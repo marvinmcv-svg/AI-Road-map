@@ -29,7 +29,8 @@
     { "term": "Pace", "definition": "How fast a video feels. Short shots feel fast.", "analogy": "Walking vs. running.", "example": "Most shots in a short ad last 1 to 3 seconds." },
     { "term": "Captions", "definition": "The words of what's said, shown on the screen.", "analogy": "Subtitles in a movie.", "example": "Big white words with a dark edge at the bottom." },
     { "term": "Deepfake", "definition": "A fake video, picture or voice of a real person, made with AI.", "analogy": "A fake signature, but for faces and voices.", "example": "A fake video of a famous person selling a scam." },
-    { "term": "AI label", "definition": "Words or a mark that show a video was made with AI.", "analogy": "The ingredients list on a snack.", "example": "'Made with AI' on the end card." }
+    { "term": "AI label", "definition": "Words or a mark that show a video was made with AI.", "analogy": "The ingredients list on a snack.", "example": "'Made with AI' on the end card." },
+    { "term": "Script", "definition": "The words that will be said or shown in your video, written down in order.", "analogy": "The lines actors learn before a play.", "example": "\"Meet Sip Squad. The bottle that keeps up with you.\"" }
   ],
   "tools": [
     { "name": "Gemini with Veo (video making)", "bestFor": "MAIN TOOL for this module: 8-second clips with sound from words, photo to video, plus storyboard pictures and scripts", "freeTier": "A few video clips a day, depending on the plan. Paid Google AI plans give more.", "minAge": "18+ for video making on most accounts. College students: use it on your own account.", "ageTag": "18+", "classroomUse": "Students make every clip themselves. Plan prompts first, because clips are limited each day.", "alternative": "Google Vids (has Veo inside it too)", "url": "https://gemini.google.com" },

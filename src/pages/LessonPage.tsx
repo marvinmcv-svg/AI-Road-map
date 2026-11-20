@@ -6,7 +6,9 @@ import { KEYS, useStored, type TeachMode } from '../lib/storage';
 import { Markdown } from '../components/Markdown';
 import { Bolt } from '../components/Mascot';
 import { SEGMENT_STYLE, themeFor } from '../lib/theme';
-import { studentMissionUrl } from '../lib/links';
+import { studentGuideUrl, studentMissionUrl } from '../lib/links';
+import { guidesIn } from '../student/toolGuides';
+import { PLAN_B } from '../lib/teacherGuide';
 
 function Celebrate({ xp, onClose, nextTo }: { xp: number; onClose: () => void; nextTo?: string }) {
   return (
@@ -154,6 +156,50 @@ export default function LessonPage() {
           </ul>
         </div>
       </div>
+
+      {(() => {
+        const guides = guidesIn([...lesson.tools, lesson.body].join('\n'), m.id);
+        return (
+          <details className="card lesson-tools no-print">
+            <summary>
+              <b>🧭 Tool help & Plan B</b> <span className="muted small">· step-by-step guides, common problems, what to do if tech breaks</span>
+            </summary>
+            <p className="small">Share these guide links with your student before class. Each one has sign-up steps, a first thing to try and fixes.</p>
+            <div className="tool-chips">
+              {guides.map((g) => (
+                <a key={g.id} className="tool-chip" style={{ '--c': g.color } as React.CSSProperties} href={studentGuideUrl(g.id)} target="_blank" rel="noreferrer">
+                  {g.icon} {g.name} ↗
+                </a>
+              ))}
+            </div>
+            {guides.map((g) => (
+              <details key={g.id} className="stuck-mini">
+                <summary>
+                  {g.icon} Common {g.name} problems
+                </summary>
+                <ul>
+                  {g.stuck.map(([p, f]) => (
+                    <li key={p}>
+                      <b>{p}</b> {f}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ))}
+            <h4>🛟 If the tech breaks</h4>
+            <table className="planb">
+              <tbody>
+                {PLAN_B.map(([p, f]) => (
+                  <tr key={p}>
+                    <td>{p}</td>
+                    <td>{f}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </details>
+        );
+      })()}
 
       <details className="card principles">
         <summary>🧠 The learning science behind each segment</summary>

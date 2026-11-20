@@ -29,7 +29,8 @@
     { "term": "Balance", "definition": "Making a game fair and fun: no part too easy, too hard or too random.", "analogy": "Making sure both teams have a fair chance.", "example": "Making a power-up last 5 seconds instead of 30." },
     { "term": "Leaderboard", "definition": "A ranked list of the best scores from many players.", "analogy": "A hall of fame.", "example": "Top 10 nicknames and scores." },
     { "term": "NPC", "definition": "A non-player character: someone in the game the computer controls.", "analogy": "An actor in a play who isn't you.", "example": "A gardener who gives tips between levels." },
-    { "term": "Playtest", "definition": "Watching people play your game to see what works.", "analogy": "A taste test before a bake sale.", "example": "3 new players, you watch silently and take notes." }
+    { "term": "Playtest", "definition": "Watching people play your game to see what works.", "analogy": "A taste test before a bake sale.", "example": "3 new players, you watch silently and take notes." },
+    { "term": "Fallback", "definition": "A backup plan the app uses when something fails, like ready-made lines if the AI is down.", "analogy": "An umbrella in your bag, just in case.", "example": "The NPC says \"Hmm, let me think…\" if the AI does not answer." }
   ],
   "tools": [
     { "name": "Claude (artifacts)", "bestFor": "Small playable games right in the chat: first games, remixes, quick core-loop prototypes", "freeTier": "Free plan can make and publish artifacts; paid plans give more use", "minAge": "18+. College students: use your own account.", "ageTag": "18+", "classroomUse": "Lessons 1 to 5: first game, remix arcade, gray-box prototype.", "alternative": "Paper prototypes", "url": "https://claude.ai" },

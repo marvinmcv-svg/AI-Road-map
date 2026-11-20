@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { allTools } from '../lib/content';
 import { AgeTag } from '../components/Bits';
 import type { Tool } from '../types';
+import { STUDENT_SITE_URL } from '../lib/links';
 
 const FILTERS: { key: 'all' | Tool['ageTag']; label: string }[] = [
   { key: 'all', label: 'All' },
@@ -22,6 +23,12 @@ export default function ToolsPage() {
         College and adult students (18+) can use every tool here on their own accounts. If you ever teach younger
         students: under-13s can't make accounts on 13+ tools and under-18s can't use 18+ tools, so you run the tool on
         your screen while they tell you what to type. Always follow your school's AI rules.
+      </div>
+      <div className="callout">
+        🧭 Need click-by-click setup help? Every tool has a beginner guide on the student site (sign-up steps, first thing to try, fixes):{' '}
+        <a href={`${STUDENT_SITE_URL}/#/tools`} target="_blank" rel="noreferrer">
+          Open Tool guides ↗
+        </a>
       </div>
       <div className="filters no-print">
         {FILTERS.map((x) => (

@@ -109,7 +109,9 @@
       "definition": "How many it got right, out of all of them.",
       "analogy": "A test score.",
       "example": "26 out of 30 = 87%."
-    }
+    },
+    { "term": "Script Properties", "definition": "A safe, hidden place in Apps Script to keep secrets like an API key.", "analogy": "A locked drawer next to your desk, instead of a sticky note on the screen.", "example": "CLAUDE_KEY saved in Project Settings → Script Properties" },
+    { "term": "Spending limit", "definition": "The most money an account is allowed to spend in a month. When it is reached, it stops.", "analogy": "Only taking $10 to the fair, so you can never spend more.", "example": "A $5 monthly limit in the Claude Console" }
   ],
   "tools": [
     {

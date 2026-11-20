@@ -31,6 +31,11 @@ export default function Dashboard() {
             🔑 You're using the default password. Set your own before sharing the link (README → “Change the password”).
           </div>
         )}
+        {done === 0 && (
+          <Link to="/start" className="callout start-callout">
+            👋 <b>New here?</b> Read <u>Start here</u> first: how the portal works, accounts to set up, and how to run a lesson in 7 steps.
+          </Link>
+        )}
         <MascotSays mood="happy">
           {next ? (
             <>

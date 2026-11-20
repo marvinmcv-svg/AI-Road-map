@@ -1,5 +1,6 @@
 import { HOUSES, useDone, useGuildCard, useLearnMode } from '../store';
 import { MascotSays } from '../../components/Mascot';
+import { RankCard, usePractice } from '../components/Progress';
 
 const AVATARS = ['🤖', '🐼', '🦊', '🐉', '🦉', '🐙', '🌵', '🚀', '👾', '🦄', '🐸', '⚡'];
 
@@ -8,6 +9,8 @@ export default function MyCard() {
   const [done] = useDone();
   const [mode, setMode] = useLearnMode();
   const house = HOUSES.find((h) => h.name === card.house);
+  const { stickers } = usePractice();
+  const got = stickers.filter((s) => s.got).length;
   return (
     <div className="narrow">
       <h1>🪪 My Guild card</h1>
@@ -23,6 +26,22 @@ export default function MyCard() {
             House {card.house || '???'} · {done.length} missions complete
           </p>
         </div>
+      </div>
+      <RankCard />
+      <div className="card">
+        <h2>
+          🏅 Sticker book <small className="muted">{got}/{stickers.length}</small>
+        </h2>
+        <div className="sticker-grid">
+          {stickers.map((s) => (
+            <div key={s.id} className={`sticker ${s.got ? 'got' : ''}`} title={s.how}>
+              <span>{s.got ? s.icon : '🔒'}</span>
+              <b>{s.name}</b>
+              <small>{s.how}</small>
+            </div>
+          ))}
+        </div>
+        <p className="muted small">Your teacher also gives Boss badges and secret badges (like 🐞 Bug Hunter and 🤝 Guild Mentor). Ask what they are!</p>
       </div>
       <div className="card">
         <label className="field">

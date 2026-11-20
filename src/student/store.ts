@@ -12,6 +12,15 @@ export const useGuildCard = () => useStored<GuildCard>('guild.card', { nickname:
 export const useDone = () => useStored<string[]>('guild.done', []);
 export const useChecks = () => useStored<Record<string, boolean[]>>('guild.checks', {});
 
+// Days (YYYY-MM-DD) when the student ticked a step — used for streaks.
+export const useActiveDays = () => useStored<string[]>('guild.days', []);
+// "What I made" for each mission: a link and a short note. Builds the Showcase.
+export interface ShowcaseItem { link: string; note: string; date: string; feel?: string }
+export const useShowcase = () => useStored<Record<string, ShowcaseItem>>('guild.showcase', {});
+export const useSideQuests = () => useStored<string[]>('guild.side', []);
+
+export const today = () => new Date().toLocaleDateString('en-CA');
+
 // 'solo' = just me and my teacher; 'group' = a class or small group.
 export type LearnMode = 'solo' | 'group';
 export const useLearnMode = () => useStored<LearnMode>('guild.mode', 'solo');

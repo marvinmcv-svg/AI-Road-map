@@ -7,12 +7,16 @@ import MissionPage from './pages/MissionPage';
 import Words from './pages/Words';
 import Toolkit from './pages/Toolkit';
 import MyCard from './pages/MyCard';
+import Showcase from './pages/Showcase';
+import { ToolGuideList, ToolGuidePage } from './pages/ToolGuides';
 import { useGuildCard } from './store';
 
 const NAV = [
   { to: '/', label: 'Quest map', icon: '🗺️', tile: '#e3f5fe', end: true },
+  { to: '/tools', label: 'Tool guides', icon: '🧭', tile: '#e6f9f1' },
   { to: '/words', label: 'Word cards', icon: '🃏', tile: '#ffe8f2' },
-  { to: '/toolkit', label: 'Toolkit', icon: '🧰', tile: '#efeaff' },
+  { to: '/toolkit', label: 'Cheat sheets', icon: '🧰', tile: '#efeaff' },
+  { to: '/showcase', label: 'My Showcase', icon: '🖼️', tile: '#ffefe0' },
   { to: '/me', label: 'My Guild card', icon: '🪪', tile: '#fff6d9' }
 ];
 
@@ -81,6 +85,9 @@ export default function StudentApp() {
           <Route path="/words" element={<Words />} />
           <Route path="/toolkit" element={<Toolkit />} />
           <Route path="/me" element={<MyCard />} />
+          <Route path="/tools" element={<ToolGuideList />} />
+          <Route path="/tools/:id" element={<ToolGuidePage />} />
+          <Route path="/showcase" element={<Showcase />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

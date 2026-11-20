@@ -133,7 +133,8 @@
       "definition": "Watching a real person try to use your site, without helping.",
       "analogy": "A taste test for a new recipe.",
       "example": "'Please order a teal bottle and think out loud.'"
-    }
+    },
+    { "term": "Commit", "definition": "A saved change in your repo, with a short note about what changed.", "analogy": "A save point in a video game.", "example": "\"Add the hero section\"" }
   ],
   "tools": [
     {

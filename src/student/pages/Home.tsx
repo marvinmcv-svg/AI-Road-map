@@ -4,6 +4,7 @@ import { themeFor } from '../../lib/theme';
 import { LessonPath, LockedPath } from '../../components/LessonPath';
 import { MascotSays } from '../../components/Mascot';
 import { HOUSES, useDone, useGuildCard } from '../store';
+import { RankCard, SideQuestCard } from '../components/Progress';
 
 export default function Home() {
   const [done] = useDone();
@@ -15,6 +16,21 @@ export default function Home() {
   return (
     <div className="with-rail">
       <section className="center-col">
+        {done.length === 0 && (
+          <div className="card newbie-card">
+            <h3>👋 New here? Start in 3 easy steps</h3>
+            <ol>
+              <li>
+                <Link to="/me">Make your Guild card</Link>: pick a nickname, house and avatar.
+              </li>
+              <li>
+                Open <Link to="/tools">Tool guides</Link> and read the one for <b>Gemini</b>. It's your first tool.
+              </li>
+              <li>Tap the glowing circle below to start Mission 1. Tick each box as you go!</li>
+            </ol>
+            <p className="muted small">Stuck at any point? Every mission has a 🆘 help ladder at the bottom.</p>
+          </div>
+        )}
         <MascotSays mood="happy">
           {card.nickname ? <>Hey {card.nickname}! </> : <>Hey Creator! </>}
           {next ? (
@@ -71,6 +87,7 @@ export default function Home() {
             </>
           )}
         </div>
+        <RankCard />
         <div className="stat-row">
           <div className="stat">
             <span>✅</span>
@@ -80,7 +97,7 @@ export default function Home() {
           <div className="stat">
             <span>⚡</span>
             <b>{xp}</b>
-            <small>XP to claim</small>
+            <small>practice XP</small>
           </div>
           <div className="stat">
             <span>📚</span>
@@ -98,6 +115,7 @@ export default function Home() {
             </Link>
           </div>
         )}
+        <SideQuestCard moduleId={next?.module} />
         <p className="muted small">Your teacher keeps the official XP score. This page saves your checklists on this device only.</p>
       </aside>
     </div>

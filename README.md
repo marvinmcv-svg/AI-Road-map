@@ -25,6 +25,15 @@ image prompts, safety/ethics moments, differentiation and XP.
 | Lesson pages | Timeline bar, prep list, full plan, copy-able image prompts, print/PDF, present mode, private notes, "mark as taught" |
 | XP tracker | Students (nicknames), houses, 2-click XP awards, badges, house leaderboard, export/import backup |
 | Glossary / Tools / Rubrics | Searchable vocabulary, tool age filter, printable rubrics |
+| Start here | First week checklist, accounts to set up, 7-step lesson routine, tech words in plain English, Plan B |
+| Engagement | 12-move engagement playbook + what students get on their site |
+
+Every lesson page also has a **🧭 Tool help & Plan B** box (links to the student Tool guides, common problems, what to do if tech breaks).
+
+## What's on the student site
+Quest map with missions (checkboxes, "Before you start" box, tap-to-explain words, 🆘 help ladder, "Save what you made"),
+**18 Tool guides** (sign-up steps, first thing to try, tips, "Stuck?" fixes), word cards, cheat sheets,
+**My Showcase** portfolio, rank + streak + sticker book, and a 🎲 side-quest spinner. See `docs/BEGINNER-AUDIT.md`.
 
 ## Status
 - ✅ Module 0 — Launch (4 lessons)

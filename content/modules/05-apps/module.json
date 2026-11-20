@@ -29,7 +29,8 @@
     { "term": "Debugging", "definition": "Finding out why something is wrong and fixing it.", "analogy": "Being a detective for your own app.", "example": "Repeat it → look at the error → report → fix." },
     { "term": "Commit", "definition": "A saved version of your code that you can go back to.", "analogy": "A save point in a video game.", "example": "'Undo the last change and go back to how it was.'" },
     { "term": "App states", "definition": "What the app shows while loading, when empty, on error, on success and the first time.", "analogy": "A good waiter who tells you what's happening with your order.", "example": "'No entries yet. Tap + to add your first one!'" },
-    { "term": "Beta test", "definition": "Letting a few real people use your app before everyone else.", "analogy": "A sneak preview of a movie.", "example": "3 friends use it for 3 days and fill in a survey." }
+    { "term": "Beta test", "definition": "Letting a few real people use your app before everyone else.", "analogy": "A sneak preview of a movie.", "example": "3 friends use it for 3 days and fill in a survey." },
+    { "term": "Local storage", "definition": "A small space in the browser where an app can save things on THIS device only.", "analogy": "A notebook you leave at home. It is not in the cloud.", "example": "Your to-do list stays on your phone, but not on your laptop." }
   ],
   "tools": [
     { "name": "Claude Code", "bestFor": "MAIN BUILDER for this module: builds and changes every file of the app, connects the database and the AI feature, fixes bugs", "freeTier": "Needs a paid Claude plan (Pro or higher). Works on the web (claude.ai/code) and in the Claude desktop app.", "minAge": "18+. College students: use your own account.", "ageTag": "18+", "classroomUse": "From lesson 4 on: build, save data, login, AI feature, polish, fixes.", "alternative": "Claude artifacts for quick prototypes", "url": "https://claude.ai/code" },
