@@ -1,36 +1,12 @@
 import { useRef, useState } from 'react';
 import { gamification } from '../lib/content';
 import { KEYS, useStored } from '../lib/storage';
-import { levelFor } from '../lib/xp';
+import { EMPTY_TRACKER, houseStandings, levelFor, xpOf as xpOfState, type TrackerState } from '../lib/xp';
 
-interface Student {
-  id: string;
-  name: string;
-  house: string;
-}
-interface XpEvent {
-  id: string;
-  studentId: string;
-  xp: number;
-  reason: string;
-  at: string;
-}
-interface BadgeAward {
-  studentId: string;
-  badgeId: string;
-  at: string;
-}
-interface TrackerState {
-  students: Student[];
-  log: XpEvent[];
-  badges: BadgeAward[];
-}
-
-const EMPTY: TrackerState = { students: [], log: [], badges: [] };
 const uid = () => Math.random().toString(36).slice(2, 10);
 
 export default function Tracker() {
-  const [state, setState] = useStored<TrackerState>(KEYS.tracker, EMPTY);
+  const [state, setState] = useStored<TrackerState>(KEYS.tracker, EMPTY_TRACKER);
   const [name, setName] = useState('');
   const [house, setHouse] = useState(gamification.houses[0].name);
   const [selected, setSelected] = useState<string[]>([]);
@@ -39,7 +15,7 @@ export default function Tracker() {
   const [badge, setBadge] = useState(gamification.badges[0].id);
   const fileRef = useRef<HTMLInputElement>(null);
 
-  const xpOf = (id: string) => state.log.filter((e) => e.studentId === id).reduce((s, e) => s + e.xp, 0);
+  const xpOf = (id: string) => xpOfState(state, id);
 
   const addStudent = (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,36 +62,37 @@ export default function Tracker() {
   };
 
   const ranked = [...state.students].sort((a, b) => xpOf(b.id) - xpOf(a.id));
-  const houses = gamification.houses
-    .map((h) => {
-      const members = state.students.filter((s) => s.house === h.name);
-      const total = members.reduce((s, m) => s + xpOf(m.id), 0);
-      // Average keeps houses of different sizes fair.
-      return { ...h, total, avg: members.length ? Math.round(total / members.length) : 0, n: members.length };
-    })
-    .sort((a, b) => b.avg - a.avg);
+  const houses = houseStandings(state);
 
   const toggleSel = (id: string) =>
     setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
 
   return (
-    <div>
+    <div className="narrow wide-ish">
       <h1>⭐ XP tracker</h1>
       <div className="callout">
         Privacy: use first names or Guild nicknames only. Data stays in this browser — use <b>Export backup</b> weekly.
       </div>
 
-      <h2>House leaderboard (average XP per member)</h2>
-      <div className="modgrid">
-        {houses.map((h, i) => (
-          <div key={h.name} className="modcard" style={{ borderColor: h.color }}>
-            <span className="modnum">#{i + 1}</span>
-            <b style={{ color: h.color }}>{h.name}</b>
-            <small>
-              avg {h.avg} XP · {h.n} members · total {h.total}
-            </small>
-          </div>
-        ))}
+      <h2>House race (average XP per member)</h2>
+      <div className="podium">
+        {[houses[1], houses[0], houses[2], houses[3]].map((h, i) => {
+          const place = [2, 1, 3, 4][i];
+          return (
+            <div key={h.name} className={`podium-col p${place}`}>
+              <div className="podium-avatar" style={{ background: h.color }}>
+                {['', '👑', '🥈', '🥉', '⭐'][place]}
+              </div>
+              <b>{h.name}</b>
+              <small>
+                {h.avg} avg · {h.n} members
+              </small>
+              <div className="podium-block" style={{ background: h.color }}>
+                {place}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       <h2>Award XP</h2>
@@ -144,7 +121,7 @@ export default function Tracker() {
           {gamification.xpRules
             .filter((r) => r.xp > 0)
             .map((r) => (
-              <button key={r.action} className="ghost" onClick={() => award(r.xp, r.action)}>
+              <button key={r.action} className="btn chip" onClick={() => award(r.xp, r.action)}>
                 +{r.xp} {r.action}
               </button>
             ))}

@@ -1,11 +1,12 @@
+import { MascotSays } from '../components/Mascot';
 import { gamification } from '../lib/content';
 
 export default function GamificationPage() {
   const g = gamification;
   return (
-    <div>
-      <h1>🏆 The AI Creators Guild — gamification system</h1>
-      <p className="lead">{g.story}</p>
+    <div className="narrow wide-ish">
+      <h1>🏆 The AI Creators Guild</h1>
+      <MascotSays>{g.story}</MascotSays>
 
       <h2>How students earn XP</h2>
       <table>
@@ -30,34 +31,24 @@ export default function GamificationPage() {
       </table>
 
       <h2>Levels</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Lv</th>
-            <th>Title</th>
-            <th>XP needed</th>
-            <th>Perk unlocked</th>
-          </tr>
-        </thead>
-        <tbody>
-          {g.levels.map((l) => (
-            <tr key={l.level}>
-              <td>{l.level}</td>
-              <td>
-                <b>{l.name}</b>
-              </td>
-              <td>{l.xp}</td>
-              <td>{l.perk}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="levels">
+        {g.levels.map((l) => (
+          <div key={l.level} className="level">
+            <span className="level-num">{l.level}</span>
+            <div>
+              <b>{l.name}</b>
+              <small>{l.xp} XP</small>
+              <p>{l.perk}</p>
+            </div>
+          </div>
+        ))}
+      </div>
 
       <h2>Houses (teams)</h2>
-      <div className="modgrid">
+      <div className="house-grid">
         {g.houses.map((h) => (
-          <div key={h.name} className="modcard" style={{ borderColor: h.color }}>
-            <b style={{ color: h.color }}>{h.name}</b>
+          <div key={h.name} className="house-card" style={{ background: h.color }}>
+            <b>{h.name}</b>
             <small>“{h.motto}”</small>
           </div>
         ))}
@@ -67,7 +58,7 @@ export default function GamificationPage() {
       <div className="badges">
         {g.badges.map((b) => (
           <div key={b.id} className="badge">
-            <span className="bicon">{b.icon}</span>
+            <span className={`medal ${b.secret ? "secret" : ""}`}>{b.icon}</span>
             <b>
               {b.name}
               {b.secret && <em> (secret)</em>}

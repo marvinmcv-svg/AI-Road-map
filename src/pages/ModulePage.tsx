@@ -1,236 +1,272 @@
-import { Link, useParams } from 'react-router-dom';
-import { course, getModule, lessonsFor } from '../lib/content';
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { course, getModule, lessons as allLessons, lessonsFor } from '../lib/content';
 import { useProgress } from '../lib/progress';
 import { AgeTag } from '../components/Bits';
 import { RubricTable } from './Rubrics';
+import { themeFor } from '../lib/theme';
+import { LessonPath, LockedPath } from '../components/LessonPath';
+import { MascotSays } from '../components/Mascot';
+import type { VocabTerm } from '../types';
+
+const TABS = [
+  { id: 'path', label: 'Path', icon: '🗺️' },
+  { id: 'vocab', label: 'Vocabulary', icon: '🃏' },
+  { id: 'tools', label: 'AI tools', icon: '🧰' },
+  { id: 'quest', label: 'Quest & project', icon: '🏆' },
+  { id: 'safety', label: 'Safety', icon: '🛡️' },
+  { id: 'resources', label: 'Videos', icon: '📺' },
+  { id: 'support', label: 'Support', icon: '🧩' }
+] as const;
+type TabId = (typeof TABS)[number]['id'];
+
+function FlipCard({ v, color }: { v: VocabTerm; color: string }) {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <button className={`flip ${flipped ? 'flipped' : ''}`} onClick={() => setFlipped((f) => !f)} style={{ '--c': color } as React.CSSProperties}>
+      <div className="flip-inner">
+        <div className="flip-front">
+          <b>{v.term}</b>
+          <small>tap to flip</small>
+        </div>
+        <div className="flip-back">
+          <p>{v.definition}</p>
+          <p>
+            <span className="tag">🔗 Like</span> {v.analogy}
+          </p>
+          <p>
+            <span className="tag">✨ e.g.</span> {v.example}
+          </p>
+        </div>
+      </div>
+    </button>
+  );
+}
 
 export default function ModulePage() {
   const { moduleId = '' } = useParams();
   const m = getModule(moduleId);
   const summary = course.modules.find((x) => x.id === moduleId);
-  const { isTaught } = useProgress();
+  const { isTaught, taught } = useProgress();
+  const [tab, setTab] = useState<TabId>('path');
+  const t = themeFor(summary?.number ?? 0);
+  const banner = { '--c': t.color, '--s': t.shade } as React.CSSProperties;
 
   if (!m) {
     return (
-      <div>
-        <h1>
-          Module {summary?.number}: {summary?.title}
-        </h1>
-        <div className="callout">
-          Full lesson plans for this module are written one module at a time. Planned:{' '}
-          <b>{summary?.lessons} lessons</b>, weeks {summary?.weeks}. Boss / final project: {summary?.boss}.
+      <div className="narrow">
+        <div className="unit-banner big is-locked" style={banner}>
+          <div>
+            <small>MODULE {summary?.number} · WEEKS {summary?.weeks}</small>
+            <h1>{summary?.title}</h1>
+            <p>{summary?.lessons} lessons · Boss: {summary?.boss}</p>
+          </div>
+          <span className="unit-icon">{t.icon}</span>
         </div>
+        <MascotSays mood="think">Plans for this module are written one module at a time. Say “next” to unlock it!</MascotSays>
+        <LockedPath count={summary?.lessons ?? 5} icon={t.icon} />
       </div>
     );
   }
   const ls = lessonsFor(m.id);
+  const next = allLessons.find((l) => !taught.includes(l.id));
+  const doneCount = ls.filter((l) => isTaught(l.id)).length;
 
   return (
-    <div>
-      <p className="muted">
-        Module {m.number} · weeks {m.weeks} · {ls.length} lessons × 90 min
-      </p>
-      <h1>{m.title}</h1>
-      <p className="lead">{m.subtitle}</p>
-      <div className="callout">
-        <b>Big idea:</b> {m.bigIdea}
+    <div className="narrow wide-ish">
+      <div className="unit-banner big" style={banner}>
+        <div>
+          <small>
+            MODULE {m.number} · WEEKS {m.weeks} · {ls.length} LESSONS × 90 MIN
+          </small>
+          <h1>{m.title}</h1>
+          <p>{m.subtitle}</p>
+          <div className="banner-progress">
+            <div style={{ width: `${(doneCount / ls.length) * 100}%` }} />
+          </div>
+          <small>
+            {doneCount}/{ls.length} taught
+          </small>
+        </div>
+        <span className="unit-icon">{t.icon}</span>
       </div>
 
-      <nav className="toc no-print">
-        <a href="#lessons">Lessons</a> · <a href="#objectives">Objectives</a> · <a href="#vocab">Vocabulary</a> ·{' '}
-        <a href="#tools">Tools</a> · <a href="#game">Gamification</a> · <a href="#safety">Safety</a> ·{' '}
-        <a href="#resources">Resources</a> · <a href="#project">Final project</a> · <a href="#diff">Differentiation</a>
-      </nav>
-
-      <h2 id="lessons">Lesson-by-lesson plan</h2>
-      <ol className="lessonlist">
-        {ls.map((l) => (
-          <li key={l.id}>
-            <Link to={`/m/${m.id}/l/${l.number}`}>
-              <span className="lnum">L{l.number}</span>
-              <span>
-                <b>{l.title}</b>
-                <small>{l.goal}</small>
-              </span>
-              <span className="lxp">
-                {isTaught(l.id) ? '✅' : ''} +{l.xp} XP
-              </span>
-            </Link>
-          </li>
+      <div className="tabs no-print" role="tablist">
+        {TABS.map((x) => (
+          <button
+            key={x.id}
+            role="tab"
+            aria-selected={tab === x.id}
+            className={`tab ${tab === x.id ? 'on' : ''}`}
+            style={{ '--c': t.color, '--s': t.shade } as React.CSSProperties}
+            onClick={() => setTab(x.id)}
+          >
+            <span>{x.icon}</span> {x.label}
+          </button>
         ))}
-      </ol>
+      </div>
 
-      <h2 id="objectives">Learning objectives</h2>
-      <p>Students will be able to…</p>
-      <ul>
-        {m.objectives.map((o) => (
-          <li key={o}>{o}</li>
-        ))}
-      </ul>
+      {tab === 'path' && (
+        <div className="path-layout">
+          <LessonPath lessons={ls} isTaught={isTaught} nextId={next?.id} />
+          <div>
+            <div className="card big-idea" style={{ borderColor: t.color }}>
+              <small className="eyebrow">💡 BIG IDEA</small>
+              <p>{m.bigIdea}</p>
+            </div>
+            <div className="card">
+              <h3>🎯 Students will be able to…</h3>
+              <ul className="checklist">
+                {m.objectives.map((o) => (
+                  <li key={o}>{o}</li>
+                ))}
+              </ul>
+            </div>
+            {m.carryForward && (
+              <div className="card">
+                <h3>🔗 Carries forward</h3>
+                <p>{m.carryForward}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
-      <h2 id="vocab">Key vocabulary & AI jargon</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Term</th>
-            <th>Kid-friendly definition</th>
-            <th>Real-life analogy</th>
-            <th>Quick example</th>
-          </tr>
-        </thead>
-        <tbody>
-          {m.vocabulary.map((v) => (
-            <tr key={v.term}>
-              <td>
-                <b>{v.term}</b>
-              </td>
-              <td>{v.definition}</td>
-              <td>{v.analogy}</td>
-              <td>{v.example}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {tab === 'vocab' && (
+        <>
+          <p className="muted">Tap a card to flip it. Great for Recall Raids on the projector.</p>
+          <div className="flipgrid">
+            {m.vocabulary.map((v) => (
+              <FlipCard key={v.term} v={v} color={t.color} />
+            ))}
+          </div>
+        </>
+      )}
 
-      <h2 id="tools">Best AI tools for this module</h2>
-      <p className="muted">Checked: {m.toolsVerified}. Free tiers and age rules change — re-check each term.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Tool</th>
-            <th>Best for</th>
-            <th>Free tier / limits</th>
-            <th>Min. age (ToS)</th>
-            <th>How we use it in class</th>
-            <th>Beginner alternative</th>
-          </tr>
-        </thead>
-        <tbody>
-          {m.tools.map((t) => (
-            <tr key={t.name}>
-              <td>
-                <b>{t.url ? <a href={t.url} target="_blank" rel="noreferrer">{t.name}</a> : t.name}</b>
-              </td>
-              <td>{t.bestFor}</td>
-              <td>{t.freeTier}</td>
-              <td>
-                <AgeTag tag={t.ageTag} />
-                <br />
-                <small>{t.minAge}</small>
-              </td>
-              <td>{t.classroomUse}</td>
-              <td>{t.alternative}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {tab === 'tools' && (
+        <>
+          <p className="muted">Checked: {m.toolsVerified}. Free tiers and age rules change — re-check each term.</p>
+          <div className="toolgrid">
+            {m.tools.map((x) => (
+              <div key={x.name} className="card tool">
+                <div className="tool-head">
+                  <b>{x.url ? <a href={x.url} target="_blank" rel="noreferrer">{x.name}</a> : x.name}</b>
+                  <AgeTag tag={x.ageTag} />
+                </div>
+                <p>{x.bestFor}</p>
+                <dl>
+                  <dt>💸 Free tier</dt>
+                  <dd>{x.freeTier}</dd>
+                  <dt>🎂 Age rule</dt>
+                  <dd>{x.minAge}</dd>
+                  <dt>🏫 In class</dt>
+                  <dd>{x.classroomUse}</dd>
+                  <dt>🔁 Alternative</dt>
+                  <dd>{x.alternative}</dd>
+                </dl>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
-      <h2 id="game">How this module plugs into the game</h2>
-      <ul>
-        <li>
-          <b>Quest line:</b> {m.gamification.questLine}
-        </li>
-        <li>
-          <b>Module badge:</b> {m.gamification.badge}
-        </li>
-        <li>
-          <b>Boss challenge:</b> {m.gamification.boss}
-        </li>
-      </ul>
-      <h3>Side quests (fast finishers)</h3>
-      <ul>
-        {m.gamification.sideQuests.map((q) => (
-          <li key={q}>{q}</li>
-        ))}
-      </ul>
+      {tab === 'quest' && (
+        <>
+          <div className="quest-grid">
+            <div className="card questcard">
+              <span className="big-emoji">🧭</span>
+              <small className="eyebrow">QUEST LINE</small>
+              <p>{m.gamification.questLine}</p>
+            </div>
+            <div className="card questcard">
+              <span className="big-emoji">👑</span>
+              <small className="eyebrow">BOSS CHALLENGE</small>
+              <p>{m.gamification.boss}</p>
+            </div>
+            <div className="card questcard">
+              <span className="big-emoji">🏅</span>
+              <small className="eyebrow">MODULE BADGE</small>
+              <p>{m.gamification.badge}</p>
+            </div>
+          </div>
+          <h2>⚡ Side quests (+25 XP)</h2>
+          <div className="sidequests">
+            {m.gamification.sideQuests.map((q) => (
+              <div key={q} className="sidequest">
+                {q}
+              </div>
+            ))}
+          </div>
+          <h2>🏆 Final project: {m.finalProject.title}</h2>
+          <p>{m.finalProject.brief}</p>
+          <ul className="checklist">
+            {m.finalProject.deliverables.map((d) => (
+              <li key={d}>{d}</li>
+            ))}
+          </ul>
+          <RubricTable rubric={m.finalProject.rubric} />
+          <div className="callout levelup">
+            <b>⚡ Level-up challenge:</b> {m.finalProject.levelUp}
+          </div>
+        </>
+      )}
 
-      <h2 id="safety">Safety & ethics thread</h2>
-      <table>
-        <tbody>
+      {tab === 'safety' && (
+        <div className="safety-grid">
           {m.safety.map((s) => (
-            <tr key={s.topic}>
-              <td>
-                <b>{s.topic}</b>
-              </td>
-              <td>{s.teach}</td>
-            </tr>
+            <div key={s.topic} className="card safety">
+              <h3>🛡️ {s.topic}</h3>
+              <p>{s.teach}</p>
+            </div>
           ))}
-        </tbody>
-      </table>
+        </div>
+      )}
 
-      <h2 id="resources">YouTube & learning resources</h2>
-      <p className="muted">
-        Items marked “verify before class” are given as a channel + exact search phrase — preview before showing.
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Channel / source</th>
-            <th>What</th>
-            <th>Why it fits</th>
-            <th>Find it</th>
-          </tr>
-        </thead>
-        <tbody>
+      {tab === 'resources' && (
+        <div className="toolgrid">
           {m.resources.map((r) => (
-            <tr key={r.title}>
-              <td>{r.channel}</td>
-              <td>{r.title}</td>
-              <td>{r.why}</td>
-              <td>
-                {r.url && (
-                  <a href={r.url} target="_blank" rel="noreferrer">
-                    Link
-                  </a>
-                )}
-                {r.search && (
-                  <>
-                    Search: <code>{r.search}</code>
-                  </>
-                )}
+            <div key={r.title} className="card tool">
+              <div className="tool-head">
+                <b>📺 {r.channel}</b>
                 {r.verify && <span className="verify">verify before class</span>}
-              </td>
-            </tr>
+              </div>
+              <p>
+                <b>{r.title}</b>
+              </p>
+              <p className="muted">{r.why}</p>
+              {r.url && (
+                <a className="btn ghost small" href={r.url} target="_blank" rel="noreferrer">
+                  Open link ↗
+                </a>
+              )}
+              {r.search && (
+                <p className="small">
+                  Search: <code>{r.search}</code>
+                </p>
+              )}
+            </div>
           ))}
-        </tbody>
-      </table>
-
-      <h2 id="project">Final project: {m.finalProject.title}</h2>
-      <p>{m.finalProject.brief}</p>
-      <h3>Deliverables</h3>
-      <ul>
-        {m.finalProject.deliverables.map((d) => (
-          <li key={d}>{d}</li>
-        ))}
-      </ul>
-      <h3>Rubric</h3>
-      <RubricTable rubric={m.finalProject.rubric} />
-      <div className="callout">
-        <b>⚡ Level-up challenge:</b> {m.finalProject.levelUp}
-      </div>
-
-      <h2 id="diff">Differentiation</h2>
-      <div className="grid2">
-        <div className="card">
-          <h3>🧩 Support for students who struggle</h3>
-          <ul>
-            {m.differentiation.support.map((d) => (
-              <li key={d}>{d}</li>
-            ))}
-          </ul>
         </div>
-        <div className="card">
-          <h3>🚀 Extensions for fast finishers</h3>
-          <ul>
-            {m.differentiation.extension.map((d) => (
-              <li key={d}>{d}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      {m.carryForward && (
-        <div className="callout">
-          <b>Carries forward:</b> {m.carryForward}
+      )}
+
+      {tab === 'support' && (
+        <div className="grid2">
+          <div className="card">
+            <h3>🧩 Students who struggle</h3>
+            <ul className="checklist">
+              {m.differentiation.support.map((d) => (
+                <li key={d}>{d}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="card">
+            <h3>🚀 Fast finishers</h3>
+            <ul className="checklist">
+              {m.differentiation.extension.map((d) => (
+                <li key={d}>{d}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

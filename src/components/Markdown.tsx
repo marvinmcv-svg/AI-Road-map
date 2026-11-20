@@ -9,6 +9,12 @@ const escape = (s: string) =>
 const md = new Marked({
   gfm: true,
   renderer: {
+    heading({ tokens, depth, text }) {
+      const inner = this.parser.parseInline(tokens);
+      const seg = depth === 2 && text.match(/^(\d)\./);
+      const id = seg ? `seg-${seg[1]}` : depth === 2 && /visuals/i.test(text) ? 'visuals' : undefined;
+      return `<h${depth}${id ? ` id="${id}"` : ''}${seg ? ` class="seg-h seg-h${seg[1]}"` : ''}>${inner}</h${depth}>`;
+    },
     code({ text, lang }) {
       if (lang === 'prompt') {
         return `<div class="prompt-card"><div class="prompt-head"><span>🎨 Image prompt</span><button type="button" class="copy-btn" data-copy="${escape(
