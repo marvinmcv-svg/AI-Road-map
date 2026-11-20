@@ -47,7 +47,7 @@ export const TOOLKIT = [
     color: '#1cb0f6',
     shade: '#1189c2',
     rows: [
-      ['🎂 Age rules', 'Only use the tools your teacher says are OK.'],
+      ['📜 App rules', 'Check what the app does with your info and your work.'],
       ['🤝 Ask first', 'Never use photos of other people without a yes. Never classmates.'],
       ['🔒 Privacy', 'No full names, addresses, school name or passwords in AI.'],
       ['🏷️ Honesty', 'Say when you used AI: #MadeWithAI.'],

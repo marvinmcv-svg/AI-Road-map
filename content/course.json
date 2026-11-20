@@ -1,7 +1,7 @@
 {
   "title": "AI Creators: Build Real Things with AI",
-  "tagline": "A year-long, hands-on course where kids learn HOW to use AI tools and WHY they work. They leave with a portfolio of pictures, videos, a website, an AI helper, an app and a game. Every lesson works 1-on-1 or with a group, in easy-to-read words.",
-  "audience": "Ages 11–14 · any AI experience · 1-on-1 or small group · easy, 4th-grade reading level",
+  "tagline": "A year-long, hands-on course where students learn HOW to use AI tools and WHY they work. They leave with a portfolio of pictures, videos, a website, an AI helper, an app and a game. Every lesson works 1-on-1 or with a group, in easy-to-read words.",
+  "audience": "College students (18+) · any AI experience · 1-on-1 or small group · easy, 4th-grade reading level",
   "schedule": {
     "duration": "One school year (36 weeks)",
     "meetings": "2 lessons per week",
@@ -151,12 +151,12 @@
   ],
   "safetyThreads": [
     {
-      "thread": "Age rules",
-      "how": "Every tool has an age tag. 18+ tools are teacher-only demos. The student tells the teacher what to type."
+      "thread": "App rules & data",
+      "how": "Students use every tool on their own accounts. Before using one, check what it does with your info and your work, and turn off AI training where you can."
     },
     {
       "thread": "Consent & deepfakes",
-      "how": "Never upload real photos of classmates, teachers or other people. Use yourself only with clear rules, free public pictures, or AI-made characters."
+      "how": "Never put real photos, videos or voices of other people into AI without their clear 'yes'. Use yourself, objects, free public pictures, or AI-made characters."
     },
     {
       "thread": "Copyright & brands",
@@ -177,24 +177,20 @@
   ],
   "ageRuleKey": [
     {
-      "tag": "School account OK",
-      "meaning": "Allowed for students of all ages when used through a school-managed account (e.g. Google Workspace for Education, Canva for Education)."
-    },
-    {
-      "tag": "13+ w/ parent OK",
-      "meaning": "Students 13+ may use their own account with parent/guardian permission. Under-13s: teacher-led demo."
+      "tag": "18+ · OK for adult students",
+      "meaning": "Students must be 18 or older. College students use these on their own accounts."
     },
     {
       "tag": "13+",
-      "meaning": "Students must be 13 or older. Under-13s: teacher-led demo or the listed alternative."
+      "meaning": "Students must be 13 or older. Fine for college students."
     },
     {
-      "tag": "18+ · teacher demo only",
-      "meaning": "No student accounts. Teacher drives it on the projector; students write the prompts."
+      "tag": "School account OK",
+      "meaning": "Works through a school or college Google or Canva account, for any age."
     },
     {
       "tag": "Teacher only",
-      "meaning": "Professional tool or paid account used only by the teacher."
+      "meaning": "A paid or pro account the teacher uses for demos."
     }
   ]
 }

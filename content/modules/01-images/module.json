@@ -136,20 +136,20 @@
   ],
   "tools": [
     {
-      "name": "Gemini image making (Nano Banana), school account",
+      "name": "Gemini image making (Nano Banana)",
       "bestFor": "MAIN TOOL for this module: making pictures from words, fixing them with follow-up asks, words on pictures, logos, study pictures",
-      "freeTier": "Free with a daily picture limit (about 20 a day on personal free plans; school limits set by Google)",
-      "minAge": "Education accounts: all ages. Under 18s can make pictures and change them with follow-up asks, but CAN'T edit uploaded photos. Personal accounts 13+.",
-      "ageTag": "all-ages-school",
-      "classroomUse": "The student's main picture tool in every lesson. To edit a REAL photo, the teacher uploads it to the teacher's own Gemini and the student says what to change.",
-      "alternative": "Teacher drives Gemini on the shared screen while the student gives the prompt",
+      "freeTier": "Free plan with a daily picture limit. Google AI plans give more.",
+      "minAge": "Personal accounts 13+. College students can use everything, including editing uploaded photos.",
+      "ageTag": "18+",
+      "classroomUse": "The student's main picture tool in every lesson: make pictures, fix them with follow-up asks, and edit real photos of objects.",
+      "alternative": "Google AI Studio",
       "url": "https://gemini.google.com"
     },
     {
       "name": "Google Slides",
       "bestFor": "Putting pictures and words together: grids, posts, posters, flashcards, the Brand Kit deck",
-      "freeTier": "Free with the school Google account",
-      "minAge": "School account: all ages",
+      "freeTier": "Free with a Google account",
+      "minAge": "Any Google account",
       "ageTag": "all-ages-school",
       "classroomUse": "Simple layout helper that lives next to Gemini in the same Google account.",
       "alternative": "Canva for Education",
@@ -159,19 +159,19 @@
       "name": "Canva for Education (optional)",
       "bestFor": "Ready-made layouts for posters and posts, Brand Kit, background remover",
       "freeTier": "Free for K-12 teachers and their students (teacher checks with a school email)",
-      "minAge": "K-12 students through a teacher or school class invite",
+      "minAge": "Free for teachers and students at schools and colleges with Canva for Education (or the free Canva plan)",
       "ageTag": "all-ages-school",
       "classroomUse": "Optional layout helper if the student likes it. All pictures still come from Gemini.",
       "alternative": "Google Slides",
       "url": "https://www.canva.com/education/"
     }
   ],
-  "toolsVerified": "November 2026 (Gemini for Education under-18 picture rules checked). Gemini is the main tool for this module.",
+  "toolsVerified": "November 2026. Set up for college students (18+), so all tools are open. Gemini is the main tool for this module.",
   "resources": [
     {
       "channel": "Google — Gemini for Education",
       "title": "Making and editing pictures in Gemini",
-      "why": "How picture making works on school accounts, and what under-18 accounts can do.",
+      "why": "How to make and edit pictures in Gemini, and the daily limits.",
       "search": "Gemini for Education generate images students",
       "verify": true
     },
@@ -185,7 +185,7 @@
     {
       "channel": "Code.org",
       "title": "How AI Works — making pictures",
-      "why": "Kid-friendly look at how picture AI learns.",
+      "why": "Beginner-friendly look at how picture AI learns.",
       "url": "https://code.org/ai",
       "search": "code.org how AI works generative AI",
       "verify": true
@@ -212,14 +212,14 @@
     "sideQuests": [
       "Style Remix: make one picture in 5 art styles and name each one (+25 XP).",
       "Glitch Fixer: find 3 AI glitches in your own pictures (extra fingers, mixed-up letters, odd shadows) and fix them with follow-up asks (+25 XP).",
-      "Make a comic for younger kids: 'How picture AI works' (+25 XP).",
+      "Make a comic for beginners: 'How picture AI works' (+25 XP).",
       "Real vs. AI: take a real photo of a toy and make the same shot in Gemini. Which is better, and why? (+25 XP)."
     ]
   },
   "safety": [
     {
-      "topic": "Age rules",
-      "teach": "Gemini on the school account is the main tool. Under-18 accounts can't edit uploaded photos, so real-photo edits happen on the teacher's account with the student giving directions."
+      "topic": "App rules & your data",
+      "teach": "Gemini on the student's own account is the main tool. Before uploading a real photo, check it shows only objects or places, and nothing private (like an address on a letter)."
     },
     {
       "topic": "Asking first & deepfakes",

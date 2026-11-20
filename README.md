@@ -1,6 +1,6 @@
 # AI Creators — Teacher Portal
 
-A teacher-only, installable web app (PWA) with the full **AI Creators** curriculum for ages 11–14:
+A teacher-only, installable web app (PWA) with the full **AI Creators** curriculum for college students (18+), taught 1-on-1 or in small groups:
 a school year of lessons, 2 per week, across 6 modules (Images → Video → Websites →
 Agents → Mobile Apps → Games), plus a Launch module and Demo Day.
 

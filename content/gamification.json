@@ -29,7 +29,7 @@
     {
       "action": "Side quest",
       "xp": 25,
-      "notes": "Extra quests for kids who finish early, or for homework."
+      "notes": "Extra quests for students who finish early, or for homework."
     },
     {
       "action": "Spot the AI mistake",
@@ -259,7 +259,7 @@
       "name": "Boss Week",
       "when": "Last 1 or 2 lessons of each module",
       "how": "Finish the final project, then show it off and score it with the rubric. Beat the Boss = module badge.",
-      "principle": "Using many skills together on one big project helps kids use them later."
+      "principle": "Using many skills together on one big project helps students use them later."
     }
   ],
   "moduleHooks": [
@@ -315,7 +315,7 @@
   "fairness": [
     "Most XP comes from effort (trying, fixing, helping), so every student can level up, not just the fastest.",
     "Group: house scores use the AVERAGE XP per member, so uneven team sizes stay fair.",
-    "Group: show house scores to everyone, but show each kid's XP privately, so no one feels bad.",
+    "Group: show house scores to everyone, but show each student's XP privately, so no one feels bad.",
     "1-on-1: the student competes with Team Bolt (you) and with their own best score. Let them win fair and square. Don't make it too easy.",
     "Give XP right away with the tracker (2 clicks). Keep it fast. The game should never eat lesson time."
   ]

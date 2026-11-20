@@ -9,35 +9,153 @@
     "Say in your own words how AI makes words or pictures by guessing from patterns it learned.",
     "Write a prompt with the Guild Prompt Recipe (Role · Task · Details · Style · Format), then make it better step by step.",
     "Spot an AI mistake or an unfair pattern, and check a fact with a trusted source.",
-    "Follow the AI Safety Pact: age rules, asking first, privacy, honesty and making your own work.",
+    "Follow the AI Safety Pact: app rules, asking first, privacy, honesty and making your own work.",
     "Explain how XP, levels, houses and Boss Challenges work."
   ],
   "vocabulary": [
-    { "term": "Artificial Intelligence (AI)", "definition": "A computer program that learns from examples so it can do jobs like seeing pictures or writing.", "analogy": "A super fast student who read millions of books but never went outside.", "example": "Your phone putting all the photos of your dog in one album." },
-    { "term": "Generative AI", "definition": "AI that makes new things: words, pictures, videos, music or code.", "analogy": "A DJ who heard millions of songs and mixes a brand new one.", "example": "Asking Gemini for a poem about pizza." },
-    { "term": "Model", "definition": "The 'brain' an AI builds after learning from lots of examples.", "analogy": "A recipe book written after tasting a million meals.", "example": "Gemini is a family of models made by Google." },
-    { "term": "Training data", "definition": "The examples an AI learns from.", "analogy": "All the books and practice tests a student studied.", "example": "Billions of web pages, and pictures with words under them." },
-    { "term": "Prompt", "definition": "What you type to tell the AI what you want.", "analogy": "Your order at a restaurant. The clearer it is, the better the meal.", "example": "'Draw a cartoon cat astronaut, bright colors, square.'" },
-    { "term": "Prediction", "definition": "The AI's best guess. AI writes by guessing the next small piece of text, again and again.", "analogy": "The word guesser on a phone keyboard, but with super powers.", "example": "'Peanut butter and…' → 'jelly'." },
-    { "term": "Token", "definition": "A small chunk of text, like part of a word. AI reads and writes in tokens.", "analogy": "LEGO bricks that build sentences.", "example": "'unhappy' might be 'un' + 'happy'." },
-    { "term": "Hallucination", "definition": "When AI says something false but sounds very sure.", "analogy": "A friend who makes up an answer instead of saying 'I don't know'.", "example": "Making up a book that doesn't exist." },
-    { "term": "Bias", "definition": "An unfair, one-sided pattern. AI copies it when its examples were one-sided.", "analogy": "If you only ever saw red apples, you'd think all apples are red.", "example": "Always drawing 'a scientist' as the same kind of person." },
-    { "term": "Iteration", "definition": "Making something better step by step: try it, check it, change it.", "analogy": "Writing a second and third draft of a story.", "example": "Prompt try 1 → try 2 → try 3, each one better." },
-    { "term": "Terms of Service (ToS)", "definition": "The rules you agree to when you use an app. They often say how old you must be.", "analogy": "The rules sign at the swimming pool.", "example": "Many AI apps are only for kids 13 and up." },
-    { "term": "Deepfake", "definition": "A fake picture, video or voice that looks real and shows a real person doing something they never did.", "analogy": "A fake signature, but for faces and voices.", "example": "A fake video of a famous person selling a scam." }
+    {
+      "term": "Artificial Intelligence (AI)",
+      "definition": "A computer program that learns from examples so it can do jobs like seeing pictures or writing.",
+      "analogy": "A super fast student who read millions of books but never went outside.",
+      "example": "Your phone putting all the photos of your dog in one album."
+    },
+    {
+      "term": "Generative AI",
+      "definition": "AI that makes new things: words, pictures, videos, music or code.",
+      "analogy": "A DJ who heard millions of songs and mixes a brand new one.",
+      "example": "Asking Gemini for a poem about pizza."
+    },
+    {
+      "term": "Model",
+      "definition": "The 'brain' an AI builds after learning from lots of examples.",
+      "analogy": "A recipe book written after tasting a million meals.",
+      "example": "Gemini is a family of models made by Google."
+    },
+    {
+      "term": "Training data",
+      "definition": "The examples an AI learns from.",
+      "analogy": "All the books and practice tests a student studied.",
+      "example": "Billions of web pages, and pictures with words under them."
+    },
+    {
+      "term": "Prompt",
+      "definition": "What you type to tell the AI what you want.",
+      "analogy": "Your order at a restaurant. The clearer it is, the better the meal.",
+      "example": "'Draw a cartoon cat astronaut, bright colors, square.'"
+    },
+    {
+      "term": "Prediction",
+      "definition": "The AI's best guess. AI writes by guessing the next small piece of text, again and again.",
+      "analogy": "The word guesser on a phone keyboard, but with super powers.",
+      "example": "'Peanut butter and…' → 'jelly'."
+    },
+    {
+      "term": "Token",
+      "definition": "A small chunk of text, like part of a word. AI reads and writes in tokens.",
+      "analogy": "LEGO bricks that build sentences.",
+      "example": "'unhappy' might be 'un' + 'happy'."
+    },
+    {
+      "term": "Hallucination",
+      "definition": "When AI says something false but sounds very sure.",
+      "analogy": "A friend who makes up an answer instead of saying 'I don't know'.",
+      "example": "Making up a book that doesn't exist."
+    },
+    {
+      "term": "Bias",
+      "definition": "An unfair, one-sided pattern. AI copies it when its examples were one-sided.",
+      "analogy": "If you only ever saw red apples, you'd think all apples are red.",
+      "example": "Always drawing 'a scientist' as the same kind of person."
+    },
+    {
+      "term": "Iteration",
+      "definition": "Making something better step by step: try it, check it, change it.",
+      "analogy": "Writing a second and third draft of a story.",
+      "example": "Prompt try 1 → try 2 → try 3, each one better."
+    },
+    {
+      "term": "Terms of Service (ToS)",
+      "definition": "The rules you agree to when you use an app: your age, what it does with your info, and who owns what you make.",
+      "analogy": "The rules sign at the swimming pool.",
+      "example": "Some AI apps can use what you type to train their AI unless you turn it off."
+    },
+    {
+      "term": "Deepfake",
+      "definition": "A fake picture, video or voice that looks real and shows a real person doing something they never did.",
+      "analogy": "A fake signature, but for faces and voices.",
+      "example": "A fake video of a famous person selling a scam."
+    }
   ],
   "tools": [
-    { "name": "Gemini (school account)", "bestFor": "Main tool for the whole course: chat, explaining things and making pictures, inside the school's Google account", "freeTier": "Comes with Google Workspace for Education (the school's admin must turn it on)", "minAge": "Education accounts: all ages. Under-18 accounts get stricter filters and can't edit uploaded photos. Personal accounts: 13+.", "ageTag": "all-ages-school", "classroomUse": "The student's main tool. If it's off for students, you run it on your screen and the student tells you what to type.", "alternative": "You drive Gemini on your screen while the student tells you the prompt", "url": "https://gemini.google.com" },
-    { "name": "Teachable Machine (Google)", "bestFor": "Training your own tiny picture or sound AI in the browser. It makes 'training data' easy to see.", "freeTier": "Free, no account needed", "minAge": "No account. Runs in the browser. Point the webcam at things, never at other people without a 'yes'.", "ageTag": "all-ages-school", "classroomUse": "Lesson 1: train an AI, then trick it with bad examples.", "alternative": "Quick, Draw!", "url": "https://teachablemachine.withgoogle.com" },
-    { "name": "Quick, Draw! (Google)", "bestFor": "Watching AI guess your doodle as you draw", "freeTier": "Free, no account", "minAge": "No account needed", "ageTag": "all-ages-school", "classroomUse": "Warm-up game about how AI finds patterns.", "alternative": "A paper guessing game", "url": "https://quickdraw.withgoogle.com" }
+    {
+      "name": "Gemini",
+      "bestFor": "Main tool for the whole course: chat, explaining things and making pictures",
+      "freeTier": "Free plan with daily limits. Google AI plans (and free student offers) give more.",
+      "minAge": "13+ for personal accounts; some features (like video) are 18+. College students can use everything.",
+      "ageTag": "18+",
+      "classroomUse": "The student's main tool, on their own Google account.",
+      "alternative": "Google AI Studio (more settings, same models)",
+      "url": "https://gemini.google.com"
+    },
+    {
+      "name": "Teachable Machine (Google)",
+      "bestFor": "Training your own tiny picture or sound AI in the browser. It makes 'training data' easy to see.",
+      "freeTier": "Free, no account needed",
+      "minAge": "No account. Runs in the browser. Point the webcam at things, never at other people without a 'yes'.",
+      "ageTag": "all-ages-school",
+      "classroomUse": "Lesson 1: train an AI, then trick it with bad examples.",
+      "alternative": "Quick, Draw!",
+      "url": "https://teachablemachine.withgoogle.com"
+    },
+    {
+      "name": "Quick, Draw! (Google)",
+      "bestFor": "Watching AI guess your doodle as you draw",
+      "freeTier": "Free, no account",
+      "minAge": "No account needed",
+      "ageTag": "all-ages-school",
+      "classroomUse": "Warm-up game about how AI finds patterns.",
+      "alternative": "A paper guessing game",
+      "url": "https://quickdraw.withgoogle.com"
+    }
   ],
-  "toolsVerified": "November 2026 (Gemini for Education age rules checked). Gemini is the main tool for the course.",
+  "toolsVerified": "November 2026. Set up for college students (18+), so all tools are open. Gemini is the main tool for the course.",
   "resources": [
-    { "channel": "Code.org", "title": "How AI Works video series", "why": "Short and kid-friendly. Explains training data, bias and how AI learns.", "url": "https://code.org/ai", "search": "code.org How AI Works", "verify": false },
-    { "channel": "Crash Course AI (YouTube)", "title": "Crash Course Artificial Intelligence, 'What is AI?' episode", "why": "Fun and full of pictures. Show short clips, not the whole video.", "search": "Crash Course Artificial Intelligence episode 1 what is artificial intelligence", "verify": true },
-    { "channel": "Google — Teachable Machine", "title": "Teachable Machine site + intro video", "why": "Lets kids SEE examples → AI brain → guess.", "url": "https://teachablemachine.withgoogle.com", "verify": false },
-    { "channel": "Common Sense Education", "title": "AI lessons for kids", "why": "Ready-made talk questions about fairness and safety, plus tip sheets for families.", "search": "Common Sense Education AI literacy lessons", "verify": true },
-    { "channel": "Google — Gemini for Education", "title": "Gemini help for teachers and students", "why": "How Gemini works on school accounts, and what kids under 18 can and can't do.", "search": "Gemini for Education help center students", "verify": true }
+    {
+      "channel": "Code.org",
+      "title": "How AI Works video series",
+      "why": "Short and beginner-friendly. Explains training data, bias and how AI learns.",
+      "url": "https://code.org/ai",
+      "search": "code.org How AI Works",
+      "verify": false
+    },
+    {
+      "channel": "Crash Course AI (YouTube)",
+      "title": "Crash Course Artificial Intelligence, 'What is AI?' episode",
+      "why": "Fun and full of pictures. Show short clips, not the whole video.",
+      "search": "Crash Course Artificial Intelligence episode 1 what is artificial intelligence",
+      "verify": true
+    },
+    {
+      "channel": "Google — Teachable Machine",
+      "title": "Teachable Machine site + intro video",
+      "why": "Lets students SEE examples → AI brain → guess.",
+      "url": "https://teachablemachine.withgoogle.com",
+      "verify": false
+    },
+    {
+      "channel": "Google — AI Essentials",
+      "title": "Google AI Essentials course",
+      "why": "A short, free course on using AI tools well at work and school.",
+      "search": "Google AI Essentials course",
+      "verify": true
+    },
+    {
+      "channel": "Google — Gemini for Education",
+      "title": "Gemini Apps Help",
+      "why": "How Gemini works, its limits, and how to manage your activity and privacy settings.",
+      "search": "Gemini Apps Help privacy activity settings",
+      "verify": true
+    }
   ],
   "gamification": {
     "questLine": "Join the Guild: make your nickname and avatar, learn the rules of AI, and earn your Safety Pact.",
@@ -50,11 +168,26 @@
     ]
   },
   "safety": [
-    { "topic": "Age rules", "teach": "Show the tools list. Explain why apps have age rules: laws protect kids' info. No sneaking onto 13+ or 18+ apps. We use school accounts, or the teacher runs the tool." },
-    { "topic": "Asking first & deepfakes", "teach": "Webcam and photos of yourself only, and only in class tools. Never other kids. Talk about how a deepfake could hurt someone." },
-    { "topic": "Privacy", "teach": "Use Guild nicknames. Never type your full name, school, address, phone number or passwords into AI." },
-    { "topic": "Checking facts", "teach": "AI guesses what SOUNDS right. Use the Two-Source Rule for every fact." },
-    { "topic": "Honesty", "teach": "Using AI is a skill, not cheating, as long as you say you used it. Start using the #MadeWithAI label." }
+    {
+      "topic": "App rules & your data",
+      "teach": "Look at the tools list. Before using an AI app, check what it does with your info, whether it trains on your work, and who owns what you make. Show where to turn off training in Gemini's activity settings."
+    },
+    {
+      "topic": "Asking first & deepfakes",
+      "teach": "Use the webcam and photos only on yourself and objects. Never put other people into AI without their clear 'yes'. Talk about how a deepfake could hurt someone."
+    },
+    {
+      "topic": "Privacy",
+      "teach": "Use Guild nicknames. Never type your full name, school, address, phone number or passwords into AI."
+    },
+    {
+      "topic": "Checking facts",
+      "teach": "AI guesses what SOUNDS right. Use the Two-Source Rule for every fact."
+    },
+    {
+      "topic": "Honesty",
+      "teach": "Using AI is a skill, not cheating, as long as you say you used it. Start using the #MadeWithAI label."
+    }
   ],
   "finalProject": {
     "title": "Prompt Duel + AI Safety Pact",
@@ -62,20 +195,52 @@
     "deliverables": [
       "Prompt Log: try 1, try 2, try 3… with what changed and why",
       "A final answer that matches the target",
-      "Your own AI Safety Pact (5 promises in your own words), signed by you (and a parent if you like)"
+      "Your own AI Safety Pact (5 promises in your own words), signed by you"
     ],
     "rubric": [
-      { "criterion": "Prompt parts", "levels": ["A short one-line prompt", "Some recipe parts", "All 5 recipe parts", "All 5 parts, very clear, plus extra rules or examples"] },
-      { "criterion": "Trying again", "levels": ["One try", "2 tries, changes not clear", "3 or more tries, with a reason for each change", "Each change has a clear goal, explained with course words"] },
-      { "criterion": "Checking the answer", "levels": ["Took the answer without checking", "Noticed a problem", "Found and fixed a mistake", "Checked facts with a source and named the kind of mistake"] },
-      { "criterion": "Safety Pact", "levels": ["Copied the rules", "Some rules in own words", "5 clear promises in own words", "Promises include 'what I'd do if…' answers"] }
+      {
+        "criterion": "Prompt parts",
+        "levels": [
+          "A short one-line prompt",
+          "Some recipe parts",
+          "All 5 recipe parts",
+          "All 5 parts, very clear, plus extra rules or examples"
+        ]
+      },
+      {
+        "criterion": "Trying again",
+        "levels": [
+          "One try",
+          "2 tries, changes not clear",
+          "3 or more tries, with a reason for each change",
+          "Each change has a clear goal, explained with course words"
+        ]
+      },
+      {
+        "criterion": "Checking the answer",
+        "levels": [
+          "Took the answer without checking",
+          "Noticed a problem",
+          "Found and fixed a mistake",
+          "Checked facts with a source and named the kind of mistake"
+        ]
+      },
+      {
+        "criterion": "Safety Pact",
+        "levels": [
+          "Copied the rules",
+          "Some rules in own words",
+          "5 clear promises in own words",
+          "Promises include 'what I'd do if…' answers"
+        ]
+      }
     ],
     "levelUp": "Write a prompt that turns Gemini into a quiz show host for this module's words. Test it on someone and make it better 2 times."
   },
   "differentiation": {
     "support": [
       "Prompt Recipe card with sentence starters for each part.",
-      "Group: pair kids up. One types, one reads the recipe out loud. Swap every 10 minutes. 1-on-1: the student types, you read the recipe.",
+      "Group: pair students up. One types, one reads the recipe out loud. Swap every 10 minutes. 1-on-1: the student types, you read the recipe.",
       "Word wall with pictures for every new word.",
       "Exit tickets can be answered by drawing and labeling, or out loud."
     ],
