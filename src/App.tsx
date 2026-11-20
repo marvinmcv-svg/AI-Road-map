@@ -13,6 +13,7 @@ import Tracker from './pages/Tracker';
 import Rubrics from './pages/Rubrics';
 import { course } from './lib/content';
 import { themeFor } from './lib/theme';
+import { STUDENT_SITE_URL } from './lib/links';
 
 const NAV = [
   { to: '/', label: 'Learn path', icon: '🗺️', tile: '#e3f5fe', end: true },
@@ -51,6 +52,12 @@ export default function App() {
               {n.label}
             </NavLink>
           ))}
+          <a href={STUDENT_SITE_URL} target="_blank" rel="noreferrer">
+            <span className="tile" style={{ background: '#e9fbe0' }}>
+              🎒
+            </span>
+            Student site ↗
+          </a>
           <div className="nav-group">Modules</div>
           {course.modules.map((m) => {
             const t = themeFor(m.number);

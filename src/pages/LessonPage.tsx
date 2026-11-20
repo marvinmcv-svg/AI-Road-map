@@ -6,6 +6,7 @@ import { KEYS, useStored } from '../lib/storage';
 import { Markdown } from '../components/Markdown';
 import { Bolt } from '../components/Mascot';
 import { SEGMENT_STYLE, themeFor } from '../lib/theme';
+import { studentMissionUrl } from '../lib/links';
 
 function Celebrate({ xp, onClose, nextTo }: { xp: number; onClose: () => void; nextTo?: string }) {
   return (
@@ -94,6 +95,9 @@ export default function LessonPage() {
         </button>
         <a className="btn ghost" href="#visuals" onClick={(e) => { e.preventDefault(); document.getElementById('visuals')?.scrollIntoView({ behavior: 'smooth' }); }}>
           🎨 Visuals
+        </a>
+        <a className="btn ghost" href={studentMissionUrl(m.id, lesson.number)} target="_blank" rel="noreferrer">
+          🎒 Student mission ↗
         </a>
       </div>
 

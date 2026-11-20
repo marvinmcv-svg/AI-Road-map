@@ -23,6 +23,18 @@ for (const mod of readdirSync(root)) {
   const files = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.md')) : [];
   if (summary && files.length !== summary.lessons) fail(mod, `has ${files.length} lessons, course.json says ${summary.lessons}`);
   if (m.finalProject.rubric.some((r) => r.levels.length !== 4)) fail(mjson, 'rubric rows need 4 levels');
+  const sdir = join(root, mod, 'student');
+  const sfiles = existsSync(sdir) ? readdirSync(sdir).filter((f) => f.endsWith('.md')) : [];
+  for (const f of files) if (!sfiles.includes(f)) fail(join(sdir, f), 'student mission missing for this lesson');
+  for (const f of sfiles) {
+    const raw = readFileSync(join(sdir, f), 'utf8');
+    const sm = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+    if (!sm) { fail(join(sdir, f), 'no frontmatter'); continue; }
+    const meta = parse(sm[1]);
+    for (const k of ['module', 'number', 'title', 'mission', 'xp']) if (meta[k] == null) fail(join(sdir, f), `missing ${k}`);
+    for (const h of ['## 🔥 Warm-up', '## 🎟️ Exit ticket', '## 🛡️ Stay safe', '- [ ]']) if (!sm[2].includes(h)) fail(join(sdir, f), `missing "${h}"`);
+    if (/```(teacher|prompt)/.test(sm[2])) fail(join(sdir, f), 'teacher-only block in student file');
+  }
   for (const f of files) {
     const path = join(dir, f);
     const raw = readFileSync(path, 'utf8');
@@ -47,4 +59,4 @@ for (const mod of readdirSync(root)) {
   }
 }
 if (errors) { console.error(`\n${errors} content problem(s).`); process.exit(1); }
-console.log(`✓ ${count} lessons OK (all 90 min, all sections present).`);
+console.log(`✓ ${count} lessons OK (all 90 min, all sections present, student missions present).`);

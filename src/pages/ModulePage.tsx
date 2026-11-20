@@ -7,7 +7,7 @@ import { RubricTable } from './Rubrics';
 import { themeFor } from '../lib/theme';
 import { LessonPath, LockedPath } from '../components/LessonPath';
 import { MascotSays } from '../components/Mascot';
-import type { VocabTerm } from '../types';
+import { FlipCard } from '../components/FlipCard';
 
 const TABS = [
   { id: 'path', label: 'Path', icon: '🗺️' },
@@ -19,29 +19,6 @@ const TABS = [
   { id: 'support', label: 'Support', icon: '🧩' }
 ] as const;
 type TabId = (typeof TABS)[number]['id'];
-
-function FlipCard({ v, color }: { v: VocabTerm; color: string }) {
-  const [flipped, setFlipped] = useState(false);
-  return (
-    <button className={`flip ${flipped ? 'flipped' : ''}`} onClick={() => setFlipped((f) => !f)} style={{ '--c': color } as React.CSSProperties}>
-      <div className="flip-inner">
-        <div className="flip-front">
-          <b>{v.term}</b>
-          <small>tap to flip</small>
-        </div>
-        <div className="flip-back">
-          <p>{v.definition}</p>
-          <p>
-            <span className="tag">🔗 Like</span> {v.analogy}
-          </p>
-          <p>
-            <span className="tag">✨ e.g.</span> {v.example}
-          </p>
-        </div>
-      </div>
-    </button>
-  );
-}
 
 export default function ModulePage() {
   const { moduleId = '' } = useParams();

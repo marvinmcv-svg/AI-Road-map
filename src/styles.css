@@ -355,3 +355,47 @@ code { background: #f3edff; color: var(--brand-shade); padding: 0.1em 0.4em; bor
   details.principles > * { display: block; }
   .card, table, .prompt-card { break-inside: avoid; }
 }
+
+/* ---------- Student hub ---------- */
+.prompt-card.try { border-color: #a5ed6e; box-shadow: 0 4px 0 #d7ffb8; }
+.prompt-card.try .prompt-head { background: #e9fbe0; color: #3e7d00; }
+.prompt-card.try .copy-btn { background: #58cc02; box-shadow: 0 3px 0 #46a302; }
+.mission-line { font-size: 1.15rem; font-weight: 800 !important; }
+.mission-md h2 { display: flex; align-items: center; gap: 0.4rem; font-size: 1.35rem; margin-top: 2rem; padding-bottom: 0.3rem; border-bottom: 3px solid #f2f2f2; }
+.mission-md ul:has(input[type='checkbox']) { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
+.mission-md li:has(> input[type='checkbox']) {
+  display: flex; align-items: center; gap: 0.8rem; border: 2px solid var(--line); border-radius: 14px; padding: 0.75rem 1rem;
+  box-shadow: 0 3px 0 var(--line); font-weight: 700; color: var(--ink-strong); transition: background 0.15s;
+}
+.mission-md li.ticked { background: #e9fbe0; border-color: #a5ed6e; box-shadow: 0 3px 0 #a5ed6e; color: #3e7d00; text-decoration: line-through; }
+.mission-md input[type='checkbox'] { appearance: none; width: 28px; height: 28px; flex-shrink: 0; border: 3px solid var(--line-strong); border-radius: 9px; background: #fff; cursor: pointer; padding: 0; display: grid; place-items: center; }
+.mission-md input[type='checkbox']:checked { background: #58cc02; border-color: #46a302; }
+.mission-md input[type='checkbox']:checked::after { content: '✓'; color: #fff; font-weight: 900; font-size: 1rem; }
+.me-chip { display: flex; align-items: center; gap: 0.5rem; border: 2px solid var(--line); border-radius: 14px; padding: 0.4rem 0.7rem; color: var(--ink-strong) !important; text-decoration: none !important; }
+.me-chip span { font-size: 1.4rem; }
+.guild-mini { text-align: center; }
+.guild-mini h3 { margin: 0.4rem 0 0; }
+.big-avatar { width: 84px; height: 84px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 2.6rem; background: rgba(255,255,255,.25); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--line); }
+.guild-card { display: flex; align-items: center; gap: 1.2rem; color: #fff; border-radius: 22px; padding: 1.4rem 1.6rem; box-shadow: inset 0 -8px 0 rgba(0,0,0,.15); margin: 1rem 0; }
+.guild-card h2 { color: #fff; margin: 0.1rem 0; font-size: 1.8rem; }
+.guild-card small { font-weight: 900; letter-spacing: 0.1em; opacity: 0.85; }
+.guild-card p { margin: 0; font-weight: 700; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.house-pick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin: 0.5rem 0 1rem; }
+.house-btn { --c: #999; font: inherit; cursor: pointer; border: 2px solid var(--line); background: #fff; border-radius: 14px; padding: 0.7rem; box-shadow: 0 4px 0 var(--line); display: flex; flex-direction: column; text-align: left; }
+.house-btn b { color: var(--c); font-size: 1.1rem; }
+.house-btn small { color: var(--muted); }
+.house-btn.on { background: var(--c); border-color: var(--c); box-shadow: 0 4px 0 rgba(0,0,0,.25); }
+.house-btn.on b, .house-btn.on small { color: #fff; }
+.avatar-pick { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.avatar-btn { font-size: 1.8rem; width: 58px; height: 58px; border-radius: 16px; border: 2px solid var(--line); background: #fff; box-shadow: 0 4px 0 var(--line); cursor: pointer; }
+.avatar-btn.on { border-color: var(--blue); background: #ddf4ff; box-shadow: 0 4px 0 #84d8ff; }
+.toolkit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.1rem; }
+.kit { border: 2px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 0 var(--line); }
+.kit-head { background: var(--c); color: #fff; display: flex; gap: 0.6rem; align-items: center; padding: 0.8rem 1.1rem; box-shadow: inset 0 -5px 0 var(--s); }
+.kit-head span { font-size: 1.8rem; }
+.kit-head h2 { color: #fff; margin: 0; font-size: 1.2rem; }
+.kit-row { display: grid; grid-template-columns: 130px 1fr; gap: 0.6rem; padding: 0.6rem 1.1rem; border-bottom: 2px solid #f4f4f4; }
+.kit-row:last-child { border-bottom: 0; }
+.kit-row b { color: var(--ink-strong); }
+@media (max-width: 800px) { .house-pick { grid-template-columns: 1fr 1fr; } }

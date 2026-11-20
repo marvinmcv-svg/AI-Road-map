@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import type { Lesson } from '../types';
+export interface PathLesson { id: string; module: string; number: number; title: string; xp: number }
 import { lessonIcon, themeForId } from '../lib/theme';
 
 // Winding path of round lesson "nodes", like a game map.
@@ -8,7 +8,7 @@ export function LessonPath({
   isTaught,
   nextId
 }: {
-  lessons: Lesson[];
+  lessons: PathLesson[];
   isTaught: (id: string) => boolean;
   nextId?: string;
 }) {

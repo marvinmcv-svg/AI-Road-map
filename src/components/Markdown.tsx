@@ -21,6 +21,11 @@ const md = new Marked({
           text
         )}">Copy</button></div><pre>${escape(text)}</pre></div>`;
       }
+      if (lang === 'try') {
+        return `<div class="prompt-card try"><div class="prompt-head"><span>✨ Try this prompt</span><button type="button" class="copy-btn" data-copy="${escape(
+          text
+        )}">Copy</button></div><pre>${escape(text)}</pre></div>`;
+      }
       if (lang === 'teacher') {
         return `<div class="teacher-say"><strong>🗣️ Say:</strong> ${escape(text)}</div>`;
       }
@@ -29,7 +34,7 @@ const md = new Marked({
   }
 });
 
-export function Markdown({ source }: { source: string }) {
+export function Markdown({ source, className = '' }: { source: string; className?: string }) {
   const html = useMemo(() => md.parse(source) as string, [source]);
   const onClick = async (e: React.MouseEvent) => {
     const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.copy-btn');
@@ -38,5 +43,5 @@ export function Markdown({ source }: { source: string }) {
     btn.textContent = 'Copied ✓';
     setTimeout(() => (btn.textContent = 'Copy'), 1500);
   };
-  return <div className="md" onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div className={`md ${className}`} onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />;
 }
