@@ -40,7 +40,7 @@ const AGE_LABEL: Record<Tool['ageTag'], string> = {
   'all-ages-school': 'School account OK',
   '13+': '13+',
   '13+consent': '13+ w/ parent OK',
-  '18+': '18+ · teacher demo only',
+  '18+': '18+ · OK for adult students',
   'teacher-only': 'Teacher only'
 };
 

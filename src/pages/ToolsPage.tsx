@@ -8,7 +8,7 @@ const FILTERS: { key: 'all' | Tool['ageTag']; label: string }[] = [
   { key: 'all-ages-school', label: 'School account OK' },
   { key: '13+consent', label: '13+ with parent OK' },
   { key: '13+', label: '13+' },
-  { key: '18+', label: '18+ (demo only)' },
+  { key: '18+', label: '18+ (adults)' },
   { key: 'teacher-only', label: 'Teacher only' }
 ];
 
@@ -19,9 +19,9 @@ export default function ToolsPage() {
     <div>
       <h1>🧰 AI tools & age rules</h1>
       <div className="callout warn">
-        Under-13 students must not create accounts on 13+ tools; under-18s must not use 18+ tools. For those, the
-        teacher drives the tool on the projector while students write the prompts (“teacher-led demo”). Always follow
-        your school/district AI policy and get parent permission where required.
+        College and adult students (18+) can use every tool here on their own accounts. If you ever teach younger
+        students: under-13s can't make accounts on 13+ tools and under-18s can't use 18+ tools, so you run the tool on
+        your screen while they tell you what to type. Always follow your school's AI rules.
       </div>
       <div className="filters no-print">
         {FILTERS.map((x) => (

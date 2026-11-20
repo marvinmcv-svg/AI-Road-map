@@ -28,6 +28,20 @@ export const TOOLKIT = [
     ]
   },
   {
+    title: 'Video Prompt Formula',
+    icon: '🎬',
+    color: '#ff9600',
+    shade: '#d67b00',
+    rows: [
+      ['🎬 Subject & action', 'Who or what? Doing what?'],
+      ['📍 Setting', 'Where? When?'],
+      ['🎨 Style', '3D cartoon, real-life video, clay…'],
+      ['🎥 Camera', 'zoom in, pan, follow, circle around…'],
+      ['☀️ Light & mood', 'warm and calm, bright and fun…'],
+      ['🔊 Sound', 'voice, music, a splash, a whoosh…']
+    ]
+  },
+  {
     title: 'Rules of the AI Road',
     icon: '🛡️',
     color: '#1cb0f6',

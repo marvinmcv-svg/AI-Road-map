@@ -1,0 +1,100 @@
+{
+  "id": "02-video",
+  "number": 2,
+  "title": "AI Video",
+  "subtitle": "Turn your brand into a short launch video with Gemini and Google Vids. Learn hooks, storyboards, camera moves, sound, editing, captions and honest AI labels.",
+  "weeks": "7–11",
+  "bigIdea": "A video is lots of pictures shown fast. AI video has to keep every frame matching, so short, simple, well-planned clips work best. Great videos are planned before they are made: a strong hook, a clear story, the right camera moves and good sound matter more than fancy effects.",
+  "objectives": [
+    "Explain how AI makes video from frames, and why clips can glitch.",
+    "Write video prompts with the Video Prompt Formula (Subject & action · Setting · Style · Camera · Light & mood · Sound).",
+    "Plan a short ad with a hook and 4 story beats, and draw it as a storyboard.",
+    "Use camera moves, photo to video and a fixed character description to make clips that match.",
+    "Edit clips, voice, music and captions together in Google Vids, with a good pace.",
+    "Spot possible fake video, check it, and label your own AI video honestly."
+  ],
+  "vocabulary": [
+    { "term": "Frame", "definition": "One still picture in a video. Most videos show about 24 frames every second.", "analogy": "One page of a flip book.", "example": "An 8-second clip has about 200 frames." },
+    { "term": "Clip", "definition": "One short piece of video.", "analogy": "One Lego brick of your movie.", "example": "Gemini makes clips about 8 seconds long." },
+    { "term": "Veo", "definition": "Google's video-making AI. You use it inside Gemini and Google Vids.", "analogy": "A movie studio that fits in a chat box.", "example": "'Make a video of a robot watering a plant.'" },
+    { "term": "Hook", "definition": "The first 3 seconds of a video. It makes people stop and watch.", "analogy": "The worm on a fishing hook.", "example": "A plant gasps for water in the hot sun." },
+    { "term": "Story beats", "definition": "The main parts of a story, in order.", "analogy": "The stops on a bus route.", "example": "Hook → Problem → Fix → Call to action." },
+    { "term": "Storyboard", "definition": "A comic-strip plan of a video, with one box for each shot.", "analogy": "A map before a road trip.", "example": "6 boxes, each with a picture, action, camera, sound and words." },
+    { "term": "Camera move", "definition": "How the camera moves during a shot.", "analogy": "Turning your head, or walking closer.", "example": "Zoom in, pan, follow, circle around, fly over." },
+    { "term": "Photo to video", "definition": "Giving the AI a picture and asking it to make the picture move.", "analogy": "A magic photo in a storybook that comes alive.", "example": "Upload your mascot and say 'make it wave hello'." },
+    { "term": "Voiceover", "definition": "A voice that talks over the video. You hear it, but don't see who's talking.", "analogy": "A sports announcer.", "example": "'Meet Sip, the bottle that never leaks.'" },
+    { "term": "Sound effect", "definition": "A short sound that makes an action feel real.", "analogy": "The 'boing' in a cartoon.", "example": "A splash when water pours." },
+    { "term": "Timeline", "definition": "The strip in an editor that shows all your clips in order.", "analogy": "A train with a car for each clip.", "example": "Clips on top, voice and music below." },
+    { "term": "Trim", "definition": "Cutting off the slow start or end of a clip.", "analogy": "Cutting the crusts off a sandwich.", "example": "Make an 8-second clip into a 2-second shot." },
+    { "term": "Pace", "definition": "How fast a video feels. Short shots feel fast.", "analogy": "Walking vs. running.", "example": "Most shots in a short ad last 1 to 3 seconds." },
+    { "term": "Captions", "definition": "The words of what's said, shown on the screen.", "analogy": "Subtitles in a movie.", "example": "Big white words with a dark edge at the bottom." },
+    { "term": "Deepfake", "definition": "A fake video, picture or voice of a real person, made with AI.", "analogy": "A fake signature, but for faces and voices.", "example": "A fake video of a famous person selling a scam." },
+    { "term": "AI label", "definition": "Words or a mark that show a video was made with AI.", "analogy": "The ingredients list on a snack.", "example": "'Made with AI' on the end card." }
+  ],
+  "tools": [
+    { "name": "Gemini with Veo (video making)", "bestFor": "MAIN TOOL for this module: 8-second clips with sound from words, photo to video, plus storyboard pictures and scripts", "freeTier": "A few video clips a day, depending on the plan. Paid Google AI plans give more.", "minAge": "18+ for video making on most accounts. College students: use it on your own account.", "ageTag": "18+", "classroomUse": "Students make every clip themselves. Plan prompts first, because clips are limited each day.", "alternative": "Google Vids (has Veo inside it too)", "url": "https://gemini.google.com" },
+    { "name": "Google Vids", "bestFor": "Putting the video together: timeline, trimming, voice recording, AI voices, music, captions, title cards and Veo clips", "freeTier": "Comes with Google Workspace (including Education). AI features need an AI-enabled plan.", "minAge": "AI features 18+. College students: use it on your own account.", "ageTag": "18+", "classroomUse": "The student's video editor from lesson 5 on.", "alternative": "Any simple video editor the student already knows", "url": "https://vids.google.com" },
+    { "name": "Phone camera", "bestFor": "Real shots of objects and hands to mix with AI clips, and the 'be the camera' warm-up", "freeTier": "Free", "minAge": "Any age. Film things, places and your own hands. No one else without their 'yes'.", "ageTag": "all-ages-school", "classroomUse": "Warm-ups, real product shots and the Real or AI? set.", "alternative": "A laptop webcam" }
+  ],
+  "toolsVerified": "November 2026 (Google Workspace Gemini feature-by-age table and the Vids for Education post checked). Course is set up for college students (18+), so all tools are open.",
+  "resources": [
+    { "channel": "Google — Gemini help", "title": "Make videos with Gemini (Veo)", "why": "How to make clips, photo to video, and the daily limits.", "search": "Gemini app generate videos Veo help", "verify": true },
+    { "channel": "Google — Vids help", "title": "Get started with Google Vids", "why": "Step-by-step help for the timeline, recording, AI voices and captions.", "search": "Google Vids get started help center", "verify": true },
+    { "channel": "Khan Academy — Pixar in a Box", "title": "Telling stories and moving cameras", "why": "How real movie makers plan stories and move cameras.", "url": "https://www.khanacademy.org/computing/pixar", "verify": false },
+    { "channel": "Google — SynthID", "title": "How AI pictures and videos get a hidden label", "why": "Explains the hidden mark Gemini looks for. Supports the deepfake lesson.", "search": "Google SynthID detector Gemini app verify video", "verify": true },
+    { "channel": "StudioBinder (YouTube)", "title": "Camera movements explained", "why": "Clear short clips of every camera move. Show just the parts you need.", "search": "StudioBinder camera movements explained", "verify": true }
+  ],
+  "gamification": {
+    "questLine": "Your company loved its new look. Now it needs a launch video that people actually watch, plus a short 'how it works' explainer.",
+    "badge": "🎬 Hook Master: a finished launch ad that scores 3 or more on every rubric row.",
+    "boss": "Launch Video Premiere: a 30 to 60 second ad with a hook, 4 story beats, sound, captions and an honest AI label, shown at a 'premiere'. 1-on-1: premiere for the teacher plus a guest.",
+    "sideQuests": [
+      "Flip book to film: draw a 12-page flip book, film it, and compare it with a Gemini clip of the same idea (+25 XP).",
+      "Glitch Reel: collect 5 AI video glitches from your own clips, name each one, and show how you fixed it (+25 XP).",
+      "Live Foley: record 5 sound effects with objects at home and use one in your ad (+25 XP).",
+      "Deepfake news: find a real news story about a deepfake scam and explain how people could have spotted it (+25 XP)."
+    ]
+  },
+  "safety": [
+    { "topic": "Asking first & deepfakes", "teach": "Photo to video and voice tools work on real people, so this module needs clear rules: only animate your own things, objects and made-up characters. Never put a real person's face or voice into an AI video without their clear 'yes', and never make anyone 'do' or 'say' something they didn't." },
+    { "topic": "Voice copies", "teach": "Use your own voice or a preset AI voice. Never copy a real person's voice. Talk about fake voice calls used in scams." },
+    { "topic": "Music & copying", "teach": "Use music that comes with Google Vids or free music made for videos. No songs from the radio or streaming apps. No famous characters or real brands." },
+    { "topic": "Honest labels", "teach": "Every video gets a 'Made with AI' label and a note saying which parts are AI and which are yours. Ads must not show the product doing things it can't really do." },
+    { "topic": "Checking video", "teach": "Before sharing a shocking video: stop, check the source, check for an AI mark in Gemini, and tell someone if it hurts a real person." }
+  ],
+  "finalProject": {
+    "title": "Launch Video for Your Brand",
+    "brief": "Use the made-up company and Brand Kit from Module 1. Plan, make and edit a 30 to 60 second launch ad with Gemini (Veo) and Google Vids, plus an optional 15 to 30 second explainer. Show it at a 'premiere' and explain your choices. In a group, the premiere is for the class. 1-on-1, it's for the teacher and a guest.",
+    "deliverables": [
+      "Storyboard (4 to 6 boxes) with action, camera, sound and words for each shot",
+      "Video Prompt Log with 3 or more tries for the most important shots",
+      "Voiceover script, timed to fit",
+      "Final ad, 30 to 60 seconds, exported: hook, 4 beats, sound, captions, end card",
+      "AI label on the video + a 'what's AI, what's mine' note",
+      "Optional: a 15 to 30 second explainer with title cards"
+    ],
+    "rubric": [
+      { "criterion": "Story & hook", "levels": ["No clear story or hook", "A story, but a slow start", "Strong hook and all 4 beats in order", "The hook grabs everyone and every shot moves the story along"] },
+      { "criterion": "Shots & prompts", "levels": ["Random clips that don't match", "Some clips match the storyboard", "Clips follow the storyboard, with planned camera moves and a character that stays the same", "Each camera move is picked for a feeling, and explained with video words"] },
+      { "criterion": "Sound & editing", "levels": ["Hard to hear, or shots far too long", "Sound is OK, pace is slow in places", "Clear voice, fitting music, trimmed shots, good pace", "Sound and cuts work together (cut on action, effects on time) and it passed the boring meter"] },
+      { "criterion": "Honest & works for everyone", "levels": ["No AI label, or untrue claims", "A label, but captions are missing or hard to read", "Clear AI label, true claims, captions that work on mute", "Explains what's AI vs. their own work, and how they avoided tricks, copying and deepfake risks"] }
+    ],
+    "levelUp": "Make 3 versions of the ad for 3 places: wide 16:9 for a website, tall 9:16 for phones, and a 6-second 'bumper'. That leads into the Website module!"
+  },
+  "differentiation": {
+    "support": [
+      "Video Prompt Formula card with word lists (camera moves, moods, sounds).",
+      "A 30-second ad with 4 shots is enough. The explainer is optional.",
+      "Script starter with blanks: 'Ever ___? Meet ___. It ___. Get yours at ___!'",
+      "Group: Director and Editor roles, swapping halfway. 1-on-1: the student is the Director and you are the Editor for one scene, then swap.",
+      "If clip limits run low, use Gemini pictures with a slow zoom in Vids instead of video clips."
+    ],
+    "extension": [
+      "Try a 'reveal' shot: start close on a detail, then pull back to show everything.",
+      "Cut on the music's beat.",
+      "Make captions in a second language and check them with a speaker of that language.",
+      "Make the same ad in two moods (funny vs. calm) and test which works better with 3 people."
+    ]
+  },
+  "carryForward": "The launch ad and explainer go on the brand's landing page in Module 3 (Websites & E-commerce)."
+}
