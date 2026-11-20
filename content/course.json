@@ -54,8 +54,8 @@
       "title": "AI Agents & Workflows",
       "lessons": 10,
       "weeks": "17–22",
-      "boss": "An automation/agent that solves a real class problem",
-      "status": "coming-next"
+      "boss": "An AI helper that solves a real problem for your store",
+      "status": "ready"
     },
     {
       "id": "05-apps",

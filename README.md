@@ -31,7 +31,8 @@ image prompts, safety/ethics moments, differentiation and XP.
 - ✅ Module 1 — AI Images (9 lessons)
 - ✅ Module 2 — AI Video (9 lessons, Gemini with Veo + Google Vids)
 - ✅ Module 3 — Websites & E-commerce (11 lessons, Google Sites + Gemini Canvas + a test-mode checkout)
-- ⏳ Modules 4–6 + Demo Day — written one module at a time (say "next")
+- ✅ Module 4 — AI Agents & Workflows (10 lessons, Gemini Gems + Apps Script + the Gemini API)
+- ⏳ Modules 5–6 + Demo Day — written one module at a time (say "next")
 
 ## Run it locally
 ```bash
