@@ -2,108 +2,312 @@
   "id": "01-images",
   "number": 1,
   "title": "AI Images",
-  "subtitle": "Create and edit images with intent: memes, photo edits, logos, marketing graphics and study aids — using the vocabulary designers use.",
+  "subtitle": "Make and edit pictures in Gemini on purpose: memes, photo edits, logos, ads and study helpers. Use the same words real designers use.",
   "weeks": "3–7",
-  "bigIdea": "Image AI starts from random noise and 'denoises' it step by step toward what your prompt describes. The more precisely you use design language — subject, composition, style, lighting, format — the more control you have. Great images come from design decisions, not lucky prompts.",
+  "bigIdea": "Picture AI starts from random static (noise) and cleans it, step by step, into what your prompt describes. The clearer your design words are (subject, place, style, camera, light, shape), the more control you have. Great pictures come from good choices, not lucky prompts.",
   "objectives": [
-    "Explain how a diffusion model turns noise into an image, and why prompts and reference images change the result.",
-    "Write image prompts with the Image Prompt Formula (Subject · Setting · Style · Composition · Lighting · Format) using professional terms like shot type, angle and aspect ratio.",
-    "Edit images ethically with AI tools (background removal, generative fill, inpainting/outpainting, upscaling) and label edits honestly.",
-    "Design an original brand identity (logo, colors, fonts) and marketing graphics using visual hierarchy and a clear call to action.",
-    "Create accurate study aids (flashcards, diagrams, visual notes) and fact-check AI-generated text and details in images."
+    "Explain how picture AI turns noise into a picture, and why the words you use change the result.",
+    "Write picture prompts with the Image Prompt Formula (Subject · Setting · Style · Camera · Light & color · Shape) using real camera words like close-up, from above and 16:9.",
+    "Edit pictures in Gemini by asking for changes (remove background, swap one thing, expand, sharpen), and label edits honestly.",
+    "Design your own brand look (logo, colors, fonts) and ads that put the biggest thing first and end with a clear call to action.",
+    "Make study helpers (flashcards, diagrams, picture notes) and check every AI fact and label."
   ],
   "vocabulary": [
-    { "term": "Diffusion model", "definition": "An image AI that starts with random static and cleans it up step by step into a picture.", "analogy": "A sculptor chipping a statue out of a block of marble.", "example": "Nano Banana, ChatGPT Images, Firefly." },
-    { "term": "Noise", "definition": "Random dots/static an image AI starts from.", "analogy": "TV static or a foggy window.", "example": "Step 1 of every diffusion image." },
-    { "term": "Text-to-image", "definition": "Making a new image from a written prompt.", "analogy": "Describing a picture to an artist on the phone.", "example": "'A pixel-art fox astronaut'." },
-    { "term": "Image-to-image / reference image", "definition": "Giving the AI a picture to guide the new one.", "analogy": "Showing your hairdresser a photo.", "example": "Upload a sketch, get a polished version." },
-    { "term": "Aspect ratio", "definition": "The shape of an image: width compared to height.", "analogy": "Phone screen vs. TV screen.", "example": "1:1 square post, 9:16 story, 16:9 slide." },
-    { "term": "Composition", "definition": "How things are arranged in the picture.", "analogy": "Arranging furniture in a room.", "example": "Subject on the left third, empty space for text." },
-    { "term": "Rule of thirds", "definition": "Imagine a 3×3 grid; put important things on the lines or where they cross.", "analogy": "Tic-tac-toe board over your photo.", "example": "Horizon on the bottom line." },
-    { "term": "Shot type / camera angle", "definition": "How close and from where the 'camera' sees the subject.", "analogy": "Standing far away vs. right up close.", "example": "Close-up, wide shot, bird's-eye view, low angle." },
-    { "term": "Style", "definition": "The artistic look of an image.", "analogy": "The same song played as rock or as jazz.", "example": "Pixel art, watercolor, 3D clay, flat vector." },
-    { "term": "Inpainting", "definition": "Changing or filling a selected part INSIDE an image.", "analogy": "Patching a hole in jeans.", "example": "Replace the plain mug on the desk with a plant." },
-    { "term": "Outpainting / generative expand", "definition": "Extending an image beyond its edges.", "analogy": "Drawing what's outside a window frame.", "example": "Turn a square photo into a wide banner." },
-    { "term": "Upscaling", "definition": "Making an image bigger and sharper with AI.", "analogy": "A magnifying glass that also adds detail.", "example": "Turn a small logo into a poster-size file." },
-    { "term": "Logo / wordmark / icon", "definition": "A brand's symbol; wordmark = styled name, icon = picture symbol.", "analogy": "A team's jersey crest.", "example": "Combination mark: icon + name." },
-    { "term": "Brand identity / brand kit", "definition": "The set of colors, fonts, logo and style a brand always uses.", "analogy": "A school uniform for a company.", "example": "Brand board with 3 colors, 2 fonts, logo." },
-    { "term": "Visual hierarchy", "definition": "Making the most important thing the most noticeable.", "analogy": "Headlines are bigger than the article text.", "example": "Big product photo → headline → small details." },
-    { "term": "Call to action (CTA)", "definition": "The words telling viewers what to do next.", "analogy": "A 'Press here' sign on a button.", "example": "'Try it free', 'Shop now'." },
-    { "term": "Contrast", "definition": "Difference between light/dark or colors that makes things stand out.", "analogy": "White chalk on a dark board.", "example": "Yellow text on dark blue." },
-    { "term": "Watermark / content credentials", "definition": "Hidden or visible labels showing an image was AI-made or edited.", "analogy": "A signature on a painting.", "example": "SynthID, C2PA 'Content Credentials', #MadeWithAI." },
-    { "term": "Meme template", "definition": "A familiar image format people reuse with new captions.", "analogy": "A joke format like 'knock knock'.", "example": "Two-panel 'expectation vs. reality'." },
-    { "term": "Dual coding", "definition": "Learning with words AND pictures together.", "analogy": "Two roads to the same memory.", "example": "Flashcard with a term + a drawing." }
+    {
+      "term": "Picture AI (diffusion model)",
+      "definition": "An AI that starts with random static and cleans it, step by step, into a picture.",
+      "analogy": "Fog clearing slowly to show a picture behind it.",
+      "example": "Gemini's picture maker (Nano Banana)."
+    },
+    {
+      "term": "Noise",
+      "definition": "Random fuzzy dots. Picture AI starts from noise.",
+      "analogy": "TV static, or a foggy window.",
+      "example": "Step 1 of every AI picture."
+    },
+    {
+      "term": "Text-to-image",
+      "definition": "Making a new picture from words you type.",
+      "analogy": "Telling an artist on the phone what to draw.",
+      "example": "'A pixel-art fox astronaut.'"
+    },
+    {
+      "term": "Follow-up edit",
+      "definition": "Asking the AI to change a picture it already made, in the same chat.",
+      "analogy": "Asking a hairdresser for 'a little shorter on the sides'.",
+      "example": "'Same picture, but make the sky purple.'"
+    },
+    {
+      "term": "Shape (aspect ratio)",
+      "definition": "How wide or tall a picture is.",
+      "analogy": "A phone screen vs. a TV screen.",
+      "example": "1:1 square post, 9:16 phone story, 16:9 slide."
+    },
+    {
+      "term": "Composition",
+      "definition": "Where things sit in the picture.",
+      "analogy": "Moving furniture around a room.",
+      "example": "The subject on the left, empty space for words on the right."
+    },
+    {
+      "term": "Rule of thirds",
+      "definition": "Picture a 3 × 3 grid. Put the main thing on a line, or where two lines cross.",
+      "analogy": "A tic-tac-toe board over your photo.",
+      "example": "The horizon on the bottom line."
+    },
+    {
+      "term": "Camera shot",
+      "definition": "How close the camera is, and where it looks from.",
+      "analogy": "Standing far away vs. right up close.",
+      "example": "Close-up, far away, from above, looking up."
+    },
+    {
+      "term": "Style",
+      "definition": "The art look of a picture.",
+      "analogy": "The same song played as rock or as jazz.",
+      "example": "Pixel art, watercolor, 3D clay, flat cartoon."
+    },
+    {
+      "term": "Swap (fill)",
+      "definition": "Changing one part INSIDE a picture.",
+      "analogy": "Sewing a patch on your jeans.",
+      "example": "'Take away the stain on the shoe.'"
+    },
+    {
+      "term": "Expand",
+      "definition": "Making a picture wider or taller. AI fills in the new edges.",
+      "analogy": "Drawing what's outside a window frame.",
+      "example": "Turn a square picture into a wide banner."
+    },
+    {
+      "term": "Upscale",
+      "definition": "Making a picture bigger and sharper with AI.",
+      "analogy": "A magnifying glass that also adds detail.",
+      "example": "Turn a small logo into a poster-size picture."
+    },
+    {
+      "term": "Logo",
+      "definition": "A brand's symbol. It can be a name, a picture, or both.",
+      "analogy": "The crest on a sports team's shirt.",
+      "example": "An icon + name logo: a leaf drop next to the word 'Sip'."
+    },
+    {
+      "term": "Brand kit",
+      "definition": "The colors, fonts, logo and style a brand always uses.",
+      "analogy": "A school uniform for a company.",
+      "example": "A brand board with 3 colors, 2 fonts and a logo."
+    },
+    {
+      "term": "Biggest first (visual hierarchy)",
+      "definition": "Making the most important thing the easiest to see.",
+      "analogy": "Newspaper headlines are bigger than the story.",
+      "example": "Big product picture → title → small details."
+    },
+    {
+      "term": "Call to action (CTA)",
+      "definition": "Words that tell people what to do next.",
+      "analogy": "A 'Push here' sign on a button.",
+      "example": "'Try it free', 'Order now'."
+    },
+    {
+      "term": "Contrast",
+      "definition": "A big difference between light and dark, or between colors, so things stand out.",
+      "analogy": "White chalk on a dark board.",
+      "example": "Yellow words on dark blue."
+    },
+    {
+      "term": "AI label (watermark)",
+      "definition": "A mark that shows a picture was made or changed by AI. Some are hidden, some you can see.",
+      "analogy": "An artist's name signed on a painting.",
+      "example": "Google's hidden SynthID mark, and our #MadeWithAI label."
+    },
+    {
+      "term": "Meme",
+      "definition": "A funny picture with a few words that people share and change.",
+      "analogy": "A joke pattern like 'knock knock'.",
+      "example": "Two pictures: 'what I wanted' vs. 'what I got'."
+    },
+    {
+      "term": "Words + pictures (dual coding)",
+      "definition": "Learning with words AND pictures together.",
+      "analogy": "Two roads to the same memory.",
+      "example": "A flashcard with a word and a drawing."
+    }
   ],
   "tools": [
-    { "name": "Gemini image generation (Nano Banana) — school account", "bestFor": "Text-to-image, quick variations, study diagrams", "freeTier": "Free with a daily/rolling image limit (roughly ~20/day on personal free plans; school limits set by Google)", "minAge": "Education accounts: all ages; under-18s can generate and refine with follow-ups but CANNOT edit uploaded images. Personal accounts 13+.", "ageTag": "all-ages-school", "classroomUse": "Main student generator if enabled by your admin. Uploaded-photo editing = teacher-led.", "alternative": "Canva for Education Magic Media", "url": "https://gemini.google.com" },
-    { "name": "ChatGPT Images", "bestFor": "Accurate text in images, edits by conversation, logos & posters", "freeTier": "Free plan: a few images per day; Plus ≈ $20/mo for more", "minAge": "13+ with parent/guardian permission under 18", "ageTag": "13+consent", "classroomUse": "Teacher demo on projector; 13+ students with signed permission.", "alternative": "Adobe Express for Education (Firefly)", "url": "https://chatgpt.com" },
-    { "name": "Higgsfield", "bestFor": "Cinematic, stylised visuals and camera-motion effects (bridges to video)", "freeTier": "Limited free credits; paid plans", "minAge": "18+ (Terms of Use). Note: Aug 2026 terms give broad rights to train on user content.", "ageTag": "18+", "classroomUse": "Teacher demo ONLY, using non-personal prompts. Never upload student work or photos.", "alternative": "Canva Magic Media / Adobe Firefly via school", "url": "https://higgsfield.ai" },
-    { "name": "Canva for Education", "bestFor": "Layouts: posters, social posts, flashcards, brand kits; Magic Media, Magic Edit, background remover", "freeTier": "100% free for K-12 teachers and their students (teacher verifies with school email)", "minAge": "K-12 students via teacher/school class invite; AI features controlled by teacher/admin", "ageTag": "all-ages-school", "classroomUse": "Main layout tool for every module project. Create a class and invite students.", "alternative": "Google Slides / Drawings", "url": "https://www.canva.com/education/" },
-    { "name": "Adobe Express for Education", "bestFor": "Firefly text-to-image, generative fill, remove background, text effects", "freeTier": "Free for K-12 schools and districts (school accounts)", "minAge": "K-12 via school-provisioned account with education-safe filters", "ageTag": "all-ages-school", "classroomUse": "Photo-editing lesson (generative fill, remove background) on objects and stock images.", "alternative": "Photopea (manual editing, no account)", "url": "https://www.adobe.com/education/express/" },
-    { "name": "Photopea", "bestFor": "Free browser photo editor (layers, masks) — learn editing by hand", "freeTier": "Free with ads; no account needed", "minAge": "No account needed; ads present — use with supervision", "ageTag": "all-ages-school", "classroomUse": "Extension: compare manual editing vs. AI editing.", "alternative": "Canva photo editor", "url": "https://www.photopea.com" }
+    {
+      "name": "Gemini image making (Nano Banana), school account",
+      "bestFor": "MAIN TOOL for this module: making pictures from words, fixing them with follow-up asks, words on pictures, logos, study pictures",
+      "freeTier": "Free with a daily picture limit (about 20 a day on personal free plans; school limits set by Google)",
+      "minAge": "Education accounts: all ages. Under 18s can make pictures and change them with follow-up asks, but CAN'T edit uploaded photos. Personal accounts 13+.",
+      "ageTag": "all-ages-school",
+      "classroomUse": "The student's main picture tool in every lesson. To edit a REAL photo, the teacher uploads it to the teacher's own Gemini and the student says what to change.",
+      "alternative": "Teacher drives Gemini on the shared screen while the student gives the prompt",
+      "url": "https://gemini.google.com"
+    },
+    {
+      "name": "Google Slides",
+      "bestFor": "Putting pictures and words together: grids, posts, posters, flashcards, the Brand Kit deck",
+      "freeTier": "Free with the school Google account",
+      "minAge": "School account: all ages",
+      "ageTag": "all-ages-school",
+      "classroomUse": "Simple layout helper that lives next to Gemini in the same Google account.",
+      "alternative": "Canva for Education",
+      "url": "https://slides.google.com"
+    },
+    {
+      "name": "Canva for Education (optional)",
+      "bestFor": "Ready-made layouts for posters and posts, Brand Kit, background remover",
+      "freeTier": "Free for K-12 teachers and their students (teacher checks with a school email)",
+      "minAge": "K-12 students through a teacher or school class invite",
+      "ageTag": "all-ages-school",
+      "classroomUse": "Optional layout helper if the student likes it. All pictures still come from Gemini.",
+      "alternative": "Google Slides",
+      "url": "https://www.canva.com/education/"
+    }
   ],
-  "toolsVerified": "November 2026 (Gemini for Education under-18 image rules, OpenAI Terms, Higgsfield Terms of Use, Canva & Adobe Express Education pages)",
+  "toolsVerified": "November 2026 (Gemini for Education under-18 picture rules checked). Gemini is the main tool for this module.",
   "resources": [
-    { "channel": "Canva Design School (YouTube)", "title": "Graphic design basics — hierarchy, contrast, alignment", "why": "Short, clear, made for beginners; uses the tool students will use.", "search": "Canva Design School graphic design basics for beginners", "verify": true },
-    { "channel": "Khan Academy — Pixar in a Box", "title": "Color science & virtual cameras", "why": "Shows how pros think about color, light and camera — perfect for composition vocabulary.", "url": "https://www.khanacademy.org/computing/pixar", "verify": false },
-    { "channel": "Code.org", "title": "How AI Works — generative AI / images", "why": "Middle-school-level explanation of how image AI is trained.", "url": "https://code.org/ai", "search": "code.org how AI works generative AI", "verify": true },
-    { "channel": "Adobe Express (YouTube)", "title": "Generative fill & remove background tutorials", "why": "Step-by-step visuals for the photo-editing lesson.", "search": "Adobe Express generative fill tutorial for beginners", "verify": true },
-    { "channel": "Satori Graphics (YouTube)", "title": "Logo design process / types of logos", "why": "Professional vocabulary (wordmark, emblem, scalability). Preview first; show short clips.", "search": "Satori Graphics types of logos explained", "verify": true },
-    { "channel": "Google — SynthID / Content Credentials", "title": "How AI images get labelled", "why": "Explains invisible watermarks — supports the disclosure lesson.", "search": "Google SynthID explained AI watermark", "verify": true }
+    {
+      "channel": "Google — Gemini for Education",
+      "title": "Making and editing pictures in Gemini",
+      "why": "How picture making works on school accounts, and what under-18 accounts can do.",
+      "search": "Gemini for Education generate images students",
+      "verify": true
+    },
+    {
+      "channel": "Khan Academy — Pixar in a Box",
+      "title": "Color and virtual cameras",
+      "why": "Shows how real movie makers think about color, light and camera.",
+      "url": "https://www.khanacademy.org/computing/pixar",
+      "verify": false
+    },
+    {
+      "channel": "Code.org",
+      "title": "How AI Works — making pictures",
+      "why": "Kid-friendly look at how picture AI learns.",
+      "url": "https://code.org/ai",
+      "search": "code.org how AI works generative AI",
+      "verify": true
+    },
+    {
+      "channel": "Canva Design School (YouTube)",
+      "title": "Design basics: biggest first, contrast, lining up",
+      "why": "Short and clear, made for beginners. The ideas work in Google Slides too.",
+      "search": "Canva Design School graphic design basics for beginners",
+      "verify": true
+    },
+    {
+      "channel": "Google — SynthID",
+      "title": "How AI pictures get a hidden label",
+      "why": "Explains the hidden mark Gemini adds. Helps with the honest-label lesson.",
+      "search": "Google SynthID explained AI watermark",
+      "verify": true
+    }
   ],
   "gamification": {
-    "questLine": "A fictional startup (chosen by each student) hires the Guild to build its visual identity: memes for buzz, edited product shots, a logo, marketing graphics and study aids for its customers.",
-    "badge": "🎨 Pixel Forger — awarded for a complete Brand Kit that scores 3+ on every rubric row.",
-    "boss": "Brand Kit Showcase: logo + brand board + 1 social post + 1 poster + 1 study aid, all disclosed as AI-assisted, presented in a 60-second pitch.",
+    "questLine": "A made-up company (the student picks it) hires the Guild to design its whole look: memes, product pictures, a logo, ads and study helpers for its buyers.",
+    "badge": "🎨 Pixel Forger: a finished Brand Kit that scores 3 or more on every rubric row.",
+    "boss": "Brand Kit Showcase: logo + brand board + 1 social post + 1 poster + 1 study helper, all labeled as AI-made, then a 60-second pitch. 1-on-1: pitch to the teacher plus a guest.",
     "sideQuests": [
-      "Style Remix: recreate one of your images in 5 different art styles and name each one correctly (+25 XP).",
-      "Hands & Text Hunt: find 3 typical AI image glitches (extra fingers, garbled text, impossible shadows) in your own outputs and fix them (+25 XP).",
-      "Make a 'How AI images work' comic strip for younger students (+25 XP).",
-      "Manual vs. AI: do the same edit by hand in Photopea and with AI; write which was better and why (+25 XP)."
+      "Style Remix: make one picture in 5 art styles and name each one (+25 XP).",
+      "Glitch Fixer: find 3 AI glitches in your own pictures (extra fingers, mixed-up letters, odd shadows) and fix them with follow-up asks (+25 XP).",
+      "Make a comic for younger kids: 'How picture AI works' (+25 XP).",
+      "Real vs. AI: take a real photo of a toy and make the same shot in Gemini. Which is better, and why? (+25 XP)."
     ]
   },
   "safety": [
-    { "topic": "Age rules", "teach": "Gemini (school) is the default; under-18 Gemini accounts can't edit uploads, so photo editing uses Canva/Adobe Express for Education. Higgsfield is 18+ → teacher demo only; ChatGPT Images 13+ with permission." },
-    { "topic": "Consent & deepfakes", "teach": "Photo edits only on objects, stock/public-domain images, or AI-generated characters. Never classmates, teachers or celebrities. Discuss: how could an edited photo hurt someone?" },
-    { "topic": "Copyright & brands", "teach": "No real brand logos, celebrities or copyrighted characters in prompts ('in the style of [living artist]' is also off-limits — describe the style instead). Our brands are fictional and original." },
-    { "topic": "Honest disclosure", "teach": "Every image gets a #MadeWithAI or 'AI-edited' label. Marketing must not show fake product results or fake reviews." },
-    { "topic": "Fact-checking", "teach": "AI diagrams and flashcards can contain wrong labels or garbled text. Every study aid is checked against a textbook before it's shared." },
-    { "topic": "Kind memes", "teach": "Memes punch at situations, not people. No memes about classmates, groups or real people." }
+    {
+      "topic": "Age rules",
+      "teach": "Gemini on the school account is the main tool. Under-18 accounts can't edit uploaded photos, so real-photo edits happen on the teacher's account with the student giving directions."
+    },
+    {
+      "topic": "Asking first & deepfakes",
+      "teach": "Edit only objects, free public pictures or AI-made characters. Never classmates, teachers or famous people. Talk about it: how could an edited photo hurt someone?"
+    },
+    {
+      "topic": "Copying & brands",
+      "teach": "No real brand logos, famous people or other people's characters in prompts. No 'in the style of [a living artist]'. Describe the look instead. Our brands are made up and our own."
+    },
+    {
+      "topic": "Honest labels",
+      "teach": "Every picture gets a #MadeWithAI or 'AI-edited' label. Ads must not show fake results or fake reviews."
+    },
+    {
+      "topic": "Checking facts",
+      "teach": "AI diagrams and flashcards can have wrong labels or mixed-up letters. Check every study helper against a textbook before sharing it."
+    },
+    {
+      "topic": "Kind memes",
+      "teach": "Memes joke about moments, not people. No memes about classmates, groups or real people."
+    }
   ],
   "finalProject": {
-    "title": "Brand Kit for a Fictional Startup",
-    "brief": "Each student invents a startup (e.g. eco water bottles, a dog-walking app, a bakery for robots). Using AI image tools and Canva, they produce a complete Brand Kit and pitch it to the class in 60 seconds. The brand carries forward into the Video and Website modules.",
+    "title": "Brand Kit for a Made-Up Company",
+    "brief": "Each student makes up a company (like water bottles that help the Earth, a dog-walking app, or a bakery for robots). Using Gemini (and Google Slides or Canva for layout), they make a whole Brand Kit and pitch it in 60 seconds. In a group, they pitch to the class. 1-on-1, they pitch to the teacher and a guest. The brand comes back in the Video and Website modules.",
     "deliverables": [
-      "Brand Brief (name, audience, 3 personality words, mission sentence)",
-      "Logo (combination mark) + icon-only version, tested at small size",
-      "Brand board: 3–5 colors with hex codes, 2 fonts, logo, mood images",
-      "1 social media post (1:1 or 9:16) with headline and CTA",
-      "1 poster or ad (visual hierarchy + CTA)",
-      "1 study aid for customers (how-to diagram or flashcard set) that is fact-checked",
-      "Prompt Log with at least 3 iterations per asset and disclosure labels"
+      "Brand Brief (name, buyers, 3 personality words, mission sentence)",
+      "Logo (icon + name) and an icon-only version, tested at a tiny size",
+      "Brand board: 3 to 5 colors with codes, 2 fonts, logo, mood pictures",
+      "1 social post (1:1 or 9:16) with a title and a call to action",
+      "1 poster or ad (biggest first + call to action)",
+      "1 study helper for buyers (a how-to diagram or flashcards), fact-checked",
+      "Prompt Log with 3 or more tries for each piece, and AI labels"
     ],
     "rubric": [
-      { "criterion": "Design thinking", "levels": ["Assets don't match each other or the audience", "Some consistency in colors/fonts", "Consistent brand that fits the audience and personality words", "Every choice (color, font, style) is explained with design vocabulary"] },
-      { "criterion": "Prompt craft & iteration", "levels": ["Single vague prompts", "Some formula parts, few iterations", "Image Prompt Formula used; 3+ logged iterations per asset", "Advanced control: reference images, shot types, aspect ratios, targeted edits"] },
-      { "criterion": "Marketing & communication", "levels": ["No clear message or CTA", "Message present but cluttered", "Clear hierarchy, readable text, strong CTA", "Persuasive and honest; tested with a classmate and improved"] },
-      { "criterion": "Ethics & accuracy", "levels": ["Uses real brands/people or no disclosure", "Disclosure on some assets", "All assets original, disclosed, study aid fact-checked", "Explains how they avoided bias, copyright and misleading claims"] }
+      {
+        "criterion": "Design thinking",
+        "levels": [
+          "Pieces don't match each other or the buyers",
+          "Some colors and fonts match",
+          "Everything matches and fits the buyers and personality words",
+          "Every choice (color, font, style) is explained with design words"
+        ]
+      },
+      {
+        "criterion": "Prompts & trying again",
+        "levels": [
+          "One short prompt per picture",
+          "Some formula parts, few tries",
+          "Image Prompt Formula used, 3 or more tries per piece written down",
+          "Strong control: camera shots, shapes, follow-up edits, same character every time"
+        ]
+      },
+      {
+        "criterion": "Ads & message",
+        "levels": [
+          "No clear message or call to action",
+          "A message, but crowded",
+          "Biggest first, easy-to-read words, strong call to action",
+          "Honest and convincing, tested on someone and made better"
+        ]
+      },
+      {
+        "criterion": "Fair & true",
+        "levels": [
+          "Uses real brands or people, or no AI label",
+          "AI labels on some pieces",
+          "All pieces are your own and labeled, study helper fact-checked",
+          "Explains how you avoided unfair patterns, copying and tricky claims"
+        ]
+      }
     ],
-    "levelUp": "Create a consistent mascot character for the brand and place it in 3 different scenes (consistency challenge), plus an animated sticker or GIF version to bridge into the Video module."
+    "levelUp": "Make a mascot for the brand that looks the same in 3 scenes, plus a moving sticker of it. That leads into the Video module!"
   },
   "differentiation": {
     "support": [
-      "Image Prompt Formula fill-in card with word banks (styles, shots, lighting).",
-      "Brand Brief template with example answers; choose from 6 starter startup ideas.",
-      "Canva templates pre-selected and shared with the class.",
-      "Pair-programming style roles: Prompter and Art Director, swapping each asset.",
-      "Reduce the kit to logo + 1 post + 1 study aid if needed (still eligible for the badge at 'Proficient')."
+      "Image Prompt Formula fill-in card with word lists (styles, camera shots, light).",
+      "Brand Brief with example answers. Pick from 6 starter company ideas.",
+      "Starter pages ready in Google Slides or Canva.",
+      "Group: Prompter and Art Director roles, swapping for each piece. 1-on-1: the student is the Art Director and you are the Prompter for one piece, then swap.",
+      "A smaller kit is OK: logo + 1 post + 1 study helper (can still earn the badge at level 3)."
     ],
     "extension": [
-      "Use reference images and describe a consistent mascot across scenes.",
-      "Write a mini brand style guide (do's and don'ts).",
-      "Compare two generators for the same prompt and write a tool review with evidence.",
-      "Explore color theory: complementary vs. analogous palettes; test contrast for accessibility (WCAG contrast checker)."
+      "Keep a mascot the same in many scenes using a character sheet and follow-up asks.",
+      "Write a mini brand rule book (do's and don'ts).",
+      "Make the same picture 3 times in Gemini with tiny prompt changes. Write what each word did.",
+      "Color play: test color pairs and check if words are easy to read with a free contrast checker."
     ]
   },
-  "carryForward": "The startup and Brand Kit become the client for Module 2 (launch video) and Module 3 (landing page + store)."
+  "carryForward": "The company and Brand Kit become the client for Module 2 (launch video) and Module 3 (website + store)."
 }

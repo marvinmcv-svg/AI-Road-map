@@ -114,6 +114,7 @@ export interface ModuleData {
 export interface Segment {
   name: string;
   minutes: number;
+  solo: number; // minutes when teaching 1-on-1
   principle: string;
 }
 

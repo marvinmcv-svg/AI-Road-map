@@ -1,5 +1,7 @@
 // Checks every lesson file: valid frontmatter, segments sum to 90 minutes,
 // all six standard segments present, and required sections in the body.
+// Every segment also has 1-on-1 minutes (`solo`, summing to 60) and the body has
+// ```solo blocks so the lesson works with a single student.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
@@ -34,6 +36,7 @@ for (const mod of readdirSync(root)) {
     for (const k of ['module', 'number', 'title', 'mission', 'xp']) if (meta[k] == null) fail(join(sdir, f), `missing ${k}`);
     for (const h of ['## 🔥 Warm-up', '## 🎟️ Exit ticket', '## 🛡️ Stay safe', '- [ ]']) if (!sm[2].includes(h)) fail(join(sdir, f), `missing "${h}"`);
     if (/```(teacher|prompt)/.test(sm[2])) fail(join(sdir, f), 'teacher-only block in student file');
+    if (!sm[2].includes('```solo')) fail(join(sdir, f), 'no ```solo block (1-on-1 version of the challenge)');
   }
   for (const f of files) {
     const path = join(dir, f);
@@ -51,6 +54,11 @@ for (const mod of readdirSync(root)) {
     const names = (meta.segments || []).map((s) => s.name);
     for (const s of SEGMENTS) if (!names.includes(s)) fail(path, `missing segment ${s}`);
     for (const s of meta.segments || []) if (!s.principle) fail(path, `segment ${s.name} has no principle`);
+    for (const s of meta.segments || []) if (typeof s.solo !== 'number') fail(path, `segment ${s.name} has no solo (1-on-1) minutes`);
+    const soloTotal = (meta.segments || []).reduce((a, x) => a + (x.solo || 0), 0);
+    if (soloTotal !== 60) fail(path, `1-on-1 (solo) minutes sum to ${soloTotal}, expected 60`);
+    const soloBlocks = (mm[2].match(/```solo/g) || []).length;
+    if (soloBlocks < 4) fail(path, `only ${soloBlocks} \`\`\`solo blocks — each group activity needs a 1-on-1 swap`);
     const mini = (meta.segments || []).find((s) => s.name === 'Mini-lesson');
     if (mini && mini.minutes > 15) fail(path, 'mini-lesson longer than 15 min');
     for (const s of SECTIONS) if (!mm[2].includes(s)) fail(path, `missing section "${s}"`);
@@ -59,4 +67,4 @@ for (const mod of readdirSync(root)) {
   }
 }
 if (errors) { console.error(`\n${errors} content problem(s).`); process.exit(1); }
-console.log(`✓ ${count} lessons OK (all 90 min, all sections present, student missions present).`);
+console.log(`✓ ${count} lessons OK (90 min group / 60 min 1-on-1, all sections present, student missions present).`);

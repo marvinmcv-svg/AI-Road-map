@@ -265,6 +265,16 @@ button.link { background: none; border: 0; color: var(--blue); font: inherit; fo
 .copy-btn { font: inherit; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; background: var(--brand); color: #fff; border: 0; border-radius: 10px; padding: 0.35em 0.9em; box-shadow: 0 3px 0 var(--brand-shade); cursor: pointer; }
 .copy-btn:active { transform: translateY(3px); box-shadow: none; }
 .prompt-card pre { margin: 0; padding: 0.9rem; white-space: pre-wrap; background: #fff; font-family: inherit; font-size: 0.95rem; color: var(--ink-strong); }
+.solo-card, .group-card { border-radius: 14px; padding: 0.7rem 1rem; margin: 0.9rem 0; }
+.solo-card { background: #f1ecff; border: 2px solid #b9a6ff; }
+.group-card { background: #e8f6ff; border: 2px solid #9fd8ff; }
+.solo-card > strong, .group-card > strong { display: inline-block; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.solo-card p:last-child, .group-card p:last-child { margin-bottom: 0; }
+.mode-group .solo-card, .mode-solo .group-card { display: none; }
+.mode-switch { display: inline-flex; background: #eef0f6; border-radius: 999px; padding: 4px; gap: 4px; }
+.mode-switch button { border: 0; background: transparent; padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-weight: 800; cursor: pointer; color: #475569; }
+.mode-switch button.on { background: #fff; color: #1e1b4b; box-shadow: 0 2px 0 #d5d9e6; }
+@media print { .mode-group .solo-card, .mode-solo .group-card { display: none; } }
 .teacher-say { background: #e9fbe0; border: 2px solid #a5ed6e; padding: 0.7rem 1rem; border-radius: 14px; margin: 0.9rem 0; font-weight: 600; }
 .md pre { background: #f7f7f7; padding: 0.8rem; border-radius: 12px; overflow-x: auto; }
 .pager { display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem; }
@@ -399,3 +409,4 @@ code { background: #f3edff; color: var(--brand-shade); padding: 0.1em 0.4em; bor
 .kit-row:last-child { border-bottom: 0; }
 .kit-row b { color: var(--ink-strong); }
 @media (max-width: 800px) { .house-pick { grid-template-columns: 1fr 1fr; } }
+.card > .mode-switch { display: flex; flex-wrap: wrap; margin: 0.4rem 0 1rem; }

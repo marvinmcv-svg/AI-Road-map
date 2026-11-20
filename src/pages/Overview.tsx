@@ -66,7 +66,7 @@ export default function Overview() {
         </tbody>
       </table>
 
-      <h2>Every 90-minute lesson follows the same rhythm</h2>
+      <h2>Every lesson follows the same rhythm (60 min 1-on-1 · 90 min group)</h2>
       <table>
         <thead>
           <tr>

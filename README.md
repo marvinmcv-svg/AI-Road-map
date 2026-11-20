@@ -1,8 +1,16 @@
 # AI Creators — Teacher Portal
 
 A teacher-only, installable web app (PWA) with the full **AI Creators** curriculum for ages 11–14:
-a school year of 90-minute lessons, 2 per week, across 6 modules (Images → Video → Websites →
+a school year of lessons, 2 per week, across 6 modules (Images → Video → Websites →
 Agents → Mobile Apps → Games), plus a Launch module and Demo Day.
+
+- **1-on-1 or group.** Every lesson has a 👤 1-on-1 / 👥 Group switch. 1-on-1 lessons run 60 minutes
+  and swap every group activity (houses, gallery walks, duels) for a student-vs-teacher version.
+  Group lessons run 90 minutes. The student site has the same switch on "My Guild card".
+- **Easy words.** Lessons, teacher scripts, missions and word cards are written at about a
+  4th-grade reading level. `npm run lint:content` checks it.
+- **Gemini first.** Gemini (school Google account) is the main tool for chat and pictures.
+  Google Slides (or Canva for Education) is only used to lay pictures out.
 
 Every lesson has a timed plan (warm-up, mini-lesson, build, challenge, share-out, exit ticket),
 the learning-science principle behind each segment, a teacher script, visuals with ready-to-copy
@@ -57,6 +65,11 @@ are needed. After the first visit it works offline and can be installed ("Instal
 `prep`, `segments` with `minutes` + `principle`). In the body:
 - ```` ```prompt ```` blocks render as copyable image-prompt cards
 - ```` ```teacher ```` blocks render as "Say:" teacher-script boxes
+- ```` ```solo ```` blocks show only in 1-on-1 mode; ```` ```group ```` blocks show only in group mode
+- Each segment has `minutes` (group) and `solo` (1-on-1) — group adds up to 90, 1-on-1 to 60
+
+`npm run lint:content` also runs `scripts/reading-level.mjs`, which fails if a lesson or mission
+reads above grade 5 or uses long words that aren't on the list of taught course words.
 
 `npm run lint:content` checks every lesson adds up to 90 minutes and has all required sections
 (it also runs on `npm run build`).

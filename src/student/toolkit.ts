@@ -6,11 +6,11 @@ export const TOOLKIT = [
     color: '#7c5cff',
     shade: '#5a3fd6',
     rows: [
-      ['🎭 Role', 'Who should the AI act as?'],
-      ['🎯 Task', 'What exactly should it do?'],
-      ['🔍 Details', 'What must it include or avoid?'],
-      ['🖌️ Style', 'How should it sound or look?'],
-      ['📐 Format', 'What shape is the answer?']
+      ['🎭 Role', 'Who should the AI act like?'],
+      ['🎯 Task', 'What should it do?'],
+      ['🔍 Details', 'What must it have? What should it skip?'],
+      ['🖌️ Style', 'How should it sound?'],
+      ['📐 Format', 'What shape is the answer? (list, table, poem)']
     ]
   },
   {
@@ -19,12 +19,12 @@ export const TOOLKIT = [
     color: '#ff5fa2',
     shade: '#d63f80',
     rows: [
-      ['⭐ Subject', 'Who/what? Doing what?'],
-      ['📍 Setting', 'Where and when?'],
+      ['⭐ Subject', 'Who or what? Doing what?'],
+      ['📍 Setting', 'Where? When?'],
       ['🎨 Style', 'pixel art, watercolor, 3D clay…'],
-      ['📷 Composition', 'close-up, wide shot, bird’s-eye…'],
-      ['☀️ Lighting', 'golden hour, neon, pastel…'],
-      ['📐 Format', '1:1 · 9:16 · 16:9 · 4:5']
+      ['📷 Camera', 'close-up, far away, from above…'],
+      ['☀️ Light & color', 'golden sunset, neon, pastel…'],
+      ['📐 Shape', 'square 1:1 · tall 9:16 · wide 16:9']
     ]
   },
   {
@@ -33,11 +33,11 @@ export const TOOLKIT = [
     color: '#1cb0f6',
     shade: '#1189c2',
     rows: [
-      ['🎂 Age rules', 'Only use tools your teacher says are OK for you.'],
-      ['🤝 Consent', 'Never use photos of other people without permission — never classmates.'],
-      ['🔒 Privacy', 'No full names, addresses, school, passwords or keys in AI.'],
+      ['🎂 Age rules', 'Only use the tools your teacher says are OK.'],
+      ['🤝 Ask first', 'Never use photos of other people without a yes. Never classmates.'],
+      ['🔒 Privacy', 'No full names, addresses, school name or passwords in AI.'],
       ['🏷️ Honesty', 'Say when you used AI: #MadeWithAI.'],
-      ['©️ Originals', 'No real brands, celebrities or copied characters.']
+      ['©️ Your own work', 'No real brands, famous people or copied characters.']
     ]
   },
   {
@@ -46,10 +46,10 @@ export const TOOLKIT = [
     color: '#14c38e',
     shade: '#0e9a6f',
     rows: [
-      ['🌀 Hallucination', 'Sounds sure, but false → check 2 trusted sources.'],
-      ['⚖️ Bias', 'Unfair patterns → notice it, ask for variety, speak up.'],
-      ['📅 Out of date', 'Old info → check the date of your source.'],
-      ['✋ Image glitches', 'Extra fingers, melted text, wrong shadows → fix or regenerate.']
+      ['🌀 Hallucination', 'Sounds sure, but it is false → check 2 trusted places.'],
+      ['⚖️ Bias', 'An unfair pattern → notice it, ask for more kinds, speak up.'],
+      ['📅 Out of date', 'Old news → check the date on your source.'],
+      ['✋ Picture glitches', 'Extra fingers, melted letters, wrong shadows → ask for a fix or try again.']
     ]
   },
   {
@@ -58,8 +58,8 @@ export const TOOLKIT = [
     color: '#ffb800',
     shade: '#d69a00',
     rows: [
-      ['👍 I like…', 'Something specific that works.'],
-      ['🤔 I wonder…', 'A question about a choice.'],
+      ['👍 I like…', 'One thing that really works.'],
+      ['🤔 I wonder…', 'A question about a choice they made.'],
       ['💡 Try…', 'One idea to make it better.']
     ]
   }

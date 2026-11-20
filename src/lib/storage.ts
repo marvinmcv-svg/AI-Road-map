@@ -21,5 +21,9 @@ export const KEYS = {
   session: 'aic.session',
   progress: 'aic.progress',
   tracker: 'aic.tracker',
-  notes: 'aic.notes'
+  notes: 'aic.notes',
+  mode: 'aic.mode'
 };
+
+// How the teacher is running lessons: 1-on-1 (default) or with a group.
+export type TeachMode = 'solo' | 'group';

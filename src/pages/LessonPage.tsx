@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getModule, lessons } from '../lib/content';
 import { useProgress } from '../lib/progress';
-import { KEYS, useStored } from '../lib/storage';
+import { KEYS, useStored, type TeachMode } from '../lib/storage';
 import { Markdown } from '../components/Markdown';
 import { Bolt } from '../components/Mascot';
 import { SEGMENT_STYLE, themeFor } from '../lib/theme';
@@ -46,12 +46,16 @@ export default function LessonPage() {
   const [notes, setNotes] = useStored<Record<string, string>>(KEYS.notes, {});
   const [present, setPresent] = useState(false);
   const [party, setParty] = useState(false);
+  const [mode, setMode] = useStored<TeachMode>(KEYS.mode, 'solo');
 
   if (!lesson || !m) return <p>Lesson not found.</p>;
   const prev = lessons[idx - 1];
   const next = lessons[idx + 1];
   const t = themeFor(m.number);
   const taught = isTaught(lesson.id);
+  const solo = mode === 'solo';
+  const mins = (x: { minutes: number; solo: number }) => (solo ? x.solo : x.minutes);
+  const total = lesson.segments.reduce((a, x) => a + mins(x), 0);
   let clock = 0;
 
   const markTaught = () => {
@@ -60,7 +64,7 @@ export default function LessonPage() {
   };
 
   return (
-    <div className={`lesson narrow wide-ish ${present ? 'present' : ''}`}>
+    <div className={`lesson narrow wide-ish mode-${mode} ${present ? 'present' : ''}`}>
       {party && <Celebrate xp={lesson.xp} onClose={() => setParty(false)} nextTo={next ? `/m/${next.module}/l/${next.number}` : undefined} />}
 
       <div className="crumbs no-print">
@@ -75,7 +79,7 @@ export default function LessonPage() {
       <div className="unit-banner big lesson-banner" style={{ '--c': t.color, '--s': t.shade } as React.CSSProperties}>
         <div>
           <small>
-            LESSON {lesson.number} · COURSE LESSON {lesson.courseNumber}/70 · 90 MIN
+            LESSON {lesson.number} · COURSE LESSON {lesson.courseNumber}/70 · {total} MIN {solo ? '· 1-ON-1' : '· GROUP'}
           </small>
           <h1>{lesson.title}</h1>
           <p>{lesson.goal}</p>
@@ -84,6 +88,14 @@ export default function LessonPage() {
       </div>
 
       <div className="actions no-print">
+        <div className="mode-switch" role="group" aria-label="Teaching mode">
+          <button className={solo ? 'on' : ''} onClick={() => setMode('solo')}>
+            👤 1-on-1
+          </button>
+          <button className={!solo ? 'on' : ''} onClick={() => setMode('group')}>
+            👥 Group
+          </button>
+        </div>
         <button className={`btn ${taught ? 'gold' : 'primary'}`} onClick={markTaught}>
           {taught ? '✔ Taught' : '✓ Mark as taught'}
         </button>
@@ -105,19 +117,19 @@ export default function LessonPage() {
         {lesson.segments.map((s) => {
           const st = SEGMENT_STYLE[s.name] ?? { icon: '•', color: '#94a3b8', shade: '#64748b', n: 0 };
           const start = clock;
-          clock += s.minutes;
+          clock += mins(s);
           return (
             <button
               key={s.name}
               className="step"
-              style={{ '--c': st.color, '--s': st.shade, flexGrow: s.minutes } as React.CSSProperties}
+              style={{ '--c': st.color, '--s': st.shade, flexGrow: mins(s) } as React.CSSProperties}
               onClick={() => document.getElementById(`seg-${st.n}`)?.scrollIntoView({ behavior: 'smooth' })}
               title={s.principle}
             >
               <span className="step-icon">{st.icon}</span>
               <b>{s.name}</b>
               <small>
-                {s.minutes} min · {start}–{clock}′
+                {mins(s)} min · {start}–{clock}′
               </small>
             </button>
           );

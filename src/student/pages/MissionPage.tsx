@@ -4,7 +4,7 @@ import { getMission, getModule, missions } from '../content';
 import { themeFor } from '../../lib/theme';
 import { Markdown } from '../../components/Markdown';
 import { Bolt } from '../../components/Mascot';
-import { useChecks, useDone } from '../store';
+import { useChecks, useDone, useLearnMode } from '../store';
 
 export default function MissionPage() {
   const { moduleId = '', n = '1' } = useParams();
@@ -13,6 +13,7 @@ export default function MissionPage() {
   const [checks, setChecks] = useChecks();
   const [done, setDone] = useDone();
   const [party, setParty] = useState(false);
+  const [mode] = useLearnMode();
   const [total, setTotal] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const id = mission?.id ?? '';
@@ -48,7 +49,7 @@ export default function MissionPage() {
   const pct = total ? Math.round((ticked / total) * 100) : 0;
 
   return (
-    <div className="narrow wide-ish">
+    <div className={`narrow wide-ish mode-${mode}`}>
       {party && (
         <div className="celebrate" onClick={() => setParty(false)}>
           <div className="confetti" aria-hidden="true">
@@ -59,10 +60,10 @@ export default function MissionPage() {
           <div className="celebrate-card" onClick={(e) => e.stopPropagation()}>
             <Bolt size={120} mood="wow" />
             <h2>Mission complete!</h2>
-            <p>Show your teacher to claim up to <b>+{mission.xp} XP</b> for your house!</p>
+            <p>Show your teacher. You can win up to <b>+{mission.xp} XP</b>!</p>
             <div className="row center">
               <button className="btn ghost" onClick={() => setParty(false)}>
-                Keep looking
+                Stay here
               </button>
               {next && (
                 <Link className="btn primary" to={`/m/${next.module}/l/${next.number}`} onClick={() => setParty(false)}>

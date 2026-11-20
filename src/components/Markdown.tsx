@@ -6,6 +6,8 @@ const escape = (s: string) =>
 
 // ```prompt fences become copyable "image prompt" cards.
 // ```teacher fences become highlighted teacher-script boxes.
+// ```solo fences become "1-on-1" cards (shown when the lesson is in 1-on-1 mode).
+const inner = new Marked({ gfm: true });
 const md = new Marked({
   gfm: true,
   renderer: {
@@ -25,6 +27,12 @@ const md = new Marked({
         return `<div class="prompt-card try"><div class="prompt-head"><span>✨ Try this prompt</span><button type="button" class="copy-btn" data-copy="${escape(
           text
         )}">Copy</button></div><pre>${escape(text)}</pre></div>`;
+      }
+      if (lang === 'solo') {
+        return `<div class="solo-card"><strong>👤 1-on-1</strong>${inner.parse(text) as string}</div>`;
+      }
+      if (lang === 'group') {
+        return `<div class="group-card"><strong>👥 Group</strong>${inner.parse(text) as string}</div>`;
       }
       if (lang === 'teacher') {
         return `<div class="teacher-say"><strong>🗣️ Say:</strong> ${escape(text)}</div>`;

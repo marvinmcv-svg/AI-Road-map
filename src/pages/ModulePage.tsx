@@ -54,7 +54,7 @@ export default function ModulePage() {
       <div className="unit-banner big" style={banner}>
         <div>
           <small>
-            MODULE {m.number} · WEEKS {m.weeks} · {ls.length} LESSONS × 90 MIN
+            MODULE {m.number} · WEEKS {m.weeks} · {ls.length} LESSONS · 60 MIN 1-ON-1 / 90 MIN GROUP
           </small>
           <h1>{m.title}</h1>
           <p>{m.subtitle}</p>
