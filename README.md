@@ -32,7 +32,8 @@ image prompts, safety/ethics moments, differentiation and XP.
 - ✅ Module 2 — AI Video (9 lessons, Gemini with Veo + Google Vids)
 - ✅ Module 3 — Websites & E-commerce (11 lessons, Claude artifacts + Claude Code + Vercel + a test-mode checkout)
 - ✅ Module 4 — AI Agents & Workflows (10 lessons, Claude Projects + Apps Script + the Claude API)
-- ⏳ Modules 5–6 + Demo Day — written one module at a time (say "next")
+- ✅ Module 5 — Mobile Apps (12 lessons, Claude Code + Vercel + Supabase + the Claude API)
+- ⏳ Module 6 + Demo Day — written one module at a time (say "next")
 
 ## Run it locally
 ```bash

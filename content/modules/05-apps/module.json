@@ -1,0 +1,105 @@
+{
+  "id": "05-apps",
+  "number": 5,
+  "title": "Mobile Apps",
+  "subtitle": "Build your own app with Claude: plan it, design it for thumbs, build it with Claude Code as an installable web app, save data in the cloud with login, add a Claude-powered AI feature, make it safe, and launch it on real phones.",
+  "weeks": "22–28",
+  "bigIdea": "An app is a tool that helps someone DO something, again and again. Great apps start with one real problem, a small plan and a design for thumbs. Claude Code can write the code, but you are the product owner: you decide what to build, test it, protect your users' data and listen to real people.",
+  "objectives": [
+    "Turn a real problem into an app idea with user stories, screens and user flows.",
+    "Design screens for thumbs with a mini style guide, tested on paper and as a Claude prototype.",
+    "Build an installable web app with Claude Code, deploy it on Vercel and add it to a phone's home screen.",
+    "Save data on the device, then in the cloud with login (Supabase), so each user only sees their own data.",
+    "Add an AI feature with the Claude API through a server function, with the key kept secret and limits in place.",
+    "Test and debug, polish the app states, make it private, safe and accessible, and improve it with a beta test."
+  ],
+  "vocabulary": [
+    { "term": "App", "definition": "A tool on a phone or computer that helps you DO something (track, plan, learn, play).", "analogy": "A pocket knife for one job.", "example": "A water tracker with a streak." },
+    { "term": "Installable web app (PWA)", "definition": "A web app with a name and icon that you can add to your home screen, so it opens like a real app.", "analogy": "A website wearing an app costume.", "example": "Open the link → Add to Home Screen." },
+    { "term": "User story", "definition": "One thing a user needs: 'As a ___, I want to ___, so that ___.'", "analogy": "An order ticket in a restaurant kitchen.", "example": "'As a student, I want to log water in one tap, so that it's not a chore.'" },
+    { "term": "User flow", "definition": "The path a user takes through the screens to get something done.", "analogy": "Directions from your door to the store.", "example": "Home → + → Add → Save → Home." },
+    { "term": "Prototype", "definition": "A quick, rough version to try an idea.", "analogy": "A cardboard model of a house.", "example": "Paper screens or a Claude artifact." },
+    { "term": "Thumb zone", "definition": "The part of the screen your thumb reaches easily.", "analogy": "The shelf at eye level in a store.", "example": "The main button at the bottom." },
+    { "term": "Data model", "definition": "A plan of what your app saves, like the columns of a table.", "analogy": "The labels on a filing cabinet.", "example": "date · glasses · note" },
+    { "term": "CRUD", "definition": "Create, Read, Update, Delete: the 4 things apps do with data.", "analogy": "Add, look, change, throw away.", "example": "Add an expense, see the list, fix one, delete one." },
+    { "term": "Database", "definition": "A place that stores tables of data in the cloud.", "analogy": "A very strong, shared spreadsheet.", "example": "Supabase holds every user's entries." },
+    { "term": "Row Level Security (RLS)", "definition": "A database rule so each person can only see and change their own rows.", "analogy": "Lockers: everyone has one, only you have your key.", "example": "User B can't see User A's diary." },
+    { "term": "Server function", "definition": "A small piece of code that runs on a server (like Vercel), not on the phone, so it can keep secrets.", "analogy": "The back room of a store where the safe is.", "example": "The function that calls Claude with the hidden key." },
+    { "term": "Environment variable", "definition": "A secret setting stored on the server, not in the code.", "analogy": "A note in a locked drawer.", "example": "ANTHROPIC_API_KEY in Vercel settings." },
+    { "term": "Debugging", "definition": "Finding out why something is wrong and fixing it.", "analogy": "Being a detective for your own app.", "example": "Repeat it → look at the error → report → fix." },
+    { "term": "Commit", "definition": "A saved version of your code that you can go back to.", "analogy": "A save point in a video game.", "example": "'Undo the last change and go back to how it was.'" },
+    { "term": "App states", "definition": "What the app shows while loading, when empty, on error, on success and the first time.", "analogy": "A good waiter who tells you what's happening with your order.", "example": "'No entries yet. Tap + to add your first one!'" },
+    { "term": "Beta test", "definition": "Letting a few real people use your app before everyone else.", "analogy": "A sneak preview of a movie.", "example": "3 friends use it for 3 days and fill in a survey." }
+  ],
+  "tools": [
+    { "name": "Claude Code", "bestFor": "MAIN BUILDER for this module: builds and changes every file of the app, connects the database and the AI feature, fixes bugs", "freeTier": "Needs a paid Claude plan (Pro or higher). Works on the web (claude.ai/code) and in the Claude desktop app.", "minAge": "18+. College students: use your own account.", "ageTag": "18+", "classroomUse": "From lesson 4 on: build, save data, login, AI feature, polish, fixes.", "alternative": "Claude artifacts for quick prototypes", "url": "https://claude.ai/code" },
+    { "name": "Claude (chat + artifacts)", "bestFor": "Clickable prototypes, checking plans, writing messages and privacy notes, sorting feedback", "freeTier": "Free plan works; paid plans give more use", "minAge": "18+", "ageTag": "18+", "classroomUse": "Lessons 1 to 3 for prototypes; every lesson for checks and writing.", "alternative": "Paper prototypes", "url": "https://claude.ai" },
+    { "name": "GitHub + Vercel", "bestFor": "Storing the app's code with every saved version (GitHub), putting it online with a real link and server functions (Vercel)", "freeTier": "Both free for personal projects", "minAge": "GitHub 13+, Vercel 18+ for the account owner", "ageTag": "18+", "classroomUse": "Set up in lesson 4; every change deploys by itself.", "alternative": "Netlify", "url": "https://vercel.com" },
+    { "name": "Supabase", "bestFor": "Cloud database and login, with Row Level Security so each user only sees their own data", "freeTier": "Free plan for small projects (free projects can pause if unused for a while; you can restart them)", "minAge": "18+ for the account owner", "ageTag": "18+", "classroomUse": "Lesson 7 on: login, cloud saving, delete my data.", "alternative": "Device-only saving (local storage) for a simpler app", "url": "https://supabase.com" },
+    { "name": "Claude API (Claude Console)", "bestFor": "The app's AI feature (tutor, coach, summaries, suggestions) through a server function", "freeTier": "Pay as you go with prepaid credits; set a monthly spending limit. Claude Haiku 5.5 is very cheap; Claude Opus 5.5 gives the best answers.", "minAge": "18+", "ageTag": "18+", "classroomUse": "Lesson 8: key only in Vercel environment variables, login check, daily limit per user.", "alternative": "An app without AI (still a great Boss project)", "url": "https://platform.claude.com" },
+    { "name": "Gemini (pictures)", "bestFor": "The app icon and any pictures in your style", "freeTier": "Free plan with daily limits", "minAge": "13+ (some features 18+)", "ageTag": "18+", "classroomUse": "Lesson 3: app icon.", "alternative": "A simple emoji or letter icon", "url": "https://gemini.google.com" }
+  ],
+  "toolsVerified": "November 2026 (Claude models, Claude Code access and API billing checked). Set up for college students (18+), so all tools are open. Claude is the main builder for this module.",
+  "resources": [
+    { "channel": "Claude Code docs", "title": "Claude Code on the web", "why": "How to connect GitHub and let Claude Code build and save changes to a repo.", "search": "Claude Code on the web docs", "verify": true },
+    { "channel": "MDN Web Docs", "title": "Progressive web apps (PWAs)", "why": "What makes a web app installable: manifest, icons, offline.", "search": "MDN progressive web apps guide", "verify": true },
+    { "channel": "Supabase docs", "title": "Auth and Row Level Security", "why": "How login works and how to write 'only your own rows' rules.", "search": "Supabase row level security docs", "verify": true },
+    { "channel": "Vercel docs", "title": "Functions and environment variables", "why": "How server functions run and where secret keys go.", "search": "Vercel functions environment variables docs", "verify": true },
+    { "channel": "Claude Platform docs", "title": "Models and pricing", "why": "Which Claude model to pick for the AI feature, and what it costs.", "search": "Claude models overview pricing docs", "verify": true },
+    { "channel": "Nielsen Norman Group", "title": "Mobile UX and usability testing", "why": "Short, trusted guides to designing and testing apps with real people.", "search": "Nielsen Norman Group mobile UX usability testing", "verify": true }
+  ],
+  "gamification": {
+    "questLine": "You've built a brand, a store and robot helpers. Now build something just for YOU: your own app, on your own home screen, with your own AI helper.",
+    "badge": "📱 App Engineer: a working, installable app that scores 3 or more on every rubric row.",
+    "boss": "App Launch Showcase: a live demo from the home screen (login, saving data, the AI feature, trust features and what beta testers changed). 1-on-1: launch for the teacher plus a guest.",
+    "sideQuests": [
+      "Offline mode: make the app work without internet and sync later (+25 XP).",
+      "Data export: let users download all their data as a file (+25 XP).",
+      "Read the code: pick 10 lines Claude Code wrote and explain each one in plain words (+25 XP).",
+      "Second user: get someone outside class to use the app for a week and report back (+25 XP)."
+    ]
+  },
+  "safety": [
+    { "topic": "Personal data", "teach": "Personal apps hold health, money and feelings. Collect only what's needed, add a 'delete my account and data' option, and write a short, true privacy note." },
+    { "topic": "Keys and secrets", "teach": "The Claude API key lives only in Vercel environment variables, used by a server function. The Supabase secret key never goes in the app or repo. Search the repo for keys before every deploy." },
+    { "topic": "Private by default", "teach": "Turn on Row Level Security for every table and run the 'peek test' with two accounts." },
+    { "topic": "Safe AI features", "teach": "Login check, daily limit, max message length, a clear system prompt, and a Claude Console spending limit. No medical, legal or money advice; point people to trusted people or a professional when they seem in trouble." },
+    { "topic": "Testers are real people", "teach": "Beta testers' data is real: look only at counts and survey answers, and delete test accounts they don't want." },
+    { "topic": "Works for everyone", "teach": "Screen reader names on every button, support for large text, good contrast and big tap targets." }
+  ],
+  "finalProject": {
+    "title": "Your Own App",
+    "brief": "Pick a real problem in your own life and build an app for it: a tracker, a diary, an AI tutor, a scheduler or your own idea. Plan it, design it for thumbs, build it with Claude Code as an installable web app, save data in the cloud with login, add a safe Claude-powered AI feature, polish it, make it trustworthy, run a beta test and ship version 2. Demo it live from the home screen. In a group, demo to the class. 1-on-1, demo to the teacher and a guest.",
+    "deliverables": [
+      "Problem → App sheet, user stories, screens and user flows",
+      "Style guide, app icon and clickable design",
+      "Live app on Vercel that installs on a phone, with its GitHub repo",
+      "Cloud saving with login and Row Level Security (peek test passed)",
+      "AI feature through a server function, with limits and a safe system prompt",
+      "Test checklist, bug reports, App Trust Checklist and privacy note",
+      "Beta test feedback, impact vs. effort choices, version 2 and release notes"
+    ],
+    "rubric": [
+      { "criterion": "Problem & plan", "levels": ["No clear problem or user", "A problem, but too many features or missing screens", "Clear problem, 3 to 5 user stories, screens and flows; stories take 3 taps or fewer", "Plan tested on paper and with users, and the Later list shows smart choices"] },
+      { "criterion": "Build & data", "levels": ["Doesn't install or loses data", "Installs, but some stories or saving break", "Installs on a phone; CRUD works; cloud data with login and RLS; tests pass", "Solid, polished states; bugs fixed with clear reports; student explains how data flows"] },
+      { "criterion": "AI feature & safety", "levels": ["Key exposed or no safety", "AI works but limits or rules are missing", "Key only on the server, login check, daily limit, clear system prompt, spending limit", "AI really helps the user, holds against tricks, and handles people in trouble with care"] },
+      { "criterion": "Trust, access & testing", "levels": ["Collects too much, no delete or privacy note", "Some checklist items done", "Trust Checklist passes, works with a screen reader and big text, beta tested with 3+ people, version 2 shipped", "Explains what testing changed and how the app protects users, with honest limits"] }
+    ],
+    "levelUp": "Ship version 3 with an offline mode or data export, and get one real person outside class to use it for a week."
+  },
+  "differentiation": {
+    "support": [
+      "Ready-made build prompts with blanks for each lesson.",
+      "Start from one of the 4 Boss options with a sample problem statement.",
+      "A simpler app path: device-only saving (no login) and no AI feature can still reach level 3 on most rows.",
+      "Group: Product Owner and Tester roles, swapping each lesson. 1-on-1: the student builds, you test and play first-time user."
+    ],
+    "extension": [
+      "Offline mode with sync, or data export.",
+      "Tests that run by themselves for the data functions, written by Claude Code and explained by the student.",
+      "Stream AI answers word by word, or let the AI use the user's own notes as its facts.",
+      "A/B test two onboarding screens with beta testers."
+    ]
+  },
+  "carryForward": "The skills from this module (planning, Claude Code, testing, saving data, safe AI features) power the games students design and ship in Module 6."
+}
