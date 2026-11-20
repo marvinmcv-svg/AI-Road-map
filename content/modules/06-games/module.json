@@ -1,0 +1,103 @@
+{
+  "id": "06-games",
+  "number": 6,
+  "title": "Games",
+  "subtitle": "Design and ship your own game with Claude: learn what makes games fun, remix a classic game type with your own twist, then plan, build, art up, level, balance and launch an original game, with a leaderboard and a Claude-powered character.",
+  "weeks": "28–34",
+  "bigIdea": "Every game has a goal, rules, a challenge and feedback, wrapped around a small core loop you repeat. Fun comes from challenge that's just right, and from feedback that feels great. Claude can write the code, but you are the game designer: you find the fun, tune the numbers, watch real players, and make it fair, kind and your own.",
+  "objectives": [
+    "Explain what makes a game fun: goal, rules, challenge, feedback and the core loop.",
+    "Build small games with Claude and tune them by changing numbers and adding mechanics.",
+    "Remix a classic game type into an original game with a twist, using no copied names, characters or art.",
+    "Plan an original game on one page and build it with Claude Code, deployed on Vercel.",
+    "Add original art and sound, levels with a difficulty curve, and balance it with playtest numbers.",
+    "Add a fair leaderboard and a safe Claude-powered feature, then playtest, polish and launch a game that's accessible, fair and kind."
+  ],
+  "vocabulary": [
+    { "term": "Core loop", "definition": "The small set of actions you repeat again and again in a game.", "analogy": "The chorus of a song.", "example": "Run → jump → collect → repeat." },
+    { "term": "Mechanic", "definition": "One thing the player can do.", "analogy": "One move in a dance.", "example": "Jump, dash, match, build." },
+    { "term": "Game loop", "definition": "What a game repeats many times a second: check input, update, draw.", "analogy": "A flip book that flips itself 60 times a second.", "example": "Read keys → move the cat → draw the screen." },
+    { "term": "Collision", "definition": "When two things in a game touch.", "analogy": "Bumper cars bumping.", "example": "The basket touches a falling star: +1 point." },
+    { "term": "Game type (genre)", "definition": "A kind of game with familiar mechanics.", "analogy": "A recipe type, like 'soup', with many versions.", "example": "Endless runner, maze chase, grid puzzle." },
+    { "term": "Remix", "definition": "Making something new from a familiar idea, with your own twist, name and art.", "analogy": "A new song using a classic beat.", "example": "Paddle-and-ball, but you're a whale bouncing a bubble." },
+    { "term": "Game juice", "definition": "Extra feedback that makes actions feel great: sounds, sparkles, a tiny shake.", "analogy": "Sound effects in a cartoon.", "example": "A 'ding!' and sparkles when you collect a coin." },
+    { "term": "Game plan (design doc)", "definition": "One page that says what your game is and how it works.", "analogy": "A recipe card for your game.", "example": "Pitch, player, core loop, mechanics, win/lose, controls, look, scope." },
+    { "term": "Scope", "definition": "How big a project is. Keep it small enough to finish.", "analogy": "Choosing a pizza you can actually eat.", "example": "1 level type, 3 difficulty steps, no story mode." },
+    { "term": "Sprite", "definition": "A picture of one thing in the game.", "analogy": "A sticker you move around a page.", "example": "The player, a coin, a bug." },
+    { "term": "Difficulty curve", "definition": "How a game gets harder over time.", "analogy": "Training wheels coming off, bit by bit.", "example": "Level 1 teaches, level 2 practices, level 3 tests." },
+    { "term": "Flow zone", "definition": "When the challenge matches your skill, so it's fun, not boring or stressful.", "analogy": "A talk with a friend that's not too easy and not too hard.", "example": "You lose sometimes, but always want one more try." },
+    { "term": "Balance", "definition": "Making a game fair and fun: no part too easy, too hard or too random.", "analogy": "Making sure both teams have a fair chance.", "example": "Making a power-up last 5 seconds instead of 30." },
+    { "term": "Leaderboard", "definition": "A ranked list of the best scores from many players.", "analogy": "A hall of fame.", "example": "Top 10 nicknames and scores." },
+    { "term": "NPC", "definition": "A non-player character: someone in the game the computer controls.", "analogy": "An actor in a play who isn't you.", "example": "A gardener who gives tips between levels." },
+    { "term": "Playtest", "definition": "Watching people play your game to see what works.", "analogy": "A taste test before a bake sale.", "example": "3 new players, you watch silently and take notes." }
+  ],
+  "tools": [
+    { "name": "Claude (artifacts)", "bestFor": "Small playable games right in the chat: first games, remixes, quick core-loop prototypes", "freeTier": "Free plan can make and publish artifacts; paid plans give more use", "minAge": "18+. College students: use your own account.", "ageTag": "18+", "classroomUse": "Lessons 1 to 5: first game, remix arcade, gray-box prototype.", "alternative": "Paper prototypes", "url": "https://claude.ai" },
+    { "name": "Claude Code", "bestFor": "MAIN BUILDER for your own game: every file, levels, art and sound, leaderboard, AI character, fixes", "freeTier": "Needs a paid Claude plan (Pro or higher). Works on the web (claude.ai/code) and in the Claude desktop app.", "minAge": "18+", "ageTag": "18+", "classroomUse": "From lesson 6 on.", "alternative": "Keep building as artifacts for a smaller game", "url": "https://claude.ai/code" },
+    { "name": "GitHub + Vercel", "bestFor": "Storing the game's code (GitHub) and a shareable link plus server functions (Vercel)", "freeTier": "Both free for personal projects", "minAge": "GitHub 13+, Vercel 18+ for the account owner", "ageTag": "18+", "classroomUse": "Set up in lesson 6; every change deploys by itself.", "alternative": "A published artifact link", "url": "https://vercel.com" },
+    { "name": "Supabase", "bestFor": "The online leaderboard, with Row Level Security", "freeTier": "Free plan for small projects (free projects can pause if unused for a while)", "minAge": "18+ for the account owner", "ageTag": "18+", "classroomUse": "Lesson 10.", "alternative": "A local high score only", "url": "https://supabase.com" },
+    { "name": "Claude API (Claude Console)", "bestFor": "A Claude-powered character, hints or new riddles between rounds", "freeTier": "Pay as you go with prepaid credits; set a monthly spending limit. Claude Haiku 5.5 is very cheap; Claude Opus 5.5 gives the best answers.", "minAge": "18+", "ageTag": "18+", "classroomUse": "Lesson 11: key only in Vercel, daily limit, fallback lines.", "alternative": "Ready-made character lines (no AI)", "url": "https://platform.claude.com" },
+    { "name": "Gemini (pictures)", "bestFor": "Original sprites and backgrounds in one consistent style", "freeTier": "Free plan with daily limits", "minAge": "13+ (some features 18+)", "ageTag": "18+", "classroomUse": "Lessons 3, 4 and 7.", "alternative": "Simple shapes, or art you draw yourself", "url": "https://gemini.google.com" }
+  ],
+  "toolsVerified": "November 2026 (Claude models, Claude Code access and API billing checked). Set up for college students (18+), so all tools are open. Claude is the main builder for this module.",
+  "resources": [
+    { "channel": "Claude Code docs", "title": "Claude Code on the web", "why": "How to connect GitHub and let Claude Code build and save a game project.", "search": "Claude Code on the web docs", "verify": true },
+    { "channel": "MDN Web Docs", "title": "2D games with the canvas", "why": "Trusted guide to how browser games draw and run the game loop.", "search": "MDN 2D breakout game pure JavaScript canvas tutorial", "verify": true },
+    { "channel": "Phaser", "title": "Phaser docs and examples", "why": "A free game library Claude Code can use for bigger games.", "url": "https://phaser.io", "verify": false },
+    { "channel": "Game Maker's Toolkit (YouTube)", "title": "Videos on game design ideas", "why": "Clear, short videos about difficulty, game feel and level design. Preview first; show clips.", "search": "Game Maker's Toolkit game design", "verify": true },
+    { "channel": "Game Accessibility Guidelines", "title": "Simple lists of ways to make games playable", "why": "A simple, trusted list of ways to make games playable for more people.", "url": "https://gameaccessibilityguidelines.com", "verify": false }
+  ],
+  "gamification": {
+    "questLine": "The Guild's arcade: remix a classic game type with your own twist, then design and ship your own original game.",
+    "badge": "🕹️ Game Designer: an original, launched game that scores 3 or more on every rubric row.",
+    "boss": "Game Launch Arcade: a 3-minute trailer-style pitch, then guests play your game on their own devices and fill the leaderboard. 1-on-1: launch for the teacher plus 2 or 3 guests.",
+    "sideQuests": [
+      "Daily challenge: a level that's the same for everyone each day, with its own leaderboard (+25 XP).",
+      "Sprite sheet: give your main character a walking motion (+25 XP).",
+      "Read the code: explain your game loop's code line by line in plain words (+25 XP).",
+      "Level editor: let players make and share their own level (+25 XP)."
+    ]
+  },
+  "safety": [
+    { "topic": "Original work", "teach": "Game types and mechanics are free to use; specific games' names, characters, art, music and levels are not. Make your own, and keep a Credits screen for every sound or picture you didn't make." },
+    { "topic": "Comfort & access", "teach": "Gentle flashes and shakes with an 'effects off' option, mute, pause, easy mode, color plus shapes or icons, keyboard and touch controls." },
+    { "topic": "Public leaderboards", "teach": "Nicknames only, a rude-word filter, score limits and Row Level Security. Only test cheating on your own games or with permission." },
+    { "topic": "Safe AI characters", "teach": "Key only on the server, daily limits, fallback lines, short answers, stay in character, kind and age-appropriate, no personal questions." },
+    { "topic": "Kind design", "teach": "No guilt timers, streak punishments, pay-to-win or loot boxes. Design for people being glad they played, not for pressure." }
+  ],
+  "finalProject": {
+    "title": "Remix a Classic Game Type, Then Ship Your Own Game",
+    "brief": "First, remix a classic game type (paddle-and-ball, brick breaker, grid puzzle, endless runner, maze chase or snake-style) into an original game with your own name, art and twist, and show it at the Remix Arcade. Then plan, build and launch your own original game with Claude Code: levels, balance, art and sound, a fair leaderboard and an optional Claude-powered character, tested with real players. In a group, launch to the class. 1-on-1, launch to the teacher and guests.",
+    "deliverables": [
+      "Remix: an original take on a classic game type with a twist and game juice (published artifact link)",
+      "One-Page Game Plan and a gray-box prototype",
+      "Live game on Vercel with its GitHub repo, playable on phone and computer",
+      "Original art and sound with a Credits screen",
+      "3+ levels or waves, a settings table and playtest numbers showing a balance change",
+      "High score and a fair leaderboard; optional AI character with limits and fallbacks",
+      "Playtest notes, sorted bug list, Fair & Fun Checklist and patch notes"
+    ],
+    "rubric": [
+      { "criterion": "Game design", "levels": ["No clear goal or core loop", "A core loop, but it's not fun yet or the scope is too big", "Clear goal, fun core loop, levels that teach → practice → test", "Design choices explained with game words, and a twist that makes it feel fresh"] },
+      { "criterion": "Build & feel", "levels": ["Doesn't run, or breaks often", "Runs, but missing screens or feels flat", "All game states work, original art and sound, juice that fits, live on phone and computer", "Polished, responsive and juicy; bugs triaged and fixed; student explains the game loop"] },
+      { "criterion": "Balance & testing", "levels": ["Never tested with players", "Tested once, few changes", "Settings table, playtest numbers and a measured balance change; 3+ playtesters", "Several data-driven changes with before-and-after numbers; players say 'one more try!'"] },
+      { "criterion": "Fair, kind & original", "levels": ["Copied characters or art, or unfair design", "Mostly original, some checklist items missing", "Original with credits, Fair & Fun Checklist passes, safe leaderboard and AI", "Welcoming to many kinds of players, with access options, and explains how it avoids pressure tricks"] }
+    ],
+    "levelUp": "Add a daily challenge or a level editor, and get 5 players outside class onto your leaderboard."
+  },
+  "differentiation": {
+    "support": [
+      "Ready-made prompts for each build step, with blanks to fill.",
+      "Start the remix with the simplest types (paddle-and-ball or snake-style).",
+      "A smaller own game (one level type with 3 waves, local high score, no AI character) can still reach level 3 on most rows.",
+      "Group: Designer and Tester roles, swapping each lesson. 1-on-1: the student designs and builds, you playtest out loud."
+    ],
+    "extension": [
+      "A boss level or a level editor.",
+      "Server-checked scores with a Vercel function.",
+      "Claude-generated riddles or level names, checked by code before showing.",
+      "Controls players can change, and subtitles."
+    ]
+  },
+  "carryForward": "The game, and every project from the year, comes together at Demo Day (Module 7)."
+}

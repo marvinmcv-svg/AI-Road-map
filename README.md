@@ -33,7 +33,8 @@ image prompts, safety/ethics moments, differentiation and XP.
 - ✅ Module 3 — Websites & E-commerce (11 lessons, Claude artifacts + Claude Code + Vercel + a test-mode checkout)
 - ✅ Module 4 — AI Agents & Workflows (10 lessons, Claude Projects + Apps Script + the Claude API)
 - ✅ Module 5 — Mobile Apps (12 lessons, Claude Code + Vercel + Supabase + the Claude API)
-- ⏳ Module 6 + Demo Day — written one module at a time (say "next")
+- ✅ Module 6 — Games (13 lessons, Claude artifacts + Claude Code + Supabase leaderboard + a Claude-powered character)
+- ⏳ Demo Day — written next (say "next")
 
 ## Run it locally
 ```bash

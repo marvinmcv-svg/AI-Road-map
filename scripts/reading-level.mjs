@@ -43,7 +43,7 @@ artificial intelligence prediction predictions predict hallucinate hallucinates 
 composition information education generation generator generative technology category categories
 material materials personality identity responsible responsibly originality original originals
 disclosure activity activities favorite favorites
-minimization developer professional celebration remembering completely environment variable variables installable repository accuracy reliability automation automations interactive accessible accessibility disability disabilities confirmation verification calculator delivery security wholesale
+elevator validation invisible impossible difficulty playtester playtesters minimization developer professional celebration remembering completely environment variable variables installable repository accuracy reliability automation automations interactive accessible accessibility disability disabilities confirmation verification calculator delivery security wholesale
 everything everybody everyday everywhere skateboarding relatable combination consistency watercolor superhero superheroes photographer autocomplete
 `.split(/\s+/).filter(Boolean));
 export function hardWords(text) {
