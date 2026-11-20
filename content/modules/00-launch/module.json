@@ -89,13 +89,23 @@
   "tools": [
     {
       "name": "Gemini",
-      "bestFor": "Main tool for the whole course: chat, explaining things and making pictures",
+      "bestFor": "Main tool for Modules 0–2: chat, explaining things, making pictures and videos",
       "freeTier": "Free plan with daily limits. Google AI plans (and free student offers) give more.",
       "minAge": "13+ for personal accounts; some features (like video) are 18+. College students can use everything.",
       "ageTag": "18+",
       "classroomUse": "The student's main tool, on their own Google account.",
       "alternative": "Google AI Studio (more settings, same models)",
       "url": "https://gemini.google.com"
+    },
+    {
+      "name": "Claude",
+      "bestFor": "Main BUILDER for Modules 3–6: websites, AI helpers, apps and games (artifacts, Projects, Claude Code and the Claude API)",
+      "freeTier": "Free plan for chat and artifacts; a paid plan (Pro or higher) for Claude Code",
+      "minAge": "18+. College students: use your own account.",
+      "ageTag": "18+",
+      "classroomUse": "Try it in Launch to compare answers with Gemini; it becomes the main tool from Module 3.",
+      "alternative": "Gemini for chat",
+      "url": "https://claude.ai"
     },
     {
       "name": "Teachable Machine (Google)",
@@ -118,7 +128,7 @@
       "url": "https://quickdraw.withgoogle.com"
     }
   ],
-  "toolsVerified": "November 2026. Set up for college students (18+), so all tools are open. Gemini is the main tool for the course.",
+  "toolsVerified": "November 2026. Set up for college students (18+), so all tools are open. Gemini is the main tool for Modules 0–2; Claude is the main builder for Modules 3–6.",
   "resources": [
     {
       "channel": "Code.org",

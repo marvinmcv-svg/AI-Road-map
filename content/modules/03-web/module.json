@@ -2,97 +2,357 @@
   "id": "03-web",
   "number": 3,
   "title": "Websites & E-commerce",
-  "subtitle": "Give your brand a home online: a landing page and a small store, built with Google Sites, Gemini and Gemini Canvas. Learn page parts, words that sell, vibe coding, checkout, trust and user testing.",
+  "subtitle": "Give your brand a home online: a landing page and a small store, built with Claude (artifacts and Claude Code) and put online with Vercel. Learn page parts, words that sell, vibe coding, checkout, trust and user testing.",
   "weeks": "12–17",
   "bigIdea": "A website is a set of files a browser draws on the screen. A great landing page has one goal and tells a story from top to bottom, ending in one clear button. AI can write the code, but you are the boss: you plan it, check it, test it with real people and make sure it's honest and works for everyone.",
   "objectives": [
     "Explain how a web page reaches your screen, and what HTML, CSS and JavaScript do.",
     "Plan a landing page with 6 parts and a phone-first wireframe.",
     "Write clear, honest copy: headlines, benefits and button words.",
-    "Build and publish a site in Google Sites, and vibe-code a custom section in Gemini Canvas.",
+    "Build a real website with Claude Code, put it online with Vercel, and vibe-code a custom section with Claude.",
     "Open a small store with honest product cards, fair prices and a safe checkout (order form or test payment link).",
     "Make the site work for everyone and trustworthy, then improve it with real user tests."
   ],
   "vocabulary": [
-    { "term": "Website", "definition": "A set of pages anyone can open on the internet.", "analogy": "A shop window that never closes.", "example": "sipsquad.example" },
-    { "term": "Web address (URL)", "definition": "The name you type to find a page.", "analogy": "A street address for a house.", "example": "https://sites.google.com/view/sipsquad" },
-    { "term": "HTML / CSS / JavaScript", "definition": "The 3 kinds of web code: what's on the page, how it looks, what happens when you click.", "analogy": "A house's rooms, its paint, and its lights.", "example": "A button (HTML) that's teal (CSS) and opens a pop-up (JavaScript)." },
-    { "term": "Hosting", "definition": "A computer that keeps your site online so others can see it.", "analogy": "Renting a spot in a mall for your shop.", "example": "Google Sites hosts your site for free." },
-    { "term": "Landing page", "definition": "One page made for one goal, like 'buy this'.", "analogy": "A movie poster: one film, one message.", "example": "A page for the Sip Bottle with one 'Order now' button." },
-    { "term": "Hero", "definition": "The big top part of a page that people see first.", "analogy": "The front cover of a book.", "example": "A headline, one line, a picture and a button." },
-    { "term": "Wireframe", "definition": "A simple box sketch of a page, before colors and pictures.", "analogy": "A floor plan before building a house.", "example": "Boxes for hero, reasons, proof and footer on a phone shape." },
-    { "term": "Copy", "definition": "The words on a website or ad.", "analogy": "The script for a play.", "example": "'Water bottles that never leak.'" },
-    { "term": "Feature vs. benefit", "definition": "A feature is a fact about the product. A benefit is what it does for you.", "analogy": "'Big engine' vs. 'gets you there fast'.", "example": "'Double steel walls' → 'ice-cold water for 24 hours'." },
-    { "term": "Vibe coding", "definition": "Building software by describing what you want to an AI, then testing and fixing it.", "analogy": "Being the director while the AI is the film crew.", "example": "Asking Gemini Canvas for a 'Which bottle is for you?' quiz." },
-    { "term": "Bug report", "definition": "A clear note about a mistake: what I did, what should happen, what really happened.", "analogy": "Telling a doctor exactly where it hurts.", "example": "'I clicked Next on question 3. My result should show. Nothing happened.'" },
-    { "term": "Alt text", "definition": "A short description of a picture, read out loud by screen readers.", "analogy": "A friend describing a photo to you on the phone.", "example": "'Teal water bottle with ice on a mossy rock.'" },
-    { "term": "Product card", "definition": "A box for one product: picture, name, price, short words and a button.", "analogy": "A price tag with a sales pitch.", "example": "Sip Bottle, Teal, $20, 'Add to cart'." },
-    { "term": "Checkout", "definition": "The steps to buy something online.", "analogy": "The line at the store's register.", "example": "Cart → Details → Pay → Thank you." },
-    { "term": "Test mode", "definition": "A practice mode for payments with pretend money and pretend cards.", "analogy": "Playing a store with toy money.", "example": "A Stripe Payment Link in test mode." },
-    { "term": "Dark pattern", "definition": "A sneaky design that tricks people into buying or signing up.", "analogy": "A shop that hides the exit.", "example": "A fake 'only 2 left!' timer." },
-    { "term": "User test", "definition": "Watching a real person try to use your site, without helping.", "analogy": "A taste test for a new recipe.", "example": "'Please order a teal bottle and think out loud.'" }
+    {
+      "term": "Website",
+      "definition": "A set of pages anyone can open on the internet.",
+      "analogy": "A shop window that never closes.",
+      "example": "sipsquad.example"
+    },
+    {
+      "term": "Web address (URL)",
+      "definition": "The name you type to find a page.",
+      "analogy": "A street address for a house.",
+      "example": "https://sipsquad-site.vercel.app"
+    },
+    {
+      "term": "HTML / CSS / JavaScript",
+      "definition": "The 3 kinds of web code: what's on the page, how it looks, what happens when you click.",
+      "analogy": "A house's rooms, its paint, and its lights.",
+      "example": "A button (HTML) that's teal (CSS) and opens a pop-up (JavaScript)."
+    },
+    {
+      "term": "Hosting",
+      "definition": "A computer that keeps your site online so others can see it.",
+      "analogy": "Renting a spot in a mall for your shop.",
+      "example": "Vercel hosts your site for free and updates it every time you save a change."
+    },
+    {
+      "term": "Artifact",
+      "definition": "Claude's live preview of something it built, right next to the chat. You can publish it with a link.",
+      "analogy": "A sketch you can already click on.",
+      "example": "A one-page site you made in your first lesson."
+    },
+    {
+      "term": "Claude Code",
+      "definition": "Claude working as a coder: it makes and changes all the files of a project for you.",
+      "analogy": "A builder who follows your plans and shows you every change.",
+      "example": "'Add a Shop page with 3 product cards.'"
+    },
+    {
+      "term": "Repo & deploy",
+      "definition": "A repo is a project's folder on GitHub that remembers every change. Deploy means putting it online.",
+      "analogy": "A notebook with every draft saved, and a printer that publishes the newest page.",
+      "example": "Claude Code saves to the repo; Vercel deploys the site."
+    },
+    {
+      "term": "Landing page",
+      "definition": "One page made for one goal, like 'buy this'.",
+      "analogy": "A movie poster: one film, one message.",
+      "example": "A page for the Sip Bottle with one 'Order now' button."
+    },
+    {
+      "term": "Hero",
+      "definition": "The big top part of a page that people see first.",
+      "analogy": "The front cover of a book.",
+      "example": "A headline, one line, a picture and a button."
+    },
+    {
+      "term": "Wireframe",
+      "definition": "A simple box sketch of a page, before colors and pictures.",
+      "analogy": "A floor plan before building a house.",
+      "example": "Boxes for hero, reasons, proof and footer on a phone shape."
+    },
+    {
+      "term": "Copy",
+      "definition": "The words on a website or ad.",
+      "analogy": "The script for a play.",
+      "example": "'Water bottles that never leak.'"
+    },
+    {
+      "term": "Feature vs. benefit",
+      "definition": "A feature is a fact about the product. A benefit is what it does for you.",
+      "analogy": "'Big engine' vs. 'gets you there fast'.",
+      "example": "'Double steel walls' → 'ice-cold water for 24 hours'."
+    },
+    {
+      "term": "Vibe coding",
+      "definition": "Building software by describing what you want to an AI, then testing and fixing it.",
+      "analogy": "Being the director while the AI is the film crew.",
+      "example": "Asking Claude for a 'Which bottle is for you?' quiz, then testing and fixing it."
+    },
+    {
+      "term": "Bug report",
+      "definition": "A clear note about a mistake: what I did, what should happen, what really happened.",
+      "analogy": "Telling a doctor exactly where it hurts.",
+      "example": "'I clicked Next on question 3. My result should show. Nothing happened.'"
+    },
+    {
+      "term": "Alt text",
+      "definition": "A short description of a picture, read out loud by screen readers.",
+      "analogy": "A friend describing a photo to you on the phone.",
+      "example": "'Teal water bottle with ice on a mossy rock.'"
+    },
+    {
+      "term": "Product card",
+      "definition": "A box for one product: picture, name, price, short words and a button.",
+      "analogy": "A price tag with a sales pitch.",
+      "example": "Sip Bottle, Teal, $20, 'Add to cart'."
+    },
+    {
+      "term": "Checkout",
+      "definition": "The steps to buy something online.",
+      "analogy": "The line at the store's register.",
+      "example": "Cart → Details → Pay → Thank you."
+    },
+    {
+      "term": "Test mode",
+      "definition": "A practice mode for payments with pretend money and pretend cards.",
+      "analogy": "Playing a store with toy money.",
+      "example": "A Stripe Payment Link in test mode."
+    },
+    {
+      "term": "Dark pattern",
+      "definition": "A sneaky design that tricks people into buying or signing up.",
+      "analogy": "A shop that hides the exit.",
+      "example": "A fake 'only 2 left!' timer."
+    },
+    {
+      "term": "User test",
+      "definition": "Watching a real person try to use your site, without helping.",
+      "analogy": "A taste test for a new recipe.",
+      "example": "'Please order a teal bottle and think out loud.'"
+    }
   ],
   "tools": [
-    { "name": "Google Sites", "bestFor": "MAIN BUILDER for this module: the landing page and store, with your pictures, video, pages and menu. Publish with one click.", "freeTier": "Free with a Google account", "minAge": "Any Google account (13+). College students: use your own account.", "ageTag": "13+", "classroomUse": "The home for the student's website from lesson 4 on.", "alternative": "Gemini Canvas pages shared with a public link", "url": "https://sites.google.com" },
-    { "name": "Gemini + Gemini Canvas", "bestFor": "Writing copy, making pictures and icons, and vibe-coding custom sections (quizzes, calculators, product grids) you can embed in Sites", "freeTier": "Canvas is free for Gemini users. Paid plans give higher limits.", "minAge": "13+ (some features 18+). College students can use everything.", "ageTag": "18+", "classroomUse": "Lessons 1, 3, 5 and 7 build with Canvas; Gemini helps in every lesson.", "alternative": "Google AI Studio (Build mode)", "url": "https://gemini.google.com" },
-    { "name": "Google Forms + Sheets", "bestFor": "Order forms, feedback surveys and a pricing sheet", "freeTier": "Free with a Google account", "minAge": "Any Google account", "ageTag": "13+", "classroomUse": "Lesson 7 (pricing), lesson 8 (order form) and lesson 10 (survey).", "alternative": "Google Sites contact form", "url": "https://forms.google.com" },
-    { "name": "Stripe Payment Links (test mode)", "bestFor": "Practicing a real online checkout with pretend cards", "freeTier": "Free to set up. Test mode costs nothing. Real payments have fees.", "minAge": "18+ to open an account", "ageTag": "18+", "classroomUse": "Optional level-up in lesson 8. Stay in test mode in class.", "alternative": "Google Forms order form (no payment)", "url": "https://stripe.com" },
-    { "name": "Screen readers (TalkBack, VoiceOver, ChromeVox)", "bestFor": "Testing your site the way blind and low-vision visitors use it", "freeTier": "Free, built into phones and computers", "minAge": "Any age", "ageTag": "all-ages-school", "classroomUse": "Lesson 6 warm-up and Screen Reader Race.", "alternative": "WAVE accessibility checker (browser extension)" }
+    {
+      "name": "Claude (artifacts)",
+      "bestFor": "MAIN TOOL: writing copy, quick one-page sites and trying custom sections (quizzes, calculators) as live previews you can publish with a link",
+      "freeTier": "Free plan can make and publish artifacts; paid plans give more use",
+      "minAge": "18+ for Claude accounts. College students: use your own account.",
+      "ageTag": "18+",
+      "classroomUse": "Lessons 1, 3, 5 and every lesson where Claude helps with words, checks or fixes.",
+      "alternative": "Claude Code for bigger builds",
+      "url": "https://claude.ai"
+    },
+    {
+      "name": "Claude Code",
+      "bestFor": "MAIN BUILDER for the real website: makes and changes every file in the site's GitHub repo, adds pages, the shop and fixes",
+      "freeTier": "Needs a paid Claude plan (Pro or higher). Works on the web (claude.ai/code) and in the Claude desktop app.",
+      "minAge": "18+",
+      "ageTag": "18+",
+      "classroomUse": "From lesson 4 on: build, add the custom section, shop, privacy page and fixes.",
+      "alternative": "Publish the site as a Claude artifact link",
+      "url": "https://claude.ai/code"
+    },
+    {
+      "name": "GitHub + Vercel",
+      "bestFor": "Storing the site's files (GitHub) and putting it online with a real web address that updates on every save (Vercel)",
+      "freeTier": "Both free for personal projects",
+      "minAge": "GitHub 13+, Vercel 18+ for the account owner",
+      "ageTag": "18+",
+      "classroomUse": "Lesson 4 sets them up once; every later change deploys by itself.",
+      "alternative": "Netlify or GitHub Pages",
+      "url": "https://vercel.com"
+    },
+    {
+      "name": "Google Forms + Sheets",
+      "bestFor": "Order forms, feedback surveys and a pricing sheet",
+      "freeTier": "Free with a Google account",
+      "minAge": "Any Google account",
+      "ageTag": "13+",
+      "classroomUse": "Lesson 7 (pricing), lesson 8 (order form) and lesson 10 (survey).",
+      "alternative": "A Claude-built form section (later, with a real backend)",
+      "url": "https://forms.google.com"
+    },
+    {
+      "name": "Stripe Payment Links (test mode)",
+      "bestFor": "Practicing a real online checkout with pretend cards",
+      "freeTier": "Free to set up. Test mode costs nothing. Real payments have fees.",
+      "minAge": "18+ to open an account",
+      "ageTag": "18+",
+      "classroomUse": "Optional level-up in lesson 8. Stay in test mode in class.",
+      "alternative": "Google Forms order form (no payment)",
+      "url": "https://stripe.com"
+    },
+    {
+      "name": "Screen readers (TalkBack, VoiceOver, ChromeVox)",
+      "bestFor": "Testing your site the way blind and low-vision visitors use it",
+      "freeTier": "Free, built into phones and computers",
+      "minAge": "Any age",
+      "ageTag": "all-ages-school",
+      "classroomUse": "Lesson 6 warm-up and Screen Reader Race.",
+      "alternative": "WAVE accessibility checker (browser extension)"
+    },
+    {
+      "name": "Gemini (pictures)",
+      "bestFor": "Product pictures, icons and banners in your brand style (your picture tool from Module 1)",
+      "freeTier": "Free plan with daily limits",
+      "minAge": "13+ (some features 18+)",
+      "ageTag": "18+",
+      "classroomUse": "Lessons 4 and 7 for any new pictures.",
+      "alternative": "Your own product photos",
+      "url": "https://gemini.google.com"
+    }
   ],
-  "toolsVerified": "November 2026 (Gemini Canvas public links and Sites embedding checked). Set up for college students (18+), so all tools are open.",
+  "toolsVerified": "November 2026 (Claude artifact publishing and Claude Code access checked). Set up for college students (18+), so all tools are open. Claude is the main builder for websites, agents, apps and games.",
   "resources": [
-    { "channel": "Google — Gemini help", "title": "Create docs, apps & more with Canvas", "why": "How to build, preview, share and copy code from Canvas.", "url": "https://support.google.com/gemini/answer/16047321", "verify": false },
-    { "channel": "Google — Sites help", "title": "Get started with Google Sites", "why": "Themes, embedding, publishing and sharing settings.", "search": "Google Sites help get started create a site", "verify": true },
-    { "channel": "MDN Web Docs", "title": "Getting started with the web", "why": "Clear, trusted guide to HTML, CSS and JavaScript for when students want to look under the hood.", "search": "MDN getting started with the web", "verify": true },
-    { "channel": "WebAIM", "title": "Contrast Checker and alt text guide", "why": "Free tools and simple rules for accessible sites.", "url": "https://webaim.org/resources/contrastchecker/", "verify": false },
-    { "channel": "Stripe Docs", "title": "Payment Links and test mode", "why": "How to make a payment link and test it with pretend cards.", "search": "Stripe payment links test mode docs", "verify": true },
-    { "channel": "Nielsen Norman Group", "title": "Usability testing 101", "why": "The classic short guide to running user tests.", "search": "Nielsen Norman Group usability testing 101", "verify": true }
+    {
+      "channel": "Claude Help Center",
+      "title": "Share artifacts",
+      "why": "How to publish an artifact and who can see it.",
+      "url": "https://support.claude.com/en/articles/9547008-share-artifacts",
+      "verify": false
+    },
+    {
+      "channel": "Claude Code docs",
+      "title": "Claude Code on the web",
+      "why": "How to connect GitHub and let Claude Code build and save changes to a repo.",
+      "search": "Claude Code on the web docs",
+      "verify": true
+    },
+    {
+      "channel": "Vercel docs",
+      "title": "Deploy a Git repository",
+      "why": "Import a GitHub repo and get a live web address that updates on every push.",
+      "search": "Vercel import git repository deploy",
+      "verify": true
+    },
+    {
+      "channel": "MDN Web Docs",
+      "title": "Getting started with the web",
+      "why": "Clear, trusted guide to HTML, CSS and JavaScript for when students want to look under the hood.",
+      "search": "MDN getting started with the web",
+      "verify": true
+    },
+    {
+      "channel": "WebAIM",
+      "title": "Contrast Checker and alt text guide",
+      "why": "Free tools and simple rules for accessible sites.",
+      "url": "https://webaim.org/resources/contrastchecker/",
+      "verify": false
+    },
+    {
+      "channel": "Stripe Docs",
+      "title": "Payment Links and test mode",
+      "why": "How to make a payment link and test it with pretend cards.",
+      "search": "Stripe payment links test mode docs",
+      "verify": true
+    },
+    {
+      "channel": "Nielsen Norman Group",
+      "title": "Usability testing 101",
+      "why": "The classic short guide to running user tests.",
+      "search": "Nielsen Norman Group usability testing 101",
+      "verify": true
+    }
   ],
   "gamification": {
     "questLine": "Your launch video is ready. Now your company needs a home online: a landing page where people learn about it and a small store where they can order.",
     "badge": "🌐 Web Smith: a live landing page + store that scores 3 or more on every rubric row.",
     "boss": "Launch Day: a live walkthrough from the hero to a test order, with guests as 'first customers'. 1-on-1: launch for the teacher plus a guest.",
     "sideQuests": [
-      "Under the hood: view the source of your Canvas section and explain 5 lines of the code in your own words (+25 XP).",
+      "Under the hood: read the code of your custom Claude section and explain 5 lines of the code in your own words (+25 XP).",
       "Dark Pattern Detective: find a real store with a sneaky design and write a polite note on how to fix it (+25 XP).",
       "A/B test: run two headlines with different testers and report which one won and why (+25 XP).",
-      "Custom domain: connect a real web address to your Google Site (+25 XP)."
+      "Custom domain: connect a real web address to your site on Vercel (+25 XP)."
     ]
   },
   "safety": [
-    { "topic": "Personal data", "teach": "Collect only what you need (name, email, product, address if shipping). Never ask for card numbers in a form. Keep the order sheet private and delete it when done." },
-    { "topic": "Payments", "teach": "Stay in Stripe test mode in class. Real money brings real rules (fees, taxes, refunds). If a student wants to sell for real, they should check local rules first." },
-    { "topic": "Honest selling", "teach": "No dark patterns: no fake timers, hidden fees, pre-ticked boxes or fake reviews. Pictures, prices and promises must match what the buyer gets. Label AI pictures." },
-    { "topic": "Account security", "teach": "Strong passwords and 2-step verification on Google and Stripe. Learn to spot phishing messages and fake stores." },
-    { "topic": "Public links", "teach": "A published site or public Canvas link can be seen by anyone. Use a brand email; never post a home address or personal phone number." },
-    { "topic": "Works for everyone", "teach": "Alt text, contrast, headings, clear link words and captions, so people with disabilities can use the site too." }
+    {
+      "topic": "Personal data",
+      "teach": "Collect only what you need (name, email, product, address if shipping). Never ask for card numbers in a form. Keep the order sheet private and delete it when done."
+    },
+    {
+      "topic": "Payments",
+      "teach": "Stay in Stripe test mode in class. Real money brings real rules (fees, taxes, refunds). If a student wants to sell for real, they should check local rules first."
+    },
+    {
+      "topic": "Honest selling",
+      "teach": "No dark patterns: no fake timers, hidden fees, pre-ticked boxes or fake reviews. Pictures, prices and promises must match what the buyer gets. Label AI pictures."
+    },
+    {
+      "topic": "Account security",
+      "teach": "Strong passwords and 2-step verification on Claude, GitHub, Vercel, Google and Stripe. Learn to spot phishing messages and fake stores."
+    },
+    {
+      "topic": "Public links",
+      "teach": "A deployed site or published artifact can be seen by anyone. Use a brand email; never post a home address or personal phone number, and never put passwords or keys in the repo."
+    },
+    {
+      "topic": "Works for everyone",
+      "teach": "Alt text, contrast, headings, clear link words and captions, so people with disabilities can use the site too."
+    }
   ],
   "finalProject": {
     "title": "Live Landing Page + Mini Store",
-    "brief": "Use the made-up company, Brand Kit and launch video from Modules 1 and 2. Plan, write, build and publish a landing page and a small store in Google Sites, with one custom section vibe-coded in Gemini Canvas and a working checkout (order form or Stripe test payment link). Test it with real people, fix it, then launch it live. In a group, launch to the class. 1-on-1, launch to the teacher and a guest.",
+    "brief": "Use the made-up company, Brand Kit and launch video from Modules 1 and 2. Plan, write and build a landing page and a small store with Claude Code, put it online with Vercel, add one custom section vibe-coded with Claude and a working checkout (order form or Stripe test payment link). Test it with real people, fix it, then launch it live. In a group, launch to the class. 1-on-1, launch to the teacher and a guest.",
     "deliverables": [
       "Phone and laptop wireframes",
       "Page Copy doc (all 6 sections, honesty-checked)",
-      "Published Google Site: landing page with launch video, Shop page with 3+ product cards, Privacy & Rules page",
-      "One custom Canvas section, embedded and working, with 2+ bug reports in the Prompt Log",
+      "Live site on Vercel (built with Claude Code): landing page with launch video, Shop page with 3+ product cards, Privacy & Rules page",
+      "One custom section vibe-coded with Claude, live and working, with 2+ bug reports in the Prompt Log",
       "Working checkout: order form or Stripe test payment link, with a thank-you message",
       "User test notes from 2+ people and a fix list with the top 3 fixes done",
       "Works for Everyone and Trust checklists passed"
     ],
     "rubric": [
-      { "criterion": "Plan & story", "levels": ["No clear goal or page parts missing", "Most parts there, but the goal is fuzzy", "One clear goal, all 6 parts, hero clear in 5 seconds", "Every section moves the visitor toward the goal, and choices are explained with web words"] },
-      { "criterion": "Build & code", "levels": ["Site not published, or broken parts", "Published, but messy on phones", "Clean on phones and computers, brand theme, working custom section", "Custom section fits the brand and helps buyers decide; clear bug reports show the fix process"] },
-      { "criterion": "Store & checkout", "levels": ["No store or no way to order", "Products listed, but prices or checkout unclear", "3+ honest product cards, fair prices, working checkout with thank-you message", "Smooth, fast checkout that asks only for what's needed, with clear shipping and returns"] },
-      { "criterion": "Trust, access & testing", "levels": ["Tricks, missing privacy info or no alt text", "Some checklist items done", "Both checklists pass; tested with 2+ people and top fixes made", "Explains what testing changed, how the store protects buyers' data, and who the access fixes help"] }
+      {
+        "criterion": "Plan & story",
+        "levels": [
+          "No clear goal or page parts missing",
+          "Most parts there, but the goal is fuzzy",
+          "One clear goal, all 6 parts, hero clear in 5 seconds",
+          "Every section moves the visitor toward the goal, and choices are explained with web words"
+        ]
+      },
+      {
+        "criterion": "Build & code",
+        "levels": [
+          "Site not published, or broken parts",
+          "Published, but messy on phones",
+          "Clean on phones and computers, brand theme, working custom section",
+          "Custom section fits the brand and helps buyers decide; clear bug reports show the fix process"
+        ]
+      },
+      {
+        "criterion": "Store & checkout",
+        "levels": [
+          "No store or no way to order",
+          "Products listed, but prices or checkout unclear",
+          "3+ honest product cards, fair prices, working checkout with thank-you message",
+          "Smooth, fast checkout that asks only for what's needed, with clear shipping and returns"
+        ]
+      },
+      {
+        "criterion": "Trust, access & testing",
+        "levels": [
+          "Tricks, missing privacy info or no alt text",
+          "Some checklist items done",
+          "Both checklists pass; tested with 2+ people and top fixes made",
+          "Explains what testing changed, how the store protects buyers' data, and who the access fixes help"
+        ]
+      }
     ],
-    "levelUp": "Connect a custom web address, add an email sign-up with a Gemini-written welcome email, and make a 9:16 version of the launch video for social posts that link to the store."
+    "levelUp": "Connect a custom web address, add an email sign-up with a Claude-written welcome email, and make a 9:16 version of the launch video for social posts that link to the store."
   },
   "differentiation": {
     "support": [
       "Web Prompt Recipe card and a ready example prompt to copy.",
       "Wireframe sheet with the 6 boxes already drawn.",
       "Copy frames: '[Product] that [benefit], so you can [feeling].'",
-      "A Google Sites template with sections ready to fill.",
+      "A starter build prompt with blanks to fill; the one-page artifact link is fine as a first version.",
       "Group: Builder and Tester roles, swapping each lesson. 1-on-1: the student builds and you test, then swap for the custom section."
     ],
     "extension": [

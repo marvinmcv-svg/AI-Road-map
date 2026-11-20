@@ -9,8 +9,8 @@ Agents → Mobile Apps → Games), plus a Launch module and Demo Day.
   Group lessons run 90 minutes. The student site has the same switch on "My Guild card".
 - **Easy words.** Lessons, teacher scripts, missions and word cards are written at about a
   4th-grade reading level. `npm run lint:content` checks it.
-- **Gemini first.** Gemini (school Google account) is the main tool for chat and pictures.
-  Google Slides (or Canva for Education) is only used to lay pictures out.
+- **Two main tools.** Gemini for chat, pictures and video (Modules 0–2). Claude for building:
+  websites, AI helpers, apps and games (Modules 3–6), using artifacts, Projects, Claude Code and the Claude API.
 
 Every lesson has a timed plan (warm-up, mini-lesson, build, challenge, share-out, exit ticket),
 the learning-science principle behind each segment, a teacher script, visuals with ready-to-copy
@@ -30,8 +30,8 @@ image prompts, safety/ethics moments, differentiation and XP.
 - ✅ Module 0 — Launch (4 lessons)
 - ✅ Module 1 — AI Images (9 lessons)
 - ✅ Module 2 — AI Video (9 lessons, Gemini with Veo + Google Vids)
-- ✅ Module 3 — Websites & E-commerce (11 lessons, Google Sites + Gemini Canvas + a test-mode checkout)
-- ✅ Module 4 — AI Agents & Workflows (10 lessons, Gemini Gems + Apps Script + the Gemini API)
+- ✅ Module 3 — Websites & E-commerce (11 lessons, Claude artifacts + Claude Code + Vercel + a test-mode checkout)
+- ✅ Module 4 — AI Agents & Workflows (10 lessons, Claude Projects + Apps Script + the Claude API)
 - ⏳ Modules 5–6 + Demo Day — written one module at a time (say "next")
 
 ## Run it locally

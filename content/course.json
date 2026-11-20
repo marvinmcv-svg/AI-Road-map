@@ -10,7 +10,7 @@
     "planned": 70,
     "buffer": 2
   },
-  "budget": "Free tools first. Gemini on a school Google account is the main tool. Up to about $20 a month for ONE teacher account used for demos.",
+  "budget": "Free tools first. Gemini (pictures and video, Modules 0–2) and Claude (websites, AI helpers, apps and games, Modules 3–6) are the main tools. A paid Claude plan (Pro or higher) is needed for Claude Code, plus a few dollars of Claude API credit for Modules 4–5.",
   "modules": [
     {
       "id": "00-launch",
