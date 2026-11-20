@@ -1,0 +1,72 @@
+{
+  "story": "Students join the AI Creators Guild, a studio that takes on real creative missions. Each module is a Quest Line that ends with a Boss Challenge (the final project). Students earn XP for learning behaviours (not just talent), level up from Prompt Rookie to AI Architect, collect badges, and compete in four Houses whose scores are averaged so team size doesn't matter. The same system runs all year so students always know how to progress.",
+  "xpRules": [
+    { "action": "Warm-up / Recall Raid answered", "xp": 10, "notes": "Effort counts — any honest attempt earns it." },
+    { "action": "Build checkpoint reached", "xp": 20, "notes": "Each lesson's build has 1–2 checkpoints shown on the board." },
+    { "action": "Challenge win (team)", "xp": 15, "notes": "Every member of the winning team; 5 XP to all teams that finish." },
+    { "action": "Exit ticket complete", "xp": 10, "notes": "+5 bonus for a thoughtful 'why' answer." },
+    { "action": "Helpful peer feedback", "xp": 5, "notes": "Specific feedback using the 'I like / I wonder / Try' frame." },
+    { "action": "Side quest", "xp": 25, "notes": "Optional extensions for fast finishers." },
+    { "action": "Spot the AI mistake", "xp": 15, "notes": "Catching a real hallucination or bias and proving it with a source." },
+    { "action": "Boss Challenge (final project)", "xp": 100, "notes": "Rubric score 1–4 per criterion × 25 XP; up to 100 per criterion bands." },
+    { "action": "Level-up challenge", "xp": 50, "notes": "Optional advanced add-on to the final project." }
+  ],
+  "levels": [
+    { "level": 1, "name": "Prompt Rookie", "xp": 0, "perk": "Guild nickname + avatar (made with AI in Launch)." },
+    { "level": 2, "name": "Pixel Apprentice", "xp": 150, "perk": "Choose the warm-up music once." },
+    { "level": 3, "name": "Remix Artist", "xp": 350, "perk": "One 'hint card' for any challenge." },
+    { "level": 4, "name": "Story Weaver", "xp": 600, "perk": "Pick your build partner for a lesson." },
+    { "level": 5, "name": "Web Smith", "xp": 900, "perk": "Your work featured on the class showcase wall." },
+    { "level": 6, "name": "Flow Builder", "xp": 1250, "perk": "Become a Guild Mentor (earn peer-teaching XP)." },
+    { "level": 7, "name": "App Engineer", "xp": 1650, "perk": "Propose a side quest for the class." },
+    { "level": 8, "name": "Game Designer", "xp": 2100, "perk": "Skip one exit ticket (still do the build!)." },
+    { "level": 9, "name": "Master Creator", "xp": 2600, "perk": "Co-host a Demo Day segment." },
+    { "level": 10, "name": "AI Architect", "xp": 3200, "perk": "Certificate + name on the Guild Hall of Fame." }
+  ],
+  "badges": [
+    { "id": "pact", "name": "Safety Pact", "icon": "🛡️", "how": "Signed the AI Safety Pact and passed the safety quiz.", "module": "Launch" },
+    { "id": "prompt-duelist", "name": "Prompt Duelist", "icon": "⚔️", "how": "Completed the Launch Boss: Prompt Duel.", "module": "Launch" },
+    { "id": "pixel-forger", "name": "Pixel Forger", "icon": "🎨", "how": "Shipped a complete Brand Kit (Images Boss).", "module": "Images" },
+    { "id": "hook-master", "name": "Hook Master", "icon": "🎬", "how": "Shipped a disclosed AI video (Video Boss).", "module": "Video" },
+    { "id": "web-smith", "name": "Web Smith", "icon": "🌐", "how": "Published a landing page + store (Web Boss).", "module": "Websites" },
+    { "id": "flow-builder", "name": "Flow Builder", "icon": "⚙️", "how": "Built a working automation/agent (Agents Boss).", "module": "Agents" },
+    { "id": "app-engineer", "name": "App Engineer", "icon": "📱", "how": "Shipped a personal app (Apps Boss).", "module": "Apps" },
+    { "id": "game-designer", "name": "Game Designer", "icon": "🕹️", "how": "Shipped an original game (Games Boss).", "module": "Games" },
+    { "id": "fact-checker", "name": "Fact Checker", "icon": "🔎", "how": "Caught 3 real AI mistakes and proved them with sources.", "secret": true },
+    { "id": "ethics-guardian", "name": "Ethics Guardian", "icon": "⚖️", "how": "Spoke up about a consent, copyright or honesty issue in a respectful way.", "secret": true },
+    { "id": "mentor", "name": "Guild Mentor", "icon": "🤝", "how": "Helped 5 classmates get unstuck (without touching their keyboard).", "secret": true },
+    { "id": "debugger", "name": "Bug Hunter", "icon": "🐞", "how": "Found and fixed a bug by explaining it to the AI precisely.", "secret": true },
+    { "id": "iterator", "name": "Iteration Station", "icon": "🔁", "how": "Showed 5+ documented versions of one piece of work.", "secret": true },
+    { "id": "streak", "name": "On a Roll", "icon": "🔥", "how": "10 exit tickets in a row completed." }
+  ],
+  "houses": [
+    { "name": "Pixel", "color": "#ec4899", "motto": "We make it beautiful." },
+    { "name": "Byte", "color": "#2563eb", "motto": "We make it work." },
+    { "name": "Spark", "color": "#f59e0b", "motto": "We make it bold." },
+    { "name": "Nova", "color": "#10b981", "motto": "We make it new." }
+  ],
+  "rituals": [
+    { "name": "Recall Raid", "when": "Warm-up, every Monday-equivalent lesson", "how": "5 quick questions mixing THIS module and older modules; houses answer on mini-whiteboards.", "principle": "Spaced retrieval + interleaving: pulling older ideas back out strengthens memory far more than re-reading." },
+    { "name": "Prompt of the Week", "when": "Start of each week", "how": "Best student prompt from last week is shown and dissected with the Prompt Recipe.", "principle": "Worked examples from peers lower cognitive load and show what 'good' looks like." },
+    { "name": "Spot the AI Mistake", "when": "Once per module (minimum)", "how": "Teacher shows an AI output with a planted or real error; first house to prove it with a source wins.", "principle": "Elaborative interrogation: asking 'is this true and how do I know?' builds critical thinking." },
+    { "name": "Gallery Walk", "when": "Share-out", "how": "Laptops open, students rotate and leave sticky-note feedback: I like / I wonder / Try.", "principle": "Peer teaching and feedback: explaining and judging work deepens understanding." },
+    { "name": "Boss Week", "when": "Last 1–2 lessons of each module", "how": "Final project build + showcase with rubric; Boss defeated = module badge.", "principle": "Project-based learning: applying many skills together makes knowledge transferable." }
+  ],
+  "moduleHooks": [
+    { "module": "0 · Launch", "questLine": "Join the Guild: make your avatar, learn the rules of AI.", "boss": "Prompt Duel", "badge": "🛡️ Safety Pact + ⚔️ Prompt Duelist" },
+    { "module": "1 · Images", "questLine": "A startup hires the Guild to create its visual identity.", "boss": "Brand Kit", "badge": "🎨 Pixel Forger" },
+    { "module": "2 · Video", "questLine": "The startup needs a launch video that people actually watch.", "boss": "30–60 s disclosed ad/explainer", "badge": "🎬 Hook Master" },
+    { "module": "3 · Websites", "questLine": "Give the brand a home on the internet and a store.", "boss": "Landing page + mini store", "badge": "🌐 Web Smith" },
+    { "module": "4 · Agents", "questLine": "The studio is overwhelmed — build robot helpers.", "boss": "Working automation/agent", "badge": "⚙️ Flow Builder" },
+    { "module": "5 · Apps", "questLine": "Build an app for yourself — your own tool.", "boss": "Personal app", "badge": "📱 App Engineer" },
+    { "module": "6 · Games", "questLine": "The Guild's arcade: remix a classic, then invent your own.", "boss": "Original game", "badge": "🕹️ Game Designer" },
+    { "module": "7 · Demo Day", "questLine": "Show the world what the Guild built.", "boss": "Showcase", "badge": "Hall of Fame" }
+  ],
+  "fairness": [
+    "Most XP comes from effort behaviours (attempting, revising, helping) so every student can level up — not only the fastest.",
+    "House scores use the AVERAGE XP per member so uneven team sizes stay fair.",
+    "Leaderboards show houses publicly; individual XP is shown privately or as top-10 only, to avoid shaming.",
+    "Re-shuffle houses never; instead rotate build partners so students work across houses.",
+    "Award XP live with the tracker (2 clicks) and keep it fast — the game should never eat lesson time."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "AI Creators: Build Real Things with AI",
+  "tagline": "A year-long, hands-on course where middle schoolers learn HOW to use AI tools and WHY they work — and leave with a portfolio of images, videos, a website, an AI agent, an app and a game.",
+  "audience": "Ages 11–14 · mixed AI experience",
+  "schedule": {
+    "duration": "One school year (36 weeks)",
+    "meetings": "2 lessons per week",
+    "lessonLength": "90 minutes each",
+    "totalSlots": 72,
+    "planned": 70,
+    "buffer": 2
+  },
+  "budget": "Free tools first · up to ~$20/month for ONE teacher account used for demos",
+  "modules": [
+    { "id": "00-launch", "number": 0, "title": "Launch: How AI Works", "lessons": 4, "weeks": "1–2", "boss": "Prompt Duel + signed AI Safety Pact", "status": "ready" },
+    { "id": "01-images", "number": 1, "title": "AI Images", "lessons": 9, "weeks": "3–7", "boss": "Brand Kit for a fictional company (logo, social post, poster, study aid)", "status": "ready" },
+    { "id": "02-video", "number": 2, "title": "AI Video", "lessons": 9, "weeks": "7–11", "boss": "30–60 s ad or explainer with an honest AI disclosure", "status": "coming-next" },
+    { "id": "03-web", "number": 3, "title": "Websites & E-commerce", "lessons": 11, "weeks": "12–17", "boss": "Live landing page + mini online store for your brand", "status": "coming-next" },
+    { "id": "04-agents", "number": 4, "title": "AI Agents & Workflows", "lessons": 10, "weeks": "17–22", "boss": "An automation/agent that solves a real class problem", "status": "coming-next" },
+    { "id": "05-apps", "number": 5, "title": "Mobile Apps", "lessons": 12, "weeks": "22–28", "boss": "Personal app: tracker, diary, AI tutor or scheduler", "status": "coming-next" },
+    { "id": "06-games", "number": 6, "title": "Games", "lessons": 13, "weeks": "28–34", "boss": "Remix a classic, then design and ship your own game", "status": "coming-next" },
+    { "id": "07-demo-day", "number": 7, "title": "Demo Day & Portfolio", "lessons": 2, "weeks": "35", "boss": "Public showcase + portfolio + peer awards", "status": "coming-next" }
+  ],
+  "progression": [
+    { "stage": "1 · Understand", "modules": "Launch", "studentsCan": "Explain in plain words how generative AI predicts, write a structured prompt, and follow the safety pact." },
+    { "stage": "2 · Create assets", "modules": "Images, Video", "studentsCan": "Produce single media pieces with intent: composition, style, hooks, pacing — and disclose AI use." },
+    { "stage": "3 · Assemble products", "modules": "Websites & E-commerce", "studentsCan": "Combine assets into a structured product (page anatomy, user journey, calls to action)." },
+    { "stage": "4 · Automate", "modules": "Agents & Workflows", "studentsCan": "Design systems that run steps for them: triggers, actions, tools, APIs, human checks." },
+    { "stage": "5 · Build software", "modules": "Mobile Apps", "studentsCan": "Plan and vibe-code an app with screens, navigation, data and login; test and debug it." },
+    { "stage": "6 · Design systems", "modules": "Games, Demo Day", "studentsCan": "Design interactive rule systems (loop, mechanics, feedback, balance), playtest, iterate and present." }
+  ],
+  "lessonTemplate": [
+    { "segment": "Warm-up", "minutes": "5–10", "purpose": "Retrieval practice on last lesson's ideas + a hook. Gets brains on before screens open." },
+    { "segment": "Mini-lesson", "minutes": "≤ 15", "purpose": "One big idea with a visual (dual coding) and a worked example. Short to protect working memory." },
+    { "segment": "Hands-on build", "minutes": "30–40", "purpose": "Students make something real (project-based learning) with a checklist and teacher circulating." },
+    { "segment": "Game / challenge", "minutes": "10–20", "purpose": "Team challenge that applies the idea under light pressure; earns house XP." },
+    { "segment": "Share-out", "minutes": "8–10", "purpose": "Gallery walk / peer feedback (peer teaching, elaboration)." },
+    { "segment": "Exit ticket", "minutes": "5", "purpose": "2–3 quick questions: retrieval + self-explanation. You read them to plan next lesson." }
+  ],
+  "safetyThreads": [
+    { "thread": "Age rules", "how": "Every tool is tagged (school account OK / 13+ / 18+). 18+ tools and accounts students can't legally make are teacher-led demos only." },
+    { "thread": "Consent & deepfakes", "how": "Never upload real photos of classmates, teachers or other people. We use ourselves only with consent rules, stock/public-domain images, or AI-made characters." },
+    { "thread": "Copyright & brands", "how": "No real brand logos, celebrities or copied characters. Make original brands; credit sources; understand fair use basics." },
+    { "thread": "Honest disclosure", "how": "Label AI-made content (#MadeWithAI). Ads must be honest — no fake reviews or fake testimonials." },
+    { "thread": "Privacy", "how": "Never share full names, school, address, passwords or API keys with AI or online. Use nicknames." },
+    { "thread": "Fact-checking", "how": "AI can be confidently wrong (hallucination). Every module has a 'Spot the AI mistake' activity." }
+  ],
+  "ageRuleKey": [
+    { "tag": "School account OK", "meaning": "Allowed for students of all ages when used through a school-managed account (e.g. Google Workspace for Education, Canva for Education)." },
+    { "tag": "13+ w/ parent OK", "meaning": "Students 13+ may use their own account with parent/guardian permission. Under-13s: teacher-led demo." },
+    { "tag": "13+", "meaning": "Students must be 13 or older. Under-13s: teacher-led demo or the listed alternative." },
+    { "tag": "18+ · teacher demo only", "meaning": "No student accounts. Teacher drives it on the projector; students write the prompts." },
+    { "tag": "Teacher only", "meaning": "Professional tool or paid account used only by the teacher." }
+  ]
+}

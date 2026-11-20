@@ -1,0 +1,109 @@
+{
+  "id": "01-images",
+  "number": 1,
+  "title": "AI Images",
+  "subtitle": "Create and edit images with intent: memes, photo edits, logos, marketing graphics and study aids — using the vocabulary designers use.",
+  "weeks": "3–7",
+  "bigIdea": "Image AI starts from random noise and 'denoises' it step by step toward what your prompt describes. The more precisely you use design language — subject, composition, style, lighting, format — the more control you have. Great images come from design decisions, not lucky prompts.",
+  "objectives": [
+    "Explain how a diffusion model turns noise into an image, and why prompts and reference images change the result.",
+    "Write image prompts with the Image Prompt Formula (Subject · Setting · Style · Composition · Lighting · Format) using professional terms like shot type, angle and aspect ratio.",
+    "Edit images ethically with AI tools (background removal, generative fill, inpainting/outpainting, upscaling) and label edits honestly.",
+    "Design an original brand identity (logo, colors, fonts) and marketing graphics using visual hierarchy and a clear call to action.",
+    "Create accurate study aids (flashcards, diagrams, visual notes) and fact-check AI-generated text and details in images."
+  ],
+  "vocabulary": [
+    { "term": "Diffusion model", "definition": "An image AI that starts with random static and cleans it up step by step into a picture.", "analogy": "A sculptor chipping a statue out of a block of marble.", "example": "Nano Banana, ChatGPT Images, Firefly." },
+    { "term": "Noise", "definition": "Random dots/static an image AI starts from.", "analogy": "TV static or a foggy window.", "example": "Step 1 of every diffusion image." },
+    { "term": "Text-to-image", "definition": "Making a new image from a written prompt.", "analogy": "Describing a picture to an artist on the phone.", "example": "'A pixel-art fox astronaut'." },
+    { "term": "Image-to-image / reference image", "definition": "Giving the AI a picture to guide the new one.", "analogy": "Showing your hairdresser a photo.", "example": "Upload a sketch, get a polished version." },
+    { "term": "Aspect ratio", "definition": "The shape of an image: width compared to height.", "analogy": "Phone screen vs. TV screen.", "example": "1:1 square post, 9:16 story, 16:9 slide." },
+    { "term": "Composition", "definition": "How things are arranged in the picture.", "analogy": "Arranging furniture in a room.", "example": "Subject on the left third, empty space for text." },
+    { "term": "Rule of thirds", "definition": "Imagine a 3×3 grid; put important things on the lines or where they cross.", "analogy": "Tic-tac-toe board over your photo.", "example": "Horizon on the bottom line." },
+    { "term": "Shot type / camera angle", "definition": "How close and from where the 'camera' sees the subject.", "analogy": "Standing far away vs. right up close.", "example": "Close-up, wide shot, bird's-eye view, low angle." },
+    { "term": "Style", "definition": "The artistic look of an image.", "analogy": "The same song played as rock or as jazz.", "example": "Pixel art, watercolor, 3D clay, flat vector." },
+    { "term": "Inpainting", "definition": "Changing or filling a selected part INSIDE an image.", "analogy": "Patching a hole in jeans.", "example": "Replace the plain mug on the desk with a plant." },
+    { "term": "Outpainting / generative expand", "definition": "Extending an image beyond its edges.", "analogy": "Drawing what's outside a window frame.", "example": "Turn a square photo into a wide banner." },
+    { "term": "Upscaling", "definition": "Making an image bigger and sharper with AI.", "analogy": "A magnifying glass that also adds detail.", "example": "Turn a small logo into a poster-size file." },
+    { "term": "Logo / wordmark / icon", "definition": "A brand's symbol; wordmark = styled name, icon = picture symbol.", "analogy": "A team's jersey crest.", "example": "Combination mark: icon + name." },
+    { "term": "Brand identity / brand kit", "definition": "The set of colors, fonts, logo and style a brand always uses.", "analogy": "A school uniform for a company.", "example": "Brand board with 3 colors, 2 fonts, logo." },
+    { "term": "Visual hierarchy", "definition": "Making the most important thing the most noticeable.", "analogy": "Headlines are bigger than the article text.", "example": "Big product photo → headline → small details." },
+    { "term": "Call to action (CTA)", "definition": "The words telling viewers what to do next.", "analogy": "A 'Press here' sign on a button.", "example": "'Try it free', 'Shop now'." },
+    { "term": "Contrast", "definition": "Difference between light/dark or colors that makes things stand out.", "analogy": "White chalk on a dark board.", "example": "Yellow text on dark blue." },
+    { "term": "Watermark / content credentials", "definition": "Hidden or visible labels showing an image was AI-made or edited.", "analogy": "A signature on a painting.", "example": "SynthID, C2PA 'Content Credentials', #MadeWithAI." },
+    { "term": "Meme template", "definition": "A familiar image format people reuse with new captions.", "analogy": "A joke format like 'knock knock'.", "example": "Two-panel 'expectation vs. reality'." },
+    { "term": "Dual coding", "definition": "Learning with words AND pictures together.", "analogy": "Two roads to the same memory.", "example": "Flashcard with a term + a drawing." }
+  ],
+  "tools": [
+    { "name": "Gemini image generation (Nano Banana) — school account", "bestFor": "Text-to-image, quick variations, study diagrams", "freeTier": "Free with a daily/rolling image limit (roughly ~20/day on personal free plans; school limits set by Google)", "minAge": "Education accounts: all ages; under-18s can generate and refine with follow-ups but CANNOT edit uploaded images. Personal accounts 13+.", "ageTag": "all-ages-school", "classroomUse": "Main student generator if enabled by your admin. Uploaded-photo editing = teacher-led.", "alternative": "Canva for Education Magic Media", "url": "https://gemini.google.com" },
+    { "name": "ChatGPT Images", "bestFor": "Accurate text in images, edits by conversation, logos & posters", "freeTier": "Free plan: a few images per day; Plus ≈ $20/mo for more", "minAge": "13+ with parent/guardian permission under 18", "ageTag": "13+consent", "classroomUse": "Teacher demo on projector; 13+ students with signed permission.", "alternative": "Adobe Express for Education (Firefly)", "url": "https://chatgpt.com" },
+    { "name": "Higgsfield", "bestFor": "Cinematic, stylised visuals and camera-motion effects (bridges to video)", "freeTier": "Limited free credits; paid plans", "minAge": "18+ (Terms of Use). Note: Aug 2026 terms give broad rights to train on user content.", "ageTag": "18+", "classroomUse": "Teacher demo ONLY, using non-personal prompts. Never upload student work or photos.", "alternative": "Canva Magic Media / Adobe Firefly via school", "url": "https://higgsfield.ai" },
+    { "name": "Canva for Education", "bestFor": "Layouts: posters, social posts, flashcards, brand kits; Magic Media, Magic Edit, background remover", "freeTier": "100% free for K-12 teachers and their students (teacher verifies with school email)", "minAge": "K-12 students via teacher/school class invite; AI features controlled by teacher/admin", "ageTag": "all-ages-school", "classroomUse": "Main layout tool for every module project. Create a class and invite students.", "alternative": "Google Slides / Drawings", "url": "https://www.canva.com/education/" },
+    { "name": "Adobe Express for Education", "bestFor": "Firefly text-to-image, generative fill, remove background, text effects", "freeTier": "Free for K-12 schools and districts (school accounts)", "minAge": "K-12 via school-provisioned account with education-safe filters", "ageTag": "all-ages-school", "classroomUse": "Photo-editing lesson (generative fill, remove background) on objects and stock images.", "alternative": "Photopea (manual editing, no account)", "url": "https://www.adobe.com/education/express/" },
+    { "name": "Photopea", "bestFor": "Free browser photo editor (layers, masks) — learn editing by hand", "freeTier": "Free with ads; no account needed", "minAge": "No account needed; ads present — use with supervision", "ageTag": "all-ages-school", "classroomUse": "Extension: compare manual editing vs. AI editing.", "alternative": "Canva photo editor", "url": "https://www.photopea.com" }
+  ],
+  "toolsVerified": "November 2026 (Gemini for Education under-18 image rules, OpenAI Terms, Higgsfield Terms of Use, Canva & Adobe Express Education pages)",
+  "resources": [
+    { "channel": "Canva Design School (YouTube)", "title": "Graphic design basics — hierarchy, contrast, alignment", "why": "Short, clear, made for beginners; uses the tool students will use.", "search": "Canva Design School graphic design basics for beginners", "verify": true },
+    { "channel": "Khan Academy — Pixar in a Box", "title": "Color science & virtual cameras", "why": "Shows how pros think about color, light and camera — perfect for composition vocabulary.", "url": "https://www.khanacademy.org/computing/pixar", "verify": false },
+    { "channel": "Code.org", "title": "How AI Works — generative AI / images", "why": "Middle-school-level explanation of how image AI is trained.", "url": "https://code.org/ai", "search": "code.org how AI works generative AI", "verify": true },
+    { "channel": "Adobe Express (YouTube)", "title": "Generative fill & remove background tutorials", "why": "Step-by-step visuals for the photo-editing lesson.", "search": "Adobe Express generative fill tutorial for beginners", "verify": true },
+    { "channel": "Satori Graphics (YouTube)", "title": "Logo design process / types of logos", "why": "Professional vocabulary (wordmark, emblem, scalability). Preview first; show short clips.", "search": "Satori Graphics types of logos explained", "verify": true },
+    { "channel": "Google — SynthID / Content Credentials", "title": "How AI images get labelled", "why": "Explains invisible watermarks — supports the disclosure lesson.", "search": "Google SynthID explained AI watermark", "verify": true }
+  ],
+  "gamification": {
+    "questLine": "A fictional startup (chosen by each student) hires the Guild to build its visual identity: memes for buzz, edited product shots, a logo, marketing graphics and study aids for its customers.",
+    "badge": "🎨 Pixel Forger — awarded for a complete Brand Kit that scores 3+ on every rubric row.",
+    "boss": "Brand Kit Showcase: logo + brand board + 1 social post + 1 poster + 1 study aid, all disclosed as AI-assisted, presented in a 60-second pitch.",
+    "sideQuests": [
+      "Style Remix: recreate one of your images in 5 different art styles and name each one correctly (+25 XP).",
+      "Hands & Text Hunt: find 3 typical AI image glitches (extra fingers, garbled text, impossible shadows) in your own outputs and fix them (+25 XP).",
+      "Make a 'How AI images work' comic strip for younger students (+25 XP).",
+      "Manual vs. AI: do the same edit by hand in Photopea and with AI; write which was better and why (+25 XP)."
+    ]
+  },
+  "safety": [
+    { "topic": "Age rules", "teach": "Gemini (school) is the default; under-18 Gemini accounts can't edit uploads, so photo editing uses Canva/Adobe Express for Education. Higgsfield is 18+ → teacher demo only; ChatGPT Images 13+ with permission." },
+    { "topic": "Consent & deepfakes", "teach": "Photo edits only on objects, stock/public-domain images, or AI-generated characters. Never classmates, teachers or celebrities. Discuss: how could an edited photo hurt someone?" },
+    { "topic": "Copyright & brands", "teach": "No real brand logos, celebrities or copyrighted characters in prompts ('in the style of [living artist]' is also off-limits — describe the style instead). Our brands are fictional and original." },
+    { "topic": "Honest disclosure", "teach": "Every image gets a #MadeWithAI or 'AI-edited' label. Marketing must not show fake product results or fake reviews." },
+    { "topic": "Fact-checking", "teach": "AI diagrams and flashcards can contain wrong labels or garbled text. Every study aid is checked against a textbook before it's shared." },
+    { "topic": "Kind memes", "teach": "Memes punch at situations, not people. No memes about classmates, groups or real people." }
+  ],
+  "finalProject": {
+    "title": "Brand Kit for a Fictional Startup",
+    "brief": "Each student invents a startup (e.g. eco water bottles, a dog-walking app, a bakery for robots). Using AI image tools and Canva, they produce a complete Brand Kit and pitch it to the class in 60 seconds. The brand carries forward into the Video and Website modules.",
+    "deliverables": [
+      "Brand Brief (name, audience, 3 personality words, mission sentence)",
+      "Logo (combination mark) + icon-only version, tested at small size",
+      "Brand board: 3–5 colors with hex codes, 2 fonts, logo, mood images",
+      "1 social media post (1:1 or 9:16) with headline and CTA",
+      "1 poster or ad (visual hierarchy + CTA)",
+      "1 study aid for customers (how-to diagram or flashcard set) that is fact-checked",
+      "Prompt Log with at least 3 iterations per asset and disclosure labels"
+    ],
+    "rubric": [
+      { "criterion": "Design thinking", "levels": ["Assets don't match each other or the audience", "Some consistency in colors/fonts", "Consistent brand that fits the audience and personality words", "Every choice (color, font, style) is explained with design vocabulary"] },
+      { "criterion": "Prompt craft & iteration", "levels": ["Single vague prompts", "Some formula parts, few iterations", "Image Prompt Formula used; 3+ logged iterations per asset", "Advanced control: reference images, shot types, aspect ratios, targeted edits"] },
+      { "criterion": "Marketing & communication", "levels": ["No clear message or CTA", "Message present but cluttered", "Clear hierarchy, readable text, strong CTA", "Persuasive and honest; tested with a classmate and improved"] },
+      { "criterion": "Ethics & accuracy", "levels": ["Uses real brands/people or no disclosure", "Disclosure on some assets", "All assets original, disclosed, study aid fact-checked", "Explains how they avoided bias, copyright and misleading claims"] }
+    ],
+    "levelUp": "Create a consistent mascot character for the brand and place it in 3 different scenes (consistency challenge), plus an animated sticker or GIF version to bridge into the Video module."
+  },
+  "differentiation": {
+    "support": [
+      "Image Prompt Formula fill-in card with word banks (styles, shots, lighting).",
+      "Brand Brief template with example answers; choose from 6 starter startup ideas.",
+      "Canva templates pre-selected and shared with the class.",
+      "Pair-programming style roles: Prompter and Art Director, swapping each asset.",
+      "Reduce the kit to logo + 1 post + 1 study aid if needed (still eligible for the badge at 'Proficient')."
+    ],
+    "extension": [
+      "Use reference images and describe a consistent mascot across scenes.",
+      "Write a mini brand style guide (do's and don'ts).",
+      "Compare two generators for the same prompt and write a tool review with evidence.",
+      "Explore color theory: complementary vs. analogous palettes; test contrast for accessibility (WCAG contrast checker)."
+    ]
+  },
+  "carryForward": "The startup and Brand Kit become the client for Module 2 (launch video) and Module 3 (landing page + store)."
+}

@@ -1,0 +1,91 @@
+{
+  "id": "00-launch",
+  "number": 0,
+  "title": "Launch: How AI Works",
+  "subtitle": "Join the AI Creators Guild: what AI really is, how to talk to it, and how to stay safe while using it.",
+  "weeks": "1–2",
+  "bigIdea": "Generative AI doesn't 'know' things like a person — it predicts what probably comes next, based on patterns in huge amounts of training data. That's why clear prompts matter and why we always check its work.",
+  "objectives": [
+    "Explain in their own words how a generative AI model makes text or images by predicting from patterns in training data.",
+    "Write a structured prompt using the Guild Prompt Recipe (Role · Task · Details · Style · Format) and improve it by iterating.",
+    "Identify an AI hallucination or bias and verify a claim with a trustworthy source.",
+    "Follow the AI Safety Pact: age rules, consent, privacy, honesty and copyright.",
+    "Describe how the course's XP, levels, houses and Boss Challenges work."
+  ],
+  "vocabulary": [
+    { "term": "Artificial Intelligence (AI)", "definition": "Computer programs that do tasks that usually need human thinking, like recognising pictures or writing.", "analogy": "A very fast student who studied millions of examples but never went outside.", "example": "Your phone grouping photos by face." },
+    { "term": "Generative AI", "definition": "AI that creates new things — text, images, video, music, code.", "analogy": "A remix artist who learned from millions of songs and makes a new one.", "example": "Asking Gemini for a poem about pizza." },
+    { "term": "Model", "definition": "The 'brain file' an AI uses, made by training on data.", "analogy": "A recipe book written by tasting a million meals.", "example": "GPT, Gemini and Claude are model families." },
+    { "term": "Training data", "definition": "The examples an AI learned from.", "analogy": "All the textbooks and practice tests a student studied.", "example": "Billions of web pages and captioned images." },
+    { "term": "Prompt", "definition": "The instructions you give an AI.", "analogy": "Your order at a restaurant — the clearer it is, the better the meal.", "example": "'Draw a cartoon cat astronaut, flat colors, square.'" },
+    { "term": "Prediction / next token", "definition": "AI writes by guessing the most likely next piece of a word, again and again.", "analogy": "Phone autocomplete on super-powers.", "example": "'Peanut butter and…' → 'jelly'." },
+    { "term": "Token", "definition": "A small chunk of text (part of a word) the AI reads and writes.", "analogy": "LEGO bricks that build sentences.", "example": "'unbelievable' might be 'un' + 'believ' + 'able'." },
+    { "term": "Hallucination", "definition": "When AI says something false but sounds confident.", "analogy": "A friend who'd rather make up an answer than say 'I don't know'.", "example": "Inventing a book that doesn't exist." },
+    { "term": "Bias", "definition": "When AI outputs are unfair or one-sided because of patterns in its training data.", "analogy": "If you only ever saw red apples, you'd think all apples are red.", "example": "Always drawing 'a scientist' as a man in a lab coat." },
+    { "term": "Iteration", "definition": "Improving something step by step by trying, checking and changing.", "analogy": "Re-drafting an essay.", "example": "Prompt v1 → v2 → v3, each better." },
+    { "term": "Terms of Service (ToS)", "definition": "The rules you agree to when you use an app, including minimum age.", "analogy": "The rules on the sign at the swimming pool.", "example": "ChatGPT: 13+ with parent permission." },
+    { "term": "Deepfake", "definition": "Fake but realistic media showing a real person doing or saying something they didn't.", "analogy": "A forged signature, but for faces and voices.", "example": "A fake video of a celebrity selling a scam product." }
+  ],
+  "tools": [
+    { "name": "Gemini (school account)", "bestFor": "Chat, explanations, image generation inside the school's Google account", "freeTier": "Included with Google Workspace for Education (admin must enable it)", "minAge": "Education accounts: all ages; under-18 accounts get stricter filters and no image editing/uploads. Personal accounts: 13+.", "ageTag": "all-ages-school", "classroomUse": "Main student chatbot IF your district has turned it on for students.", "alternative": "Teacher-led demo on projector", "url": "https://gemini.google.com" },
+    { "name": "ChatGPT", "bestFor": "General chat, writing, ChatGPT Images", "freeTier": "Free plan with daily limits; Plus ≈ $20/mo", "minAge": "13+; under 18 needs parent/guardian permission", "ageTag": "13+consent", "classroomUse": "Teacher demo; 13+ students with signed permission only.", "alternative": "Gemini via school account", "url": "https://chatgpt.com" },
+    { "name": "Teachable Machine (Google)", "bestFor": "Training your own tiny image/sound model in the browser — shows 'training data' visibly", "freeTier": "Free, no account needed", "minAge": "No account; runs in browser. Use webcam only on yourself, never classmates without consent.", "ageTag": "all-ages-school", "classroomUse": "Lesson 1 build: train a model and break it with bad data.", "alternative": "Quick, Draw!", "url": "https://teachablemachine.withgoogle.com" },
+    { "name": "Quick, Draw! (Google)", "bestFor": "Seeing AI guess your doodle in real time", "freeTier": "Free, no account", "minAge": "No account needed", "ageTag": "all-ages-school", "classroomUse": "Warm-up game on how AI recognises patterns.", "alternative": "Paper 'human neural network' game", "url": "https://quickdraw.withgoogle.com" },
+    { "name": "Claude", "bestFor": "Writing, coding, careful explanations", "freeTier": "Free plan with limits; Pro ≈ $20/mo", "minAge": "18+ (consumer apps)", "ageTag": "18+", "classroomUse": "Teacher-only planning and live demos later (apps/games).", "alternative": "Gemini via school account", "url": "https://claude.ai" }
+  ],
+  "toolsVerified": "November 2026 (Gemini for Education age rules, OpenAI Terms of Use, Higgsfield ToS checked)",
+  "resources": [
+    { "channel": "Code.org", "title": "How AI Works video series", "why": "Short, student-friendly, made for middle school; explains training data, bias and neural nets.", "url": "https://code.org/ai", "search": "code.org How AI Works", "verify": false },
+    { "channel": "Crash Course AI (YouTube)", "title": "Crash Course Artificial Intelligence — 'What is AI?' episode", "why": "Fun and visual; good for confident readers. Show clips, not whole episodes.", "search": "Crash Course Artificial Intelligence episode 1 what is artificial intelligence", "verify": true },
+    { "channel": "Google — Teachable Machine", "title": "Teachable Machine site + intro video", "why": "Lets students SEE training data → model → prediction.", "url": "https://teachablemachine.withgoogle.com", "verify": false },
+    { "channel": "Common Sense Education", "title": "AI Literacy lessons for grades 6–8", "why": "Ready-made ethics discussion prompts and family tip sheets.", "search": "Common Sense Education AI literacy lessons grades 6-8", "verify": true },
+    { "channel": "3Blue1Brown (YouTube)", "title": "Large Language Models explained briefly", "why": "Beautiful visuals of next-word prediction; show the first 3 minutes to advanced students.", "search": "3Blue1Brown large language models explained briefly", "verify": true }
+  ],
+  "gamification": {
+    "questLine": "Join the Guild: create your nickname and avatar, learn the rules of AI, and earn your Safety Pact.",
+    "badge": "🛡️ Safety Pact (Lesson 3) and ⚔️ Prompt Duelist (Lesson 4)",
+    "boss": "Prompt Duel — houses battle to get the AI to produce a target output in the fewest prompt iterations, using the Prompt Recipe.",
+    "sideQuests": [
+      "Teachable Machine Glitch Hunt: make your model confidently wrong and explain why (+25 XP).",
+      "Find a real news story about an AI hallucination and summarise it in 3 sentences with the source (+25 XP).",
+      "Write the Prompt Recipe as a rap/poem for the class wall (+25 XP)."
+    ]
+  },
+  "safety": [
+    { "topic": "Age rules", "teach": "Show the tools table; explain why ToS ages exist (COPPA protects under-13 data). No sneaking onto 13+/18+ apps — we use school accounts and teacher demos." },
+    { "topic": "Consent & deepfakes", "teach": "Webcam/photos of yourself only, and only in class tools. Never classmates. Discuss how a deepfake could hurt someone." },
+    { "topic": "Privacy", "teach": "Guild nicknames; never type full name, school, address, phone or passwords into AI." },
+    { "topic": "Fact-checking", "teach": "Hallucinations: AI predicts what SOUNDS right. Use the 'Two-Source Rule' for any fact." },
+    { "topic": "Honesty", "teach": "Using AI is a skill, not cheating — when you say you used it. Introduce the #MadeWithAI label." }
+  ],
+  "finalProject": {
+    "title": "Prompt Duel + AI Safety Pact",
+    "brief": "Each house receives target outputs (e.g. a 4-line poem with specific features, a recipe for 6 people with no nuts, an image of a specific scene). Using the Prompt Recipe, they iterate until they hit the target and document each version. Separately, each student writes and signs their own AI Safety Pact in their own words.",
+    "deliverables": [
+      "Prompt log: v1, v2, v3… with what changed and why",
+      "Final output that matches the target",
+      "Personal AI Safety Pact (5 promises in your own words), signed by student (and optionally a parent)"
+    ],
+    "rubric": [
+      { "criterion": "Prompt structure", "levels": ["Vague one-line prompt", "Some recipe parts", "All 5 recipe parts used", "Recipe parts used precisely + constraints/examples added"] },
+      { "criterion": "Iteration", "levels": ["One try", "2 versions, changes unclear", "3+ versions with a reason for each change", "Changes are targeted and explained using vocabulary"] },
+      { "criterion": "Checking the output", "levels": ["Accepted output without checking", "Noticed a problem", "Found and fixed a mistake", "Verified facts with a source and explained the error type"] },
+      { "criterion": "Safety Pact", "levels": ["Copied rules", "Some rules in own words", "5 clear promises in own words", "Promises include a 'what I'd do if…' scenario"] }
+    ],
+    "levelUp": "Write a 'system prompt' that makes the AI act as a quiz-master for this module's vocabulary, then test it on a classmate and improve it twice."
+  },
+  "differentiation": {
+    "support": [
+      "Prompt Recipe card with sentence starters for each part.",
+      "Pair students: 'driver' types, 'navigator' reads the recipe aloud — swap every 10 minutes.",
+      "Vocabulary word wall with pictures (dual coding).",
+      "Exit tickets can be answered by drawing + labels."
+    ],
+    "extension": [
+      "Compare the same prompt in two models and write 3 differences.",
+      "Explain temperature/randomness: run the same prompt 3 times and describe why answers differ.",
+      "Become a Guild Mentor for the build segment."
+    ]
+  },
+  "carryForward": "The Prompt Recipe, the Safety Pact and the prompt log habit are used in every later module."
+}
