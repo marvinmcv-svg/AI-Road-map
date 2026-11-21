@@ -5,6 +5,7 @@ import { STUDENT_SITE_URL } from '../lib/links';
 const STUDENT_FEATURES: [string, string, string][] = [
   ['🏅', 'Rank & sticker book', 'Students level up from Prompt Rookie to AI Architect as they finish missions, and collect stickers (first mission, streaks, quests cleared).'],
   ['🔥', 'Streaks', 'Counts days in a row with at least one ticked step. Ask about it at the start of class.'],
+  ['🕹️', 'Word Arcade', 'Hangman (Save Bolt), Memory Match, Quiz Blitz and Word Scramble with each quest\'s words. Wins give arcade XP (up to 500 counts toward rank).'],
   ['🎲', 'Side-quest spinner', '35 ten-minute mini challenges, only from quests they have reached. Great for early finishers. +10 XP each.'],
   ['🖼️', 'My Showcase', 'A portfolio of everything they made, with links and a "proud of" note. Use it on Demo Day.'],
   ['😵', 'Feel check', 'Each mission ends with 😎 🙂 🤔 😵. A quick way to spot who is lost.'],
@@ -17,7 +18,7 @@ export default function Engage() {
     <div className="narrow wide-ish">
       <h1>🔥 Engagement playbook</h1>
       <MascotSays mood="happy">
-        Students stay when they feel <b>able</b>, <b>in charge</b> and <b>seen</b>. These 12 moves do that. Pick 2 or 3 to try this week.
+        Students stay when they feel <b>able</b>, <b>in charge</b> and <b>seen</b>. These 13 moves do that. Pick 2 or 3 to try this week.
       </MascotSays>
 
       <div className="play-grid">

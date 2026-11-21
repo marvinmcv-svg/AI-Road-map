@@ -8,7 +8,7 @@ export default function Login({ onUnlock }: { onUnlock: () => void }) {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if ((await sha256(pw)) === PASSWORD_HASH) {
-      unlock();
+      unlock(pw);
       onUnlock();
     } else setErr('Hmm, that password didn’t work. Try again!');
   };

@@ -32,6 +32,7 @@ export const FIRST_WEEK: { title: string; items: string[] }[] = [
 ];
 
 export const LESSON_STEPS: { icon: string; title: string; text: string }[] = [
+  { icon: '▶️', title: 'Easiest way: press "Start Coach mode"', text: 'At the top of every lesson. It walks you through the steps below one screen at a time, with picture cards, a timer and a "Done when" check. Stuck? Tap 💬 Ask Coach (bottom right) and ask in your own words.' },
   { icon: '👤', title: 'Pick 1-on-1 or Group', text: 'The switch at the top of every lesson changes the times and shows the right activities. 1-on-1 = 60 min, Group = 90 min.' },
   { icon: '📋', title: 'Do the prep list', text: 'The yellow "Prep before class" box. Most prep is opening tabs and making a demo. Use the 🧭 Tool help box if a tool is new to you.' },
   { icon: '🗺️', title: 'Follow the colored bar', text: 'Warm-up → Mini-lesson → Build → Challenge → Share-out → Exit ticket. Click a color to jump there. Times are a guide, not a rule.' },
@@ -136,6 +137,12 @@ export const PLAYBOOK: Play[] = [
     title: 'Play YOU vs. THEM',
     why: 'In 1-on-1, a little friendly competition replaces the group energy.',
     how: ['Every challenge has a "Student vs. Teacher" version. Really play it, and let them beat you sometimes.', 'Keep a running score on a sticky note for the whole module.']
+  },
+  {
+    icon: '🕹️',
+    title: 'Play word games often',
+    why: 'Games turn review into fun, and words that are played with get remembered.',
+    how: ['Open the Word Arcade (menu) for a 5-minute warm-up: Hangman, Memory Match, Quiz Blitz or Word Scramble.', '1-on-1: take turns. You read the clue, they guess, then swap.', 'Students win arcade XP on their own site too.']
   },
   {
     icon: '🎲',

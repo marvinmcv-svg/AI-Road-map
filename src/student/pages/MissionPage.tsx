@@ -203,6 +203,9 @@ export default function MissionPage() {
                   {w.term}
                 </button>
               ))}
+              <Link to="/arcade" className="tool-chip" style={{ '--c': '#ff5fa2' } as React.CSSProperties}>
+                🕹️ Practice these words in the Arcade
+              </Link>
             </div>
           </>
         )}

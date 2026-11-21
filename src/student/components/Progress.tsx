@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { missions, modules } from '../content';
 import { ALL_SIDE_QUESTS, bestStreak, rankFor, stickers, streak } from '../engage';
-import { useActiveDays, useDone, useShowcase, useSideQuests } from '../store';
+import { useActiveDays, useArcade, useDone, useShowcase, useSideQuests } from '../store';
+
+// Arcade XP counts toward rank, up to this much (so missions stay the main path).
+export const ARCADE_CAP = 500;
 
 export function usePractice() {
   const [done] = useDone();
   const [days] = useActiveDays();
   const [showcase] = useShowcase();
   const [side] = useSideQuests();
-  const xp = missions.filter((m) => done.includes(m.id)).reduce((s, m) => s + m.xp, 0) + side.length * 10;
+  const [arcade] = useArcade();
+  const xp = Math.min(arcade.points, ARCADE_CAP) + missions.filter((m) => done.includes(m.id)).reduce((s, m) => s + m.xp, 0) + side.length * 10;
   const st = streak(days);
   const best = bestStreak(days);
   const shows = Object.values(showcase).filter((s) => s.link || s.note).length;
@@ -17,7 +21,7 @@ export function usePractice() {
     rank: rankFor(xp),
     streak: st,
     best,
-    stickers: stickers({ done, missions, modules, streak: st, bestStreak: best, showcase: shows, side: side.length })
+    stickers: stickers({ done, missions, modules, streak: st, bestStreak: best, showcase: shows, side: side.length, arcadeWins: arcade.wins, hangman: arcade.games.hangman ?? 0 })
   };
 }
 

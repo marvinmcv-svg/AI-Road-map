@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import CoachMode, { LessonClock } from '../components/CoachMode';
 import { getModule, lessons } from '../lib/content';
 import { useProgress } from '../lib/progress';
 import { KEYS, useStored, type TeachMode } from '../lib/storage';
@@ -49,6 +50,8 @@ export default function LessonPage() {
   const [present, setPresent] = useState(false);
   const [party, setParty] = useState(false);
   const [mode, setMode] = useStored<TeachMode>(KEYS.mode, 'solo');
+  const [coach, setCoach] = useState(false);
+  const navigate = useNavigate();
 
   if (!lesson || !m) return <p>Lesson not found.</p>;
   const prev = lessons[idx - 1];
@@ -87,6 +90,33 @@ export default function LessonPage() {
           <p>{lesson.goal}</p>
         </div>
         <div className="xp-pill">+{lesson.xp} XP</div>
+      </div>
+
+      {coach && (
+        <CoachMode
+          lesson={lesson}
+          mode={mode}
+          onClose={() => setCoach(false)}
+          onFinish={() => {
+            if (!taught) toggle(lesson.id);
+            setCoach(false);
+            navigate('/tracker');
+          }}
+        />
+      )}
+
+      <div className="coach-cta no-print">
+        <LessonClock lesson={lesson} mode={mode} />
+        <div>
+          <h3>🧑‍🏫 Teach it step by step</h3>
+          <p>
+            Coach mode walks you through this lesson one part at a time: what to do, what to say, a timer, and what to do if it isn't working. Great on a tablet
+            next to you while you teach.
+          </p>
+          <button className="btn primary" onClick={() => setCoach(true)}>
+            ▶ Start Coach mode
+          </button>
+        </div>
       </div>
 
       <div className="actions no-print">

@@ -17,6 +17,8 @@ export const useActiveDays = () => useStored<string[]>('guild.days', []);
 // "What I made" for each mission: a link and a short note. Builds the Showcase.
 export interface ShowcaseItem { link: string; note: string; date: string; feel?: string }
 export const useShowcase = () => useStored<Record<string, ShowcaseItem>>('guild.showcase', {});
+export interface ArcadeStats { points: number; wins: number; games: Record<string, number> }
+export const useArcade = () => useStored<ArcadeStats>('guild.arcade', { points: 0, wins: 0, games: {} });
 export const useSideQuests = () => useStored<string[]>('guild.side', []);
 
 export const today = () => new Date().toLocaleDateString('en-CA');

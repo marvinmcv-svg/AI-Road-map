@@ -19,9 +19,14 @@ export function isUnlocked() {
   const until = Number(localStorage.getItem('aic.session') || 0);
   return until > Date.now();
 }
-export function unlock() {
+export function unlock(password?: string) {
   localStorage.setItem('aic.session', String(Date.now() + SESSION_HOURS * 3600_000));
+  // The AI Coach server checks the password too, so it can't be used by people without it.
+  if (password) localStorage.setItem('aic.coach', password);
 }
 export function lock() {
   localStorage.removeItem('aic.session');
+  localStorage.removeItem('aic.coach');
 }
+export const coachPassword = () => localStorage.getItem('aic.coach') || '';
+export const setCoachPassword = (p: string) => localStorage.setItem('aic.coach', p);

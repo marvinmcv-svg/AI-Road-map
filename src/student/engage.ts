@@ -43,8 +43,10 @@ export function stickers(opts: {
   bestStreak: number;
   showcase: number;
   side: number;
+  arcadeWins: number;
+  hangman: number;
 }): Sticker[] {
-  const { done, missions, modules, bestStreak, showcase, side } = opts;
+  const { done, missions, modules, bestStreak, showcase, side, arcadeWins, hangman } = opts;
   const list: Sticker[] = [
     { id: 'first', icon: '🌱', name: 'First Step', how: 'Finish your first mission.', got: done.length >= 1 },
     { id: 'three', icon: '🎩', name: 'Hat Trick', how: 'Finish 3 missions.', got: done.length >= 3 },
@@ -55,6 +57,9 @@ export function stickers(opts: {
     { id: 'show1', icon: '🖼️', name: 'Show-off', how: 'Save your first thing in My Showcase.', got: showcase >= 1 },
     { id: 'show10', icon: '🏛️', name: 'Museum Maker', how: 'Save 10 things in My Showcase.', got: showcase >= 10 },
     { id: 'side1', icon: '🎲', name: 'Side Quester', how: 'Finish a side quest.', got: side >= 1 },
+    { id: 'arcade1', icon: '🕹️', name: 'Player One', how: 'Win your first Word Arcade game.', got: arcadeWins >= 1 },
+    { id: 'arcade25', icon: '👾', name: 'Arcade Legend', how: 'Win 25 Word Arcade games.', got: arcadeWins >= 25 },
+    { id: 'hangman10', icon: '🎈', name: 'Balloon Saver', how: 'Save Bolt in Hangman 10 times.', got: hangman >= 10 },
     { id: 'side10', icon: '🧭', name: 'Explorer', how: 'Finish 10 side quests.', got: side >= 10 }
   ];
   for (const m of modules) {

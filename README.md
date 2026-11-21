@@ -28,7 +28,8 @@ image prompts, safety/ethics moments, differentiation and XP.
 | Start here | First week checklist, accounts to set up, 7-step lesson routine, tech words in plain English, Plan B |
 | Engagement | 12-move engagement playbook + what students get on their site |
 
-Every lesson page also has a **🧭 Tool help & Plan B** box (links to the student Tool guides, common problems, what to do if tech breaks).
+Every lesson page has **▶ Coach mode** (a full-screen, step-by-step walkthrough: picture cards for what to do, a timer, "Done when" and "If it's not working" for each part, with a lesson clock),
+a **💬 AI Teaching Coach** (bottom right, see below), a **🕹️ Word Arcade** for warm-ups, and a **🧭 Tool help & Plan B** box (links to the student Tool guides, common problems, what to do if tech breaks).
 
 ## What's on the student site
 Quest map with missions (checkboxes, "Before you start" box, tap-to-explain words, 🆘 help ladder, "Save what you made"),
@@ -68,6 +69,16 @@ environment variables, then rebuild.
 Any static host works (Vercel, Netlify, Cloudflare Pages, GitHub Pages). Build command
 `npm run build`, output folder `dist`. The app uses hash URLs (`/#/m/01-images`), so no rewrite rules
 are needed. After the first visit it works offline and can be installed ("Install app" in the browser).
+
+## Turn on the AI Teaching Coach
+The Coach is a chat in the teacher portal that answers "how do I teach this?" questions, using the lesson you're on.
+It runs as a Vercel function (`api/coach.ts`) that calls Claude.
+1. Go to platform.claude.com, add a small credit and **set a monthly spending limit**.
+2. Create an API key.
+3. Vercel → **ai-creators-portal** → Settings → Environment Variables → add `ANTHROPIC_API_KEY`, then redeploy.
+
+Only someone who knows the portal password can use it (the function checks it against `VITE_PORTAL_PASSWORD_HASH`).
+Until the key is added, the Coach offers a **Copy & open Claude** button that copies your question together with the whole lesson.
 
 ## Where data lives
 - Curriculum content: `content/` (JSON + one Markdown file per lesson). Edit these to change lessons.

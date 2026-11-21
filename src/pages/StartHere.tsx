@@ -46,7 +46,7 @@ export default function StartHere() {
       </section>
 
       <section className="card">
-        <h2>🎬 How to run any lesson, in 7 steps</h2>
+        <h2>🎬 How to run any lesson</h2>
         <ol className="ladder teach-steps">
           {LESSON_STEPS.map((s) => (
             <li key={s.title}>
@@ -100,7 +100,7 @@ export default function StartHere() {
       <section className="card">
         <h2>🔥 Keep them excited</h2>
         <p>
-          Read the <Link to="/engage">Engagement playbook</Link>: 12 simple moves to keep your students coming back, and how to use the student site's streaks,
+          Read the <Link to="/engage">Engagement playbook</Link>: 13 simple moves to keep your students coming back, and how to use the student site's streaks,
           side quests, sticker book and Showcase.
         </p>
       </section>

@@ -33,7 +33,7 @@ export default function Dashboard() {
         )}
         {done === 0 && (
           <Link to="/start" className="callout start-callout">
-            👋 <b>New here?</b> Read <u>Start here</u> first: how the portal works, accounts to set up, and how to run a lesson in 7 steps.
+            👋 <b>New here?</b> Read <u>Start here</u> first: how the portal works, accounts to set up, and how to run a lesson step by step.
           </Link>
         )}
         <MascotSays mood="happy">

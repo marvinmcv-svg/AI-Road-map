@@ -13,6 +13,8 @@ import Tracker from './pages/Tracker';
 import Rubrics from './pages/Rubrics';
 import StartHere from './pages/StartHere';
 import Engage from './pages/Engage';
+import ArcadeTeacher from './pages/ArcadeTeacher';
+import CoachChat from './components/CoachChat';
 import { course } from './lib/content';
 import { themeFor } from './lib/theme';
 import { STUDENT_SITE_URL } from './lib/links';
@@ -24,6 +26,7 @@ const NAV = [
   { to: '/tracker', label: 'XP & houses', icon: '⭐', tile: '#fff6d9' },
   { to: '/gamification', label: 'Game rules', icon: '🏆', tile: '#ffe8f2' },
   { to: '/engage', label: 'Engagement', icon: '🔥', tile: '#ffefe0' },
+  { to: '/arcade', label: 'Word Arcade', icon: '🕹️', tile: '#fff0f6' },
   { to: '/glossary', label: 'Glossary', icon: '📖', tile: '#e1f9f1' },
   { to: '/tools', label: 'AI tools', icon: '🧰', tile: '#fff0e2' },
   { to: '/rubrics', label: 'Rubrics', icon: '✅', tile: '#e7eaf4' }
@@ -88,12 +91,14 @@ export default function App() {
           🔒 Lock portal
         </button>
       </aside>
+      <CoachChat />
       <main className="content">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/start" element={<StartHere />} />
           <Route path="/engage" element={<Engage />} />
+          <Route path="/arcade" element={<ArcadeTeacher />} />
           <Route path="/m/:moduleId" element={<ModulePage />} />
           <Route path="/m/:moduleId/l/:n" element={<LessonPage />} />
           <Route path="/gamification" element={<GamificationPage />} />
